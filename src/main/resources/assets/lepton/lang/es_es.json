@@ -365,6 +365,36 @@
 	"block.lepton.cut_glowdust_sandstone_wall": "Muro de arenisca de polvo luminoso cortada",
 	"block.lepton.smooth_glowdust_sandstone_wall": "Muro de arenisca de polvo luminoso lisa",
 	
-	"block.lepton.himmel_wall": "Muro de himmel"
+	"block.lepton.himmel_wall": "Muro de himmel",
+
+	"block.lepton.stripped_jacaranda_wood_slab": "Losa de leño de jacarandá sin corteza",
+	"block.lepton.stripped_jacaranda_wood_stairs": "Escaleras de leño de jacarandá sin corteza",
+	"block.lepton.stripped_jacaranda_wood_wall": "Muro de leño de jacarandá sin corteza",
+	"block.lepton.stripped_jacaranda_wood_vertical_slab": "Losa vertical de leño de jacarandá sin corteza",
+
+	"block.lepton.jacaranda_wood_slab": "Losa de leño de jacarandá",
+	"block.lepton.jacaranda_wood_stairs": "Escaleras de leño de jacarandá",
+	"block.lepton.jacaranda_wood_wall": "Muro de leño de jacarandá",
+	"block.lepton.jacaranda_wood_vertical_slab": "Losa vertical de leño de jacarandá",
+
+	"block.lepton.stripped_redbud_wood_slab": "Losa de leño de ciclamor sin corteza",
+	"block.lepton.stripped_redbud_wood_stairs": "Escaleras de leño de ciclamor sin corteza",
+	"block.lepton.stripped_redbud_wood_wall": "Muro de leño de ciclamor sin corteza",
+	"block.lepton.stripped_redbud_wood_vertical_slab": "Losa vertical de leño de ciclamor sin corteza",
+
+	"block.lepton.redbud_wood_slab": "Losa de leño de ciclamor",
+	"block.lepton.redbud_wood_stairs": "Escaleras de leño de ciclamor",
+	"block.lepton.redbud_wood_wall": "Muro de leño de ciclamor",
+	"block.lepton.redbud_wood_vertical_slab": "Losa vertical de leño de ciclamor",
+
+	"block.lepton.stripped_cypress_wood_slab": "Losa de leño de ciprés sin corteza",
+	"block.lepton.stripped_cypress_wood_stairs": "Escaleras de leño de ciprés sin corteza",
+	"block.lepton.stripped_cypress_wood_wall": "Muro de leño de ciprés sin corteza",
+	"block.lepton.stripped_cypress_wood_vertical_slab": "Losa vertical de leño de ciprés sin corteza",
+
+	"block.lepton.cypress_wood_slab": "Losa de leño de ciprés",
+	"block.lepton.cypress_wood_stairs": "Escaleras de leño de ciprés",
+	"block.lepton.cypress_wood_wall": "Muro de leño de ciprés",
+	"block.lepton.cypress_wood_vertical_slab": "Losa vertical de leño de ciprés"
 	
 }
