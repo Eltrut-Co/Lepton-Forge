@@ -1,10 +1,11 @@
-package eltrut.lepton.common.blocks;
+package co.eltrut.lepton.common.blocks;
 
 import java.util.Random;
 
-import com.minecraftabnormals.abnormals_core.common.blocks.VerticalSlabBlock;
-
+import co.eltrut.differentiate.common.block.VerticalSlabBlock;
+import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -12,7 +13,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class AlphaStrippedLogVerticalSlabBlock extends VerticalSlabBlock {
+public class AlphaStrippedLogVerticalSlabBlock extends VerticalSlabBlock implements IRenderTypeBlock {
 
 	public AlphaStrippedLogVerticalSlabBlock(Properties properties) {
 		super(properties);
@@ -32,4 +33,9 @@ public class AlphaStrippedLogVerticalSlabBlock extends VerticalSlabBlock {
         if(rand.nextInt(10) == 0)
             worldIn.addParticle(ParticleTypes.END_ROD, pos.getX() + rand.nextDouble(), pos.getY() + rand.nextDouble(), pos.getZ() + rand.nextDouble(), 0, 0, 0);
     }
+
+	@Override
+	public RenderType getRenderType() {
+		return RenderType.getTranslucent();
+	}
 }

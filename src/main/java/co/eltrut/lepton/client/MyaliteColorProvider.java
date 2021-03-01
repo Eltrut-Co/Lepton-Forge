@@ -1,4 +1,4 @@
-package eltrut.lepton.client;
+package co.eltrut.lepton.client;
 
 import java.awt.Color;
 import java.util.stream.IntStream;

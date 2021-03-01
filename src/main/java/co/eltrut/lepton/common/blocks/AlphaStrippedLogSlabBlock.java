@@ -1,9 +1,11 @@
-package eltrut.lepton.common.blocks;
+package co.eltrut.lepton.common.blocks;
 
 import java.util.Random;
 
+import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.WallBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -11,14 +13,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class AlphaStrippedLogWallBlock extends WallBlock {
-	public AlphaStrippedLogWallBlock(Properties properties) {
+public class AlphaStrippedLogSlabBlock extends SlabBlock implements IRenderTypeBlock {
+
+	public AlphaStrippedLogSlabBlock(Properties properties) {
 		super(properties);
 	}
-
+	
     @Override
     public boolean isSideInvisible(BlockState bs1, BlockState bs2, Direction side) {
-        return bs1 == bs2 || bs2.getBlock() instanceof AlphaLogWallBlock || bs2.getBlock() instanceof AlphaStrippedLogWallBlock;
+        return bs1 == bs2;
     }
 	
 	// Quark copy-paste for consistency
@@ -30,4 +33,9 @@ public class AlphaStrippedLogWallBlock extends WallBlock {
         if(rand.nextInt(10) == 0)
             worldIn.addParticle(ParticleTypes.END_ROD, pos.getX() + rand.nextDouble(), pos.getY() + rand.nextDouble(), pos.getZ() + rand.nextDouble(), 0, 0, 0);
     }
+
+	@Override
+	public RenderType getRenderType() {
+		return RenderType.getTranslucent();
+	}
 }

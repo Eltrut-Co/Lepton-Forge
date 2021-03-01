@@ -1,10 +1,9 @@
-package eltrut.lepton.common.blocks;
+package co.eltrut.lepton.common.blocks;
 
 import java.util.function.Supplier;
 
-import com.minecraftabnormals.abnormals_core.common.blocks.VerticalSlabBlock;
-import com.minecraftabnormals.abnormals_core.core.util.BlockUtil;
-
+import co.eltrut.differentiate.common.block.DifferStairsBlock;
+import co.eltrut.lepton.core.util.BlockUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,11 +12,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class LogVerticalSlabBlock extends VerticalSlabBlock {
+public class LogStairsBlock extends DifferStairsBlock {
 	private final Supplier<Block> block;
-	
-	public LogVerticalSlabBlock(Supplier<Block> strippedBlock, Properties properties) {
-		super(properties);
+
+	public LogStairsBlock(Supplier<Block> strippedBlock, Supplier<BlockState> state, Properties properties) {
+		super(state, properties);
 		this.block = strippedBlock;
 	}
 	

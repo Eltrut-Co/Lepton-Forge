@@ -1,11 +1,9 @@
-package eltrut.lepton.core;
+package co.eltrut.lepton.core;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
-
-import eltrut.lepton.core.other.LeptonCompat;
+import co.eltrut.differentiate.core.registrator.Registrator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -20,7 +18,7 @@ public class Lepton
 {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "lepton";
-    public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MOD_ID);
+    public static final Registrator REGISTRATOR = new Registrator(MOD_ID);
     public static Lepton instance;
 
     IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -30,20 +28,13 @@ public class Lepton
     	modEventBus.addListener(this::doClientStuff);
         instance = this;
         
-        REGISTRY_HELPER.register(modEventBus);
-        
         MinecraftForge.EVENT_BUS.register(this);
         
     }
 
-    private void doCommonStuff(final FMLCommonSetupEvent event)
-    {
+    private void doCommonStuff(final FMLCommonSetupEvent event) {
     }
     
     private void doClientStuff(final FMLClientSetupEvent event) {
-    	event.enqueueWork(() -> {
-        	LeptonCompat.registerBlockRenderers();
-        	LeptonCompat.registerBlockColors();
-    	});
     }
 }

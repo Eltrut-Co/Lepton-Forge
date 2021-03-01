@@ -1,10 +1,12 @@
-package eltrut.lepton.common.blocks;
+package co.eltrut.lepton.common.blocks;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
+import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -12,14 +14,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class AlphaLogVerticalSlabBlock extends LogVerticalSlabBlock {
+public class AlphaLogStairsBlock extends LogStairsBlock implements IRenderTypeBlock {
 
-	public AlphaLogVerticalSlabBlock(Supplier<Block> strippedBlock, Properties properties) {
-		super(strippedBlock, properties);
-		// TODO Auto-generated constructor stub
+	public AlphaLogStairsBlock(Supplier<Block> strippedBlock, Supplier<BlockState> state, Properties properties) {
+		super(strippedBlock, state, properties);
 	}
 	
-	@Override
+    @Override
     public boolean isSideInvisible(BlockState bs1, BlockState bs2, Direction side) {
         return bs1 == bs2;
     }
@@ -33,4 +34,9 @@ public class AlphaLogVerticalSlabBlock extends LogVerticalSlabBlock {
         if(rand.nextInt(10) == 0)
             worldIn.addParticle(ParticleTypes.END_ROD, pos.getX() + rand.nextDouble(), pos.getY() + rand.nextDouble(), pos.getZ() + rand.nextDouble(), 0, 0, 0);
     }
+
+	@Override
+	public RenderType getRenderType() {
+		return RenderType.getTranslucent();
+	}
 }

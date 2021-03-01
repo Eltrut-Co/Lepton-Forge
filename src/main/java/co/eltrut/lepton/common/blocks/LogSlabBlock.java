@@ -1,22 +1,21 @@
-package eltrut.lepton.common.blocks;
+package co.eltrut.lepton.common.blocks;
 
 import java.util.function.Supplier;
 
-import com.minecraftabnormals.abnormals_core.core.util.BlockUtil;
-
+import co.eltrut.lepton.core.util.BlockUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.WallBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
-public class LogWallBlock extends WallBlock {
+public class LogSlabBlock extends SlabBlock {
 	private final Supplier<Block> block;
 	
-	public LogWallBlock(Supplier<Block> strippedBlock, Properties properties) {
+	public LogSlabBlock(Supplier<Block> strippedBlock, Properties properties) {
 		super(properties);
 		this.block = strippedBlock;
 	}
