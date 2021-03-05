@@ -5,15 +5,14 @@ import net.minecraft.state.Property;
 
 public class BlockUtil {
 	
-	// TODO: change this and move it to Differentiate
-	public static BlockState transferAllBlockStates(BlockState initial, BlockState after) {
-		BlockState block = after;
-		for (Property property : initial.getBlock().getStateContainer().getProperties()) {
-			if (after.hasProperty(property) && initial.get(property) != null) {
-				block = block.with(property, initial.get(property));
-			}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static BlockState transferAllBlockStates(BlockState initial, BlockState end) {
+		BlockState state = end;
+		
+		for (Property property : initial.getProperties()) {
+			state = state.with(property, initial.get(property));
 		}
-		return block;
+		return state;
 	}
 	
 }

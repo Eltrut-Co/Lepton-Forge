@@ -14,8 +14,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("lepton")
 @Mod.EventBusSubscriber(modid = "lepton", bus = Bus.MOD)
-public class Lepton
-{
+public class Lepton {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "lepton";
     public static final Registrator REGISTRATOR = new Registrator(MOD_ID);

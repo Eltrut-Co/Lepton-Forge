@@ -2,7 +2,7 @@ package co.eltrut.lepton.core.registry;
 
 import co.eltrut.differentiate.common.block.DifferStairsBlock;
 import co.eltrut.differentiate.common.block.VerticalSlabBlock;
-import co.eltrut.differentiate.core.registrator.BlockSubRegistrator;
+import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.lepton.common.blocks.AlphaLogSlabBlock;
 import co.eltrut.lepton.common.blocks.AlphaLogStairsBlock;
@@ -35,11 +35,12 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = Lepton.MOD_ID, bus = Bus.MOD)
 public class LeptonBlocks {
 	
-	public static final BlockSubRegistrator HELPER = Lepton.REGISTRATOR.getBlockSubRegistrator();
+	public static final BlockHelper HELPER = Lepton.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
 	
 	// Cracked Sandstone
 	public static final RegistryObject<Block> CRACKED_SANDSTONE = HELPER.createSimpleBlock("cracked_sandstone", () -> new Block(Block.Properties.from(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS);
