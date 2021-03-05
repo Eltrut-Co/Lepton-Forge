@@ -72,15 +72,15 @@ dependencies {
 	minecraft "net.minecraftforge:forge:${project.mc_version}-${project.forge_version}"
 	
 	implementation fg.deobf("curse.maven:differentiate-450748:${differentiate_id}")
-	//implementation fg.deobf("curse.maven:autoreglib-250363:${arl_id}")
-	//implementation fg.deobf("curse.maven:quark-243121:${quark_id}")
+	implementation fg.deobf("curse.maven:autoreglib-250363:${arl_id}")
+	implementation fg.deobf("curse.maven:quark-243121:${quark_id}")
 	
-	//implementation fg.deobf("curse.maven:abnormals-core-382216:${ac_id}")
+	implementation fg.deobf("curse.maven:abnormals-core-382216:${ac_id}")
 	//implementation fg.deobf("curse.maven:atmospheric-362393:${atmospheric_id}")
 	//implementation fg.deobf("curse.maven:autumnity-365045:${autumnity_id}")
 	//implementation fg.deobf("curse.maven:endergetic-291509:${endergetic_id}")
 	//implementation fg.deobf("curse.maven:upgrade-aquatic-326895:${ua_id}")
-	//implementation fg.deobf("curse.maven:enhanced-mushrooms-383725:${em_id}")
+	implementation fg.deobf("curse.maven:enhanced-mushrooms-383725:${em_id}")
 	
 	//implementation fg.deobf("curse.maven:infernal-expansion-395078:${ie_id}")
 	//implementation fg.deobf("curse.maven:outer-end-430404:${oe_id}")
