@@ -1,14 +1,15 @@
 package co.eltrut.lepton.common.blocks;
 
+import co.eltrut.differentiate.common.block.StonePressurePlateBlock;
 import co.eltrut.differentiate.common.interf.IColoredBlock;
 import co.eltrut.lepton.client.MyaliteColorProvider;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.client.renderer.color.IItemColor;
 
-public class PolishedMyalitePressurePlateBlock extends InjectedPressurePlateBlock implements IColoredBlock {
+public class PolishedMyalitePressurePlateBlock extends StonePressurePlateBlock implements IColoredBlock {
 
-	public PolishedMyalitePressurePlateBlock(Sensitivity sensitivityIn, Properties propertiesIn) {
-		super(sensitivityIn, propertiesIn);
+	public PolishedMyalitePressurePlateBlock(Properties propertiesIn) {
+		super(propertiesIn);
 	}
 
 	@Override

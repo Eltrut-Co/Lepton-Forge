@@ -1,11 +1,12 @@
 package co.eltrut.lepton.common.blocks;
 
+import co.eltrut.differentiate.common.block.DifferStoneButtonBlock;
 import co.eltrut.differentiate.common.interf.IColoredBlock;
 import co.eltrut.lepton.client.MyaliteColorProvider;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.client.renderer.color.IItemColor;
 
-public class PolishedMyaliteButtonBlock extends InjectedStoneButtonBlock implements IColoredBlock {
+public class PolishedMyaliteButtonBlock extends DifferStoneButtonBlock implements IColoredBlock {
 
 	public PolishedMyaliteButtonBlock(Properties properties) {
 		super(properties);

@@ -3,6 +3,7 @@ package co.eltrut.lepton.common.blocks;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import co.eltrut.differentiate.common.block.wood.LogSlabBlock;
 import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

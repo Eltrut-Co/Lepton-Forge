@@ -1,7 +1,13 @@
 package co.eltrut.lepton.core.registry;
 
 import co.eltrut.differentiate.common.block.DifferStairsBlock;
+import co.eltrut.differentiate.common.block.DifferStoneButtonBlock;
+import co.eltrut.differentiate.common.block.StonePressurePlateBlock;
 import co.eltrut.differentiate.common.block.VerticalSlabBlock;
+import co.eltrut.differentiate.common.block.wood.LogSlabBlock;
+import co.eltrut.differentiate.common.block.wood.LogStairsBlock;
+import co.eltrut.differentiate.common.block.wood.LogVerticalSlabBlock;
+import co.eltrut.differentiate.common.block.wood.LogWallBlock;
 import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.lepton.common.blocks.AlphaLogSlabBlock;
@@ -12,19 +18,12 @@ import co.eltrut.lepton.common.blocks.AlphaStrippedLogSlabBlock;
 import co.eltrut.lepton.common.blocks.AlphaStrippedLogStairsBlock;
 import co.eltrut.lepton.common.blocks.AlphaStrippedLogVerticalSlabBlock;
 import co.eltrut.lepton.common.blocks.AlphaStrippedLogWallBlock;
-import co.eltrut.lepton.common.blocks.InjectedPressurePlateBlock;
-import co.eltrut.lepton.common.blocks.InjectedStoneButtonBlock;
-import co.eltrut.lepton.common.blocks.LogSlabBlock;
-import co.eltrut.lepton.common.blocks.LogStairsBlock;
-import co.eltrut.lepton.common.blocks.LogVerticalSlabBlock;
-import co.eltrut.lepton.common.blocks.LogWallBlock;
 import co.eltrut.lepton.common.blocks.PolishedMyaliteButtonBlock;
 import co.eltrut.lepton.common.blocks.PolishedMyalitePressurePlateBlock;
 import co.eltrut.lepton.common.blocks.PolishedMyaliteWallBlock;
 import co.eltrut.lepton.core.Lepton;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.WallBlock;
@@ -145,14 +144,14 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_WALL = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_wall", () -> new WallBlock(Block.Properties.from(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), ItemGroup.DECORATIONS);
 	
 	// Vanilla Buttons
-	public static final RegistryObject<Block> POLISHED_ANDESITE_BUTTON = HELPER.createSimpleBlock("polished_andesite_button", () -> new InjectedStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> POLISHED_DIORITE_BUTTON = HELPER.createSimpleBlock("polished_diorite_button", () -> new InjectedStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> POLISHED_GRANITE_BUTTON = HELPER.createSimpleBlock("polished_granite_button", () -> new InjectedStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> POLISHED_ANDESITE_BUTTON = HELPER.createSimpleBlock("polished_andesite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> POLISHED_DIORITE_BUTTON = HELPER.createSimpleBlock("polished_diorite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> POLISHED_GRANITE_BUTTON = HELPER.createSimpleBlock("polished_granite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
 	
 	// Vanilla Pressure Plates
-	public static final RegistryObject<Block> POLISHED_ANDESITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_andesite_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.ANDESITE_PRESSURE_PLATE), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> POLISHED_DIORITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_diorite_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.DIORITE_PRESSURE_PLATE), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> POLISHED_GRANITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_granite_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.GRANITE_PRESSURE_PLATE), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> POLISHED_ANDESITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_andesite_pressure_plate", () -> new StonePressurePlateBlock(Properties.ANDESITE_PRESSURE_PLATE), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> POLISHED_DIORITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_diorite_pressure_plate", () -> new StonePressurePlateBlock(Properties.DIORITE_PRESSURE_PLATE), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> POLISHED_GRANITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_granite_pressure_plate", () -> new StonePressurePlateBlock(Properties.GRANITE_PRESSURE_PLATE), ItemGroup.REDSTONE);
 	
 	// Cracked Soul Sandstone
 	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE = HELPER.createSimpleBlock("cracked_soul_sandstone", () -> new Block(Properties.SOUL_SANDSTONE), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
@@ -214,20 +213,20 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> BIOTITE_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("biotite_brick_vertical_slab", () -> new VerticalSlabBlock(Properties.BIOTITE), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
 	
 	// Quark Buttons
-	public static final RegistryObject<Block> POLISHED_MARBLE_BUTTON = HELPER.createSimpleBlock("polished_marble_button", () -> new InjectedStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_LIMESTONE_BUTTON = HELPER.createSimpleBlock("polished_limestone_button", () -> new InjectedStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_JASPER_BUTTON = HELPER.createSimpleBlock("polished_jasper_button", () -> new InjectedStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_SLATE_BUTTON = HELPER.createSimpleBlock("polished_slate_button", () -> new InjectedStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_VOIDSTONE_BUTTON = HELPER.createSimpleBlock("polished_voidstone_button", () -> new InjectedStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_MARBLE_BUTTON = HELPER.createSimpleBlock("polished_marble_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_LIMESTONE_BUTTON = HELPER.createSimpleBlock("polished_limestone_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_JASPER_BUTTON = HELPER.createSimpleBlock("polished_jasper_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_SLATE_BUTTON = HELPER.createSimpleBlock("polished_slate_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_VOIDSTONE_BUTTON = HELPER.createSimpleBlock("polished_voidstone_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_MYALITE_BUTTON = HELPER.createSimpleBlock("polished_myalite_button", () -> new PolishedMyaliteButtonBlock(LeptonBlocks.Properties.BUTTON), ItemGroup.REDSTONE, Mods.QUARK);
 	
 	// Quark Pressure Plates
-	public static final RegistryObject<Block> POLISHED_MARBLE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_marble_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.MARBLE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_limestone_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.LIMESTONE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_jasper_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.JASPER_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_SLATE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_slate_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.SLATE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_VOIDSTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_voidstone_pressure_plate", () -> new InjectedPressurePlateBlock(Sensitivity.MOBS, Properties.VOIDSTONE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_myalite_pressure_plate", () -> new PolishedMyalitePressurePlateBlock(Sensitivity.MOBS, Properties.MYALITE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_MARBLE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_marble_pressure_plate", () -> new StonePressurePlateBlock(Properties.MARBLE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_limestone_pressure_plate", () -> new StonePressurePlateBlock(Properties.LIMESTONE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_jasper_pressure_plate", () -> new StonePressurePlateBlock(Properties.JASPER_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_SLATE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_slate_pressure_plate", () -> new StonePressurePlateBlock(Properties.SLATE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_VOIDSTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_voidstone_pressure_plate", () -> new StonePressurePlateBlock(Properties.VOIDSTONE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_myalite_pressure_plate", () -> new PolishedMyalitePressurePlateBlock(Properties.MYALITE_PRESSURE_PLATE), ItemGroup.REDSTONE, Mods.QUARK);
 	
 	// Atmospheric
 	public static final RegistryObject<Block> CRACKED_ARID_SANDSTONE = HELPER.createSimpleBlock("cracked_arid_sandstone", () -> new Block(Block.Properties.from(Blocks.SANDSTONE)), ItemGroup.BUILDING_BLOCKS, Mods.ATMOSPHERIC);
