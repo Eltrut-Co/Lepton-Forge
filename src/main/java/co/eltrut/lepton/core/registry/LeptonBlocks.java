@@ -14,10 +14,6 @@ import co.eltrut.lepton.common.blocks.AlphaLogSlabBlock;
 import co.eltrut.lepton.common.blocks.AlphaLogStairsBlock;
 import co.eltrut.lepton.common.blocks.AlphaLogVerticalSlabBlock;
 import co.eltrut.lepton.common.blocks.AlphaLogWallBlock;
-import co.eltrut.lepton.common.blocks.AlphaStrippedLogSlabBlock;
-import co.eltrut.lepton.common.blocks.AlphaStrippedLogStairsBlock;
-import co.eltrut.lepton.common.blocks.AlphaStrippedLogVerticalSlabBlock;
-import co.eltrut.lepton.common.blocks.AlphaStrippedLogWallBlock;
 import co.eltrut.lepton.common.blocks.PolishedMyaliteButtonBlock;
 import co.eltrut.lepton.common.blocks.PolishedMyalitePressurePlateBlock;
 import co.eltrut.lepton.common.blocks.PolishedMyaliteWallBlock;
@@ -373,10 +369,10 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> BROWN_MUSHROOM_HYPHAE_WALL = HELPER.createSimpleBlock("brown_mushroom_hyphae_wall", () -> new LogWallBlock(STRIPPED_BROWN_MUSHROOM_HYPHAE_WALL, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, Mods.ENHANCED_MUSHROOMS);
 	public static final RegistryObject<Block> BROWN_MUSHROOM_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("brown_mushroom_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_BROWN_MUSHROOM_HYPHAE_VERTICAL_SLAB, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS, Mods.QUARK);
 	
-	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_SLAB = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_slab", () -> new AlphaStrippedLogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS);
-	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_STAIRS = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_stairs", () -> new AlphaStrippedLogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS);
-	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_WALL = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_wall", () -> new AlphaStrippedLogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.DECORATIONS, Mods.ENHANCED_MUSHROOMS);
-	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_vertical_slab", () -> new AlphaStrippedLogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS, Mods.QUARK);
+	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_SLAB = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_slab", () -> new AlphaLogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS);
+	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_STAIRS = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_stairs", () -> new AlphaLogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS);
+	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_WALL = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_wall", () -> new AlphaLogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.DECORATIONS, Mods.ENHANCED_MUSHROOMS);
+	public static final RegistryObject<Block> STRIPPED_GLOWSHROOM_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("stripped_glowshroom_hyphae_vertical_slab", () -> new AlphaLogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS, Mods.QUARK);
 	
 	public static final RegistryObject<Block> GLOWSHROOM_HYPHAE_SLAB = HELPER.createSimpleBlock("glowshroom_hyphae_slab", () -> new AlphaLogSlabBlock(STRIPPED_GLOWSHROOM_HYPHAE_SLAB, Block.Properties.from(Blocks.OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS);
 	public static final RegistryObject<Block> GLOWSHROOM_HYPHAE_STAIRS = HELPER.createSimpleBlock("glowshroom_hyphae_stairs", () -> new AlphaLogStairsBlock(STRIPPED_GLOWSHROOM_HYPHAE_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, Mods.ENHANCED_MUSHROOMS);

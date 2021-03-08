@@ -21,6 +21,10 @@ public class AlphaLogStairsBlock extends LogStairsBlock implements IRenderTypeBl
 		super(strippedBlock, state, properties);
 	}
 	
+	public AlphaLogStairsBlock(Supplier<BlockState> state, Properties properties) {
+		super(state, properties);
+	}
+	
     @Override
     public boolean isSideInvisible(BlockState bs1, BlockState bs2, Direction side) {
         return bs1 == bs2;

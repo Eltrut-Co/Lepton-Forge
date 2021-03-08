@@ -21,9 +21,13 @@ public class AlphaLogWallBlock extends LogWallBlock implements IRenderTypeBlock 
 		super(strippedBlock, properties);
 	}
 	
+	public AlphaLogWallBlock(Properties properties) {
+		super(properties);
+	}
+	
     @Override
     public boolean isSideInvisible(BlockState bs1, BlockState bs2, Direction side) {
-        return bs1 == bs2 || bs2.getBlock() instanceof AlphaLogWallBlock || bs2.getBlock() instanceof AlphaStrippedLogWallBlock;
+        return bs1 == bs2 || bs2.getBlock() instanceof AlphaLogWallBlock;
     }
 	
 	// Quark copy-paste for consistency

@@ -19,7 +19,10 @@ public class AlphaLogVerticalSlabBlock extends LogVerticalSlabBlock implements I
 
 	public AlphaLogVerticalSlabBlock(Supplier<Block> strippedBlock, Properties properties) {
 		super(strippedBlock, properties);
-		// TODO Auto-generated constructor stub
+	}
+	
+	public AlphaLogVerticalSlabBlock(Properties properties) {
+		super(properties);
 	}
 	
 	@Override

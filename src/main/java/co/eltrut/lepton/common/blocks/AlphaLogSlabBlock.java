@@ -20,6 +20,10 @@ public class AlphaLogSlabBlock extends LogSlabBlock implements IRenderTypeBlock 
 	public AlphaLogSlabBlock(Supplier<Block> strippedBlock, Properties properties) {
 		super(strippedBlock, properties);
 	}
+	
+	public AlphaLogSlabBlock(Properties properties) {
+		super(properties);
+	}
 
     @Override
     public boolean isSideInvisible(BlockState bs1, BlockState bs2, Direction side) {
