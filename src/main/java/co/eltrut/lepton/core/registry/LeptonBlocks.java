@@ -73,6 +73,7 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> QUARTZ_BRICK_SLAB = HELPER.createSimpleBlock("quartz_brick_slab", () -> new SlabBlock(Block.Properties.from(Blocks.QUARTZ_BRICKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_SLAB = HELPER.createSimpleBlock("cracked_nether_brick_slab", () -> new SlabBlock(Block.Properties.from(Blocks.CRACKED_NETHER_BRICKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_slab", () -> new SlabBlock(Block.Properties.from(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> GILDED_BLACKSTONE_SLAB = HELPER.createSimpleBlock("gilded_blackstone_slab", () -> new SlabBlock(Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.BUILDING_BLOCKS);
 	
 	// Vanilla Stairs
 	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_acacia_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_ACACIA_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_ACACIA_WOOD)), ItemGroup.BUILDING_BLOCKS, 300);
@@ -100,7 +101,8 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> QUARTZ_BRICK_STAIRS = HELPER.createSimpleBlock("quartz_brick_stairs", () -> new DifferStairsBlock(Blocks.QUARTZ_BRICKS::getDefaultState, Block.Properties.from(Blocks.QUARTZ_BRICKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_STAIRS = HELPER.createSimpleBlock("cracked_nether_brick_stairs", () -> new DifferStairsBlock(Blocks.CRACKED_NETHER_BRICKS::getDefaultState, Block.Properties.from(Blocks.CRACKED_NETHER_BRICKS)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_stairs", () -> new DifferStairsBlock(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS::getDefaultState, Block.Properties.from(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), ItemGroup.BUILDING_BLOCKS);
-
+	public static final RegistryObject<Block> GILDED_BLACKSTONE_STAIRS = HELPER.createSimpleBlock("gilded_blackstone_stairs", () -> new DifferStairsBlock(Blocks.GILDED_BLACKSTONE::getDefaultState, Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.BUILDING_BLOCKS);
+	
 	// Vanilla Walls
 	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_acacia_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_ACACIA_WOOD)), ItemGroup.DECORATIONS, 300);
 	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_birch_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_BIRCH_WOOD)), ItemGroup.DECORATIONS, 300);
@@ -138,6 +140,7 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> QUARTZ_BRICK_WALL = HELPER.createSimpleBlock("quartz_brick_wall", () -> new WallBlock(Block.Properties.from(Blocks.QUARTZ_BRICKS)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_WALL = HELPER.createSimpleBlock("cracked_nether_brick_wall", () -> new WallBlock(Block.Properties.from(Blocks.CRACKED_NETHER_BRICKS)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_WALL = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_wall", () -> new WallBlock(Block.Properties.from(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> GILDED_BLACKSTONE_WALL = HELPER.createSimpleBlock("gilded_blackstone_wall", () -> new WallBlock(Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.DECORATIONS);
 	
 	// Vanilla Buttons
 	public static final RegistryObject<Block> POLISHED_ANDESITE_BUTTON = HELPER.createSimpleBlock("polished_andesite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), ItemGroup.REDSTONE);
@@ -205,7 +208,8 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> QUARTZ_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("quartz_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.QUARTZ_BRICKS)), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
 	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_nether_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.CRACKED_NETHER_BRICKS)), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
 	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
-	
+	public static final RegistryObject<Block> GILDED_BLACKSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("gilded_blackstone_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
+
 	public static final RegistryObject<Block> BIOTITE_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("biotite_brick_vertical_slab", () -> new VerticalSlabBlock(Properties.BIOTITE), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
 	
 	// Quark Buttons
@@ -347,6 +351,37 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> RIVER_WOOD_STAIRS = HELPER.createSimpleFuelBlock("river_wood_stairs", () -> new LogStairsBlock(STRIPPED_RIVER_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.UPGRADE_AQUATIC);
 	public static final RegistryObject<Block> RIVER_WOOD_WALL = HELPER.createSimpleFuelBlock("river_wood_wall", () -> new LogWallBlock(STRIPPED_RIVER_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.UPGRADE_AQUATIC);
 	public static final RegistryObject<Block> RIVER_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("river_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_RIVER_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.UPGRADE_AQUATIC, Mods.QUARK);
+	
+	// Environmental
+	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+
+	public static final RegistryObject<Block> WISTERIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("wisteria_wood_slab", () -> new LogSlabBlock(STRIPPED_WISTERIA_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> WISTERIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("wisteria_wood_stairs", () -> new LogStairsBlock(STRIPPED_WISTERIA_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> WISTERIA_WOOD_WALL = HELPER.createSimpleFuelBlock("wisteria_wood_wall", () -> new LogWallBlock(STRIPPED_WISTERIA_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> WISTERIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("wisteria_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_WISTERIA_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+
+	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_cherry_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_cherry_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_cherry_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_cherry_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+
+	public static final RegistryObject<Block> CHERRY_WOOD_SLAB = HELPER.createSimpleFuelBlock("cherry_wood_slab", () -> new LogSlabBlock(STRIPPED_CHERRY_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> CHERRY_WOOD_STAIRS = HELPER.createSimpleFuelBlock("cherry_wood_stairs", () -> new LogStairsBlock(STRIPPED_CHERRY_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> CHERRY_WOOD_WALL = HELPER.createSimpleFuelBlock("cherry_wood_wall", () -> new LogWallBlock(STRIPPED_CHERRY_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> CHERRY_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("cherry_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_CHERRY_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+
+	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_willow_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_willow_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_willow_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_willow_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+
+	public static final RegistryObject<Block> WILLOW_WOOD_SLAB = HELPER.createSimpleFuelBlock("willow_wood_slab", () -> new LogSlabBlock(STRIPPED_WILLOW_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> WILLOW_WOOD_STAIRS = HELPER.createSimpleFuelBlock("willow_wood_stairs", () -> new LogStairsBlock(STRIPPED_WILLOW_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> WILLOW_WOOD_WALL = HELPER.createSimpleFuelBlock("willow_wood_wall", () -> new LogWallBlock(STRIPPED_WILLOW_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
+	public static final RegistryObject<Block> WILLOW_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("willow_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_WILLOW_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
 
 	// Enhanced Mushrooms
 	public static final RegistryObject<Block> STRIPPED_RED_MUSHROOM_HYPHAE_SLAB = HELPER.createSimpleFuelBlock("stripped_red_mushroom_hyphae_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENHANCED_MUSHROOMS);
@@ -379,42 +414,38 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> GLOWSHROOM_HYPHAE_WALL = HELPER.createSimpleFuelBlock("glowshroom_hyphae_wall", () -> new AlphaLogWallBlock(STRIPPED_GLOWSHROOM_HYPHAE_WALL, Block.Properties.from(Blocks.OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.DECORATIONS, 300, Mods.ENHANCED_MUSHROOMS);
 	public static final RegistryObject<Block> GLOWSHROOM_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("glowshroom_hyphae_vertical_slab", () -> new AlphaLogVerticalSlabBlock(STRIPPED_GLOWSHROOM_HYPHAE_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD).notSolid().setLightLevel(value -> 14)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENHANCED_MUSHROOMS, Mods.QUARK);
 
-	// Environmental
-	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_WISTERIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_wisteria_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+	// Abundance
+	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
 
-	public static final RegistryObject<Block> WISTERIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("wisteria_wood_slab", () -> new LogSlabBlock(STRIPPED_WISTERIA_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> WISTERIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("wisteria_wood_stairs", () -> new LogStairsBlock(STRIPPED_WISTERIA_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> WISTERIA_WOOD_WALL = HELPER.createSimpleFuelBlock("wisteria_wood_wall", () -> new LogWallBlock(STRIPPED_WISTERIA_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> WISTERIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("wisteria_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_WISTERIA_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+	public static final RegistryObject<Block> JACARANDA_WOOD_SLAB = HELPER.createSimpleFuelBlock("jacaranda_wood_slab", () -> new LogSlabBlock(STRIPPED_JACARANDA_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> JACARANDA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("jacaranda_wood_stairs", () -> new LogStairsBlock(STRIPPED_JACARANDA_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> JACARANDA_WOOD_WALL = HELPER.createSimpleFuelBlock("jacaranda_wood_wall", () -> new LogWallBlock(STRIPPED_JACARANDA_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> JACARANDA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("jacaranda_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_JACARANDA_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
+		
+	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_redbud_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_redbud_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_redbud_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_redbud_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
 
-	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_cherry_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_cherry_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_cherry_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_cherry_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
+	public static final RegistryObject<Block> REDBUD_WOOD_SLAB = HELPER.createSimpleFuelBlock("redbud_wood_slab", () -> new LogSlabBlock(STRIPPED_REDBUD_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> REDBUD_WOOD_STAIRS = HELPER.createSimpleFuelBlock("redbud_wood_stairs", () -> new LogStairsBlock(STRIPPED_REDBUD_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> REDBUD_WOOD_WALL = HELPER.createSimpleFuelBlock("redbud_wood_wall", () -> new LogWallBlock(STRIPPED_REDBUD_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
+	public static final RegistryObject<Block> REDBUD_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("redbud_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_REDBUD_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
+		
+	// Bayou Blues
+	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_cypress_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES);
+	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_cypress_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.BAYOU_BLUES);
+	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_cypress_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.BAYOU_BLUES);
+	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_cypress_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES, Mods.QUARK);
 
-	public static final RegistryObject<Block> CHERRY_WOOD_SLAB = HELPER.createSimpleFuelBlock("cherry_wood_slab", () -> new LogSlabBlock(STRIPPED_CHERRY_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> CHERRY_WOOD_STAIRS = HELPER.createSimpleFuelBlock("cherry_wood_stairs", () -> new LogStairsBlock(STRIPPED_CHERRY_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> CHERRY_WOOD_WALL = HELPER.createSimpleFuelBlock("cherry_wood_wall", () -> new LogWallBlock(STRIPPED_CHERRY_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> CHERRY_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("cherry_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_CHERRY_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
-
-	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_willow_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_willow_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_willow_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> STRIPPED_WILLOW_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_willow_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
-
-	public static final RegistryObject<Block> WILLOW_WOOD_SLAB = HELPER.createSimpleFuelBlock("willow_wood_slab", () -> new LogSlabBlock(STRIPPED_WILLOW_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> WILLOW_WOOD_STAIRS = HELPER.createSimpleFuelBlock("willow_wood_stairs", () -> new LogStairsBlock(STRIPPED_WILLOW_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> WILLOW_WOOD_WALL = HELPER.createSimpleFuelBlock("willow_wood_wall", () -> new LogWallBlock(STRIPPED_WILLOW_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ENVIRONMENTAL);
-	public static final RegistryObject<Block> WILLOW_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("willow_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_WILLOW_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ENVIRONMENTAL, Mods.QUARK);
-
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_SLAB = HELPER.createSimpleBlock("gilded_blackstone_slab", () -> new SlabBlock(Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.BUILDING_BLOCKS);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_STAIRS = HELPER.createSimpleBlock("gilded_blackstone_stairs", () -> new DifferStairsBlock(Blocks.GILDED_BLACKSTONE::getDefaultState, Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.BUILDING_BLOCKS);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_WALL = HELPER.createSimpleBlock("gilded_blackstone_wall", () -> new WallBlock(Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("gilded_blackstone_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.from(Blocks.GILDED_BLACKSTONE)), ItemGroup.BUILDING_BLOCKS, Mods.QUARK);
-
+	public static final RegistryObject<Block> CYPRESS_WOOD_SLAB = HELPER.createSimpleFuelBlock("cypress_wood_slab", () -> new LogSlabBlock(STRIPPED_CYPRESS_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES);
+	public static final RegistryObject<Block> CYPRESS_WOOD_STAIRS = HELPER.createSimpleFuelBlock("cypress_wood_stairs", () -> new LogStairsBlock(STRIPPED_CYPRESS_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.BAYOU_BLUES);
+	public static final RegistryObject<Block> CYPRESS_WOOD_WALL = HELPER.createSimpleFuelBlock("cypress_wood_wall", () -> new LogWallBlock(STRIPPED_CYPRESS_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.BAYOU_BLUES);
+	public static final RegistryObject<Block> CYPRESS_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("cypress_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_CYPRESS_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES, Mods.QUARK);
+		
 	// Infernal Expansion
 	public static final RegistryObject<Block> CRACKED_GLOWDUST_SANDSTONE = HELPER.createSimpleBlock("cracked_glowdust_sandstone", () -> new Block(Block.Properties.from(Blocks.SANDSTONE).setLightLevel(value -> 8)), ItemGroup.BUILDING_BLOCKS, "infernalexp");
 	public static final RegistryObject<Block> CRACKED_GLOWDUST_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_glowdust_sandstone_slab", () -> new SlabBlock(Block.Properties.from(Blocks.SANDSTONE).setLightLevel(value -> 8)), ItemGroup.BUILDING_BLOCKS, "infernalexp");
@@ -428,38 +459,6 @@ public class LeptonBlocks {
 	
 	// Outer End
 	public static final RegistryObject<Block> HIMMEL_WALL = HELPER.createSimpleBlock("himmel_wall", () -> new WallBlock(Block.Properties.from(Blocks.PURPUR_BLOCK)), ItemGroup.DECORATIONS, "outer_end");
-	
-	// Abundance
-	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> STRIPPED_JACARANDA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_jacaranda_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
-
-	public static final RegistryObject<Block> JACARANDA_WOOD_SLAB = HELPER.createSimpleFuelBlock("jacaranda_wood_slab", () -> new LogSlabBlock(STRIPPED_JACARANDA_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> JACARANDA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("jacaranda_wood_stairs", () -> new LogStairsBlock(STRIPPED_JACARANDA_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> JACARANDA_WOOD_WALL = HELPER.createSimpleFuelBlock("jacaranda_wood_wall", () -> new LogWallBlock(STRIPPED_JACARANDA_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> JACARANDA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("jacaranda_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_JACARANDA_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
-	
-	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_redbud_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_redbud_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_redbud_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_redbud_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
-
-	public static final RegistryObject<Block> REDBUD_WOOD_SLAB = HELPER.createSimpleFuelBlock("redbud_wood_slab", () -> new LogSlabBlock(STRIPPED_REDBUD_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> REDBUD_WOOD_STAIRS = HELPER.createSimpleFuelBlock("redbud_wood_stairs", () -> new LogStairsBlock(STRIPPED_REDBUD_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> REDBUD_WOOD_WALL = HELPER.createSimpleFuelBlock("redbud_wood_wall", () -> new LogWallBlock(STRIPPED_REDBUD_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.ABUNDANCE);
-	public static final RegistryObject<Block> REDBUD_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("redbud_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_REDBUD_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.ABUNDANCE, Mods.QUARK);
-	
-	// Bayou Blues
-	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_cypress_wood_slab", () -> new LogSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES);
-	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_cypress_wood_stairs", () -> new LogStairsBlock(Blocks.STRIPPED_OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.BAYOU_BLUES);
-	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_cypress_wood_wall", () -> new LogWallBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.BAYOU_BLUES);
-	public static final RegistryObject<Block> STRIPPED_CYPRESS_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_cypress_wood_vertical_slab", () -> new LogVerticalSlabBlock(Block.Properties.from(Blocks.STRIPPED_OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES, Mods.QUARK);
-
-	public static final RegistryObject<Block> CYPRESS_WOOD_SLAB = HELPER.createSimpleFuelBlock("cypress_wood_slab", () -> new LogSlabBlock(STRIPPED_CYPRESS_WOOD_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES);
-	public static final RegistryObject<Block> CYPRESS_WOOD_STAIRS = HELPER.createSimpleFuelBlock("cypress_wood_stairs", () -> new LogStairsBlock(STRIPPED_CYPRESS_WOOD_STAIRS, Blocks.OAK_WOOD::getDefaultState, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 300, Mods.BAYOU_BLUES);
-	public static final RegistryObject<Block> CYPRESS_WOOD_WALL = HELPER.createSimpleFuelBlock("cypress_wood_wall", () -> new LogWallBlock(STRIPPED_CYPRESS_WOOD_WALL, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.DECORATIONS, 300, Mods.BAYOU_BLUES);
-	public static final RegistryObject<Block> CYPRESS_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("cypress_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_CYPRESS_WOOD_VERTICAL_SLAB, Block.Properties.from(Blocks.OAK_WOOD)), ItemGroup.BUILDING_BLOCKS, 150, Mods.BAYOU_BLUES, Mods.QUARK);
 	
 	public static class Properties {
 		
