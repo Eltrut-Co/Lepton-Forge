@@ -1,0 +1,18 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "minecraft:spruce_wood"
+  },
+  "result": "lepton:spruce_wood_vertical_slab",
+  "count": 2,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "differentiate:flag",
+      "flag": "vertical_slabs"
+    }
+  ]
+}

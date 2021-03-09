@@ -1,0 +1,22 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "atmospheric:grimwood"
+  },
+  "result": "lepton:grimwood_vertical_slab",
+  "count": 2,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "mod": "atmospheric"
+    },
+    {
+      "type": "differentiate:flag",
+      "flag": "vertical_slabs"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "abundance:jacaranda_wood"
+  },
+  "result": "lepton:jacaranda_wood_vertical_slab",
+  "count": 2,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "mod": "abundance"
+    },
+    {
+      "type": "differentiate:flag",
+      "flag": "vertical_slabs"
+    }
+  ]
+}

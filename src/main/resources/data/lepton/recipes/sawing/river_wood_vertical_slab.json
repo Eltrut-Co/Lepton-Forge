@@ -1,0 +1,22 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "upgrade_aquatic:river_wood"
+  },
+  "result": "lepton:river_wood_vertical_slab",
+  "count": 2,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "mod": "upgrade_aquatic"
+    },
+    {
+      "type": "differentiate:flag",
+      "flag": "vertical_slabs"
+    }
+  ]
+}

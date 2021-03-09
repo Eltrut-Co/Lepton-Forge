@@ -1,0 +1,18 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "endergetic:poise_wood"
+  },
+  "result": "lepton:poise_wood_stairs",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "mod": "endergetic"
+    }
+  ]
+}

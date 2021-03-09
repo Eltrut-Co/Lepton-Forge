@@ -1,0 +1,14 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "environmental:willow_wood"
+  },
+  "result": "lepton:willow_wood_wall",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    }
+  ]
+}
