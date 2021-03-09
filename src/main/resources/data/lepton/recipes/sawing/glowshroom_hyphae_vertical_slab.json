@@ -1,0 +1,22 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "enhanced_mushrooms:glowshroom_hyphae"
+  },
+  "result": "lepton:glowshroom_hyphae_vertical_slab",
+  "count": 2,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "mod": "enhanced_mushrooms"
+    },
+    {
+      "type": "differentiate:flag",
+      "flag": "vertical_slabs"
+    }
+  ]
+}

@@ -33,7 +33,7 @@ public class LeptonRecipes extends RecipeProvider {
 	
 	public static void generateSawingRecipes(String type, int output, Consumer<IFinishedRecipe> consumer) {
 		ForgeRegistries.BLOCKS.getValues().stream()
-		.filter(s -> (s.getRegistryName().getPath().contains("wood_" + type) && s.getRegistryName().getNamespace().equals(Mods.LEPTON)))
+		.filter(s -> ((s.getRegistryName().getPath().contains("wood_" + type) || s.getRegistryName().getPath().contains("hyphae_" + type)) && s.getRegistryName().getNamespace().equals(Mods.LEPTON)))
 		.forEach(s -> {
 			String name = s.getRegistryName().getPath();
 			String modifiedName = name.replace("stripped_", "").replace("_" + type, "");

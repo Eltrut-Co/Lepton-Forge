@@ -1,0 +1,18 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "enhanced_mushrooms:stripped_brown_mushroom_hyphae"
+  },
+  "result": "lepton:stripped_brown_mushroom_hyphae_wall",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "mod": "enhanced_mushrooms"
+    }
+  ]
+}
