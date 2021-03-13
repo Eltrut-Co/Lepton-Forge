@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "minecraft:block/oak_log",
         "top": "minecraft:block/oak_log",

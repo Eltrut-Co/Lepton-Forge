@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "abundance:block/jacaranda_log",
         "top": "abundance:block/jacaranda_log",

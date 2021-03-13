@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "atmospheric:block/grimwood_log",
         "top": "atmospheric:block/grimwood_log",

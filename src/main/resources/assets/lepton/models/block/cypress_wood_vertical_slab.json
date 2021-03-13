@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "bayou_blues:block/cypress_log",
         "top": "bayou_blues:block/cypress_log",

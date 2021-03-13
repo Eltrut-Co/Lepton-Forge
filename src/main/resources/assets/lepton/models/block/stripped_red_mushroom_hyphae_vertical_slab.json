@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "enhanced_mushrooms:block/stripped_red_mushroom_stem",
         "top": "enhanced_mushrooms:block/stripped_red_mushroom_stem",

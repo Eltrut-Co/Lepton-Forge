@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "minecraft:block/quartz_bricks",
         "top": "minecraft:block/quartz_bricks",

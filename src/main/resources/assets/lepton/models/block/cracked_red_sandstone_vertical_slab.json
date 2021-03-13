@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "minecraft:block/red_sandstone_bottom",
         "top": "minecraft:block/red_sandstone_bottom",

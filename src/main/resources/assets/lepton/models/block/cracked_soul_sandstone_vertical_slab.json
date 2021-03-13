@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "quark:block/soul_sandstone_bottom",
         "top": "quark:block/soul_sandstone_bottom",

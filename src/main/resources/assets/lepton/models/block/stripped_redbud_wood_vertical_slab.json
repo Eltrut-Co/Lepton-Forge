@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "abundance:block/stripped_redbud_log",
         "top": "abundance:block/stripped_redbud_log",

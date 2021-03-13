@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "environmental:block/stripped_willow_log",
         "top": "environmental:block/stripped_willow_log",

@@ -1,5 +1,5 @@
 {
-    "parent": "abnormals_core:block/vertical_slab",
+    "parent": "differentiate:block/vertical_slab",
     "textures": {
         "bottom": "upgrade_aquatic:block/stripped_driftwood_log",
         "top": "upgrade_aquatic:block/stripped_driftwood_log",
