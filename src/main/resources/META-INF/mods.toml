@@ -30,6 +30,6 @@ Smallest things.
 [[dependencies.lepton]]
     modId="differentiate"
     mandatory=true
-    versionRange="[0.3.0,)"
+    versionRange="[0.3.2,)"
     ordering="AFTER"
     side="BOTH"

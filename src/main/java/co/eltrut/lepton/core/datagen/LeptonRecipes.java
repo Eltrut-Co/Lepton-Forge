@@ -6,9 +6,7 @@ import java.util.function.Consumer;
 
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.differentiate.core.util.RecipeUtil;
-import co.eltrut.lepton.core.registry.LeptonBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
@@ -27,14 +25,10 @@ public class LeptonRecipes extends RecipeProvider {
 	
 	@Override
 	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-		RecipeUtil.bakingRecipe(Ingredient.fromItems(Blocks.SMOOTH_RED_SANDSTONE), LeptonBlocks.CRACKED_RED_SANDSTONE.get(), 0.5F, 100)
-			.addModCompat(Mods.ENVIRONMENTAL)
-			.build(consumer);
-		
-//		generateSawingRecipes("slab", 2, consumer);
-//		generateSawingRecipes("stairs", 1, consumer);
-//		generateSawingRecipes("wall", 1, consumer);
-//		generateSawingRecipes("vertical_slab", 2, consumer);
+		generateSawingRecipes("slab", 2, consumer);
+		generateSawingRecipes("stairs", 1, consumer);
+		generateSawingRecipes("wall", 1, consumer);
+		generateSawingRecipes("vertical_slab", 2, consumer);
 	}
 	
 	public static void generateSawingRecipes(String type, int output, Consumer<IFinishedRecipe> consumer) {
