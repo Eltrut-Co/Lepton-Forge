@@ -1,0 +1,18 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "bayou_blues:stripped_cypress_wood"
+  },
+  "result": "lepton:stripped_cypress_wood_stairs",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bayou_blues"
+    }
+  ]
+}

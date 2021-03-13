@@ -15,7 +15,7 @@
   },
   "conditions": [
     {
-      "type": "abnormals_core:quark_flag",
+      "type": "differentiate:flag",
       "flag": "soul_sandstone"
     }
   ]
