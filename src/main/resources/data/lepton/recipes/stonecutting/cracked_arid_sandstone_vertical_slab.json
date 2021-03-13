@@ -11,7 +11,7 @@
       "modid": "atmospheric"
     },
     {
-      "type": "abnormals_core:quark_flag",
+      "type": "differentiate:flag",
       "flag": "vertical_slabs"
     }
   ]
