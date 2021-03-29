@@ -3,6 +3,9 @@
   "values": [
     "lepton:polished_voidstone_wall",
 	"lepton:polished_voidstone_button",
-	"lepton:polished_voidstone_pressure_plate"
+	"lepton:polished_voidstone_pressure_plate",
+	"lepton:polished_myalite_wall",
+	"lepton:polished_myalite_button",
+	"lepton:polished_myalite_pressure_plate"
   ]
 }
