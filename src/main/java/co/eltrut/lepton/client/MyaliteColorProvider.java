@@ -32,10 +32,10 @@ public class MyaliteColorProvider {
 			if(mc.player == null)
 				return getColor(BlockPos.ZERO, myaliteS, myaliteB);
 			
-			BlockPos pos = mc.player.getPosition();
-			RayTraceResult res = mc.objectMouseOver;
+			BlockPos pos = mc.player.blockPosition();
+			RayTraceResult res = mc.hitResult;
 			if(res != null && res instanceof BlockRayTraceResult)
-				pos = ((BlockRayTraceResult) res).getPos();
+				pos = ((BlockRayTraceResult) res).getBlockPos();
 			
 			return getColor(pos, myaliteS, myaliteB);
 		};
@@ -54,7 +54,7 @@ public class MyaliteColorProvider {
 		double zv = z + Math.cos(x) * 2;
 		double yv = y + Math.sin(y + Math.PI / 4) * 2;
 		
-		double noise = NOISE.noiseAt(xv + yv, zv + (yv * 2), false);
+		double noise = NOISE.getValue(xv + yv, zv + (yv * 2), false);
 		
     	double h = noise * (range / 2) - range + shift;
 

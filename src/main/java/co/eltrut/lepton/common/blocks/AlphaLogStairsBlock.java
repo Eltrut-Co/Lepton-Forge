@@ -26,7 +26,7 @@ public class AlphaLogStairsBlock extends LogStairsBlock implements IRenderTypeBl
 	}
 	
     @Override
-    public boolean isSideInvisible(BlockState bs1, BlockState bs2, Direction side) {
+    public boolean skipRendering(BlockState bs1, BlockState bs2, Direction side) {
         return bs1 == bs2;
     }
 	
@@ -42,6 +42,6 @@ public class AlphaLogStairsBlock extends LogStairsBlock implements IRenderTypeBl
 
 	@Override
 	public RenderType getRenderType() {
-		return RenderType.getTranslucent();
+		return RenderType.translucent();
 	}
 }

@@ -24,7 +24,7 @@ public class LeptonRecipes extends RecipeProvider {
 	}
 	
 	@Override
-	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+	protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
 		generateSawingRecipes("slab", 2, consumer);
 		generateSawingRecipes("stairs", 1, consumer);
 		generateSawingRecipes("wall", 1, consumer);
@@ -41,23 +41,23 @@ public class LeptonRecipes extends RecipeProvider {
 			Block parent = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(modid, name.replace("_" + type, "")));
 			if (type == "vertical_slab") {
 				if (modid.equals("minecraft") || modid.equals(Mods.ENVIRONMENTAL)) {
-					RecipeUtil.sawingRecipe(Ingredient.fromItems(parent), s, output)
+					RecipeUtil.sawingRecipe(Ingredient.of(parent), s, output)
 						.addModCompat(Mods.ENVIRONMENTAL)
 						.addFlags("vertical_slabs")
 						.build(consumer, new ResourceLocation("lepton", "sawing/" + name));
 				} else {
-					RecipeUtil.sawingRecipe(Ingredient.fromItems(parent), s, output)
+					RecipeUtil.sawingRecipe(Ingredient.of(parent), s, output)
 						.addModCompat(Mods.ENVIRONMENTAL, modid)
 						.addFlags("vertical_slabs")
 						.build(consumer, new ResourceLocation("lepton", "sawing/" + name));
 				}
 			} else {
 				if (modid.equals("minecraft") || modid.equals(Mods.ENVIRONMENTAL)) {
-					RecipeUtil.sawingRecipe(Ingredient.fromItems(parent), s, output)
+					RecipeUtil.sawingRecipe(Ingredient.of(parent), s, output)
 						.addModCompat(Mods.ENVIRONMENTAL)
 						.build(consumer, new ResourceLocation("lepton", "sawing/" + name));
 				} else {
-					RecipeUtil.sawingRecipe(Ingredient.fromItems(parent), s, output)
+					RecipeUtil.sawingRecipe(Ingredient.of(parent), s, output)
 						.addModCompat(Mods.ENVIRONMENTAL, modid)
 						.build(consumer, new ResourceLocation("lepton", "sawing/" + name));
 				}
