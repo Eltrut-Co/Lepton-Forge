@@ -1,5 +1,5 @@
 {
-    "parent": "lepton:block/template_wall_post_tinted",
+    "parent": "differentiate:block/template_wall_post_tinted",
     "textures": {
         "wall": "quark:block/polished_myalite"
     }

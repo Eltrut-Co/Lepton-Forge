@@ -1,5 +1,5 @@
 {
-  "parent": "lepton:block/pressure_plate_up_tinted",
+  "parent": "differentiate:block/pressure_plate_up_tinted",
   "textures": {
     "texture": "quark:block/polished_myalite"
   }

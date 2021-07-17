@@ -1,5 +1,5 @@
 {
-  "parent": "lepton:block/button_pressed_tinted",
+  "parent": "differentiate:block/button_pressed_tinted",
   "textures": {
     "texture": "quark:block/polished_myalite"
   }
