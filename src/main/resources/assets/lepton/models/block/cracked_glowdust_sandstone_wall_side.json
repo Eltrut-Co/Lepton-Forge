@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/template_wall_side",
     "textures": {
-        "wall": "infernalexp:blocks/glowdust_stone"
+        "wall": "infernalexp:block/glowdust_stone"
     }
 }

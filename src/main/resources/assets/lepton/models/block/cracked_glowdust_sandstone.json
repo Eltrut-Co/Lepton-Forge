@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "infernalexp:blocks/glowdust_stone"
+        "all": "infernalexp:block/glowdust_stone"
     }
 }
