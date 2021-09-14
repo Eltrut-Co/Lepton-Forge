@@ -355,15 +355,15 @@
 	"block.lepton.gilded_blackstone_wall": "Muretto di pietranera dorata",
 	"block.lepton.gilded_blackstone_vertical_slab": "Lastra verticale di pietranera dorata",
 	
-	"block.lepton.cracked_glowdust_sandstone": "Cracked Glowdust Sandstone",
-	"block.lepton.cracked_glowdust_sandstone_slab": "Lastra di Cracked Glowdust Sandstone Slab",
-	"block.lepton.cracked_glowdust_sandstone_stairs": "Scalini di Cracked Glowdust Sandstone Stairs",
-	"block.lepton.cracked_glowdust_sandstone_wall": "Muretto di Cracked Glowdust Sandstone Wall",
-	"block.lepton.cracked_glowdust_sandstone_vertical_slab": "Lastra verticale di Cracked Glowdust Sandstone Vertical Slab",
+	"block.lepton.cracked_glowdust_sandstone": "Arenaria di lumipolvere crepata",
+	"block.lepton.cracked_glowdust_sandstone_slab": "Lastra di arenaria di lumipolvere crepata",
+	"block.lepton.cracked_glowdust_sandstone_stairs": "Scalini di arenaria di lumipolvere crepata",
+	"block.lepton.cracked_glowdust_sandstone_wall": "Muretto di arenaria di lumipolvere crepata",
+	"block.lepton.cracked_glowdust_sandstone_vertical_slab": "Lastra verticale di arenaria di lumipolvere crepata",
 	
-	"block.lepton.cut_glowdust_sandstone_stairs": "Scalini di Cut Glowdust Sandstone Stairs",
-	"block.lepton.cut_glowdust_sandstone_wall": "Muretto di Cut Glowdust Sandstone Wall",
-	"block.lepton.smooth_glowdust_sandstone_wall": "Muretto di Smooth Glowdust Sandstone Wall",
+	"block.lepton.cut_glowdust_sandstone_stairs": "Scalini di arenaria di lumipolvere incisa",
+	"block.lepton.cut_glowdust_sandstone_wall": "Muretto di arenaria di lumipolvere incisa",
+	"block.lepton.smooth_glowdust_sandstone_wall": "Muretto di arenaria di lumipolvere liscia",
 	
 	"block.lepton.himmel_wall": "Muretto himmel",
 	
