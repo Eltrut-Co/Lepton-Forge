@@ -6,12 +6,12 @@ import java.util.function.Consumer;
 
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.differentiate.core.util.RecipeUtil;
-import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class LeptonRecipes extends RecipeProvider {
@@ -24,14 +24,14 @@ public class LeptonRecipes extends RecipeProvider {
 	}
 	
 	@Override
-	protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
+	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 		generateSawingRecipes("slab", 2, consumer);
 		generateSawingRecipes("stairs", 1, consumer);
 		generateSawingRecipes("wall", 1, consumer);
 		generateSawingRecipes("vertical_slab", 2, consumer);
 	}
 	
-	public static void generateSawingRecipes(String type, int output, Consumer<IFinishedRecipe> consumer) {
+	public static void generateSawingRecipes(String type, int output, Consumer<FinishedRecipe> consumer) {
 		ForgeRegistries.BLOCKS.getValues().stream()
 		.filter(s -> ((s.getRegistryName().getPath().contains("wood_" + type) || s.getRegistryName().getPath().contains("hyphae_" + type)) && s.getRegistryName().getNamespace().equals(Mods.LEPTON)))
 		.forEach(s -> {
