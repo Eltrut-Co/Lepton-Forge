@@ -7,6 +7,8 @@ import co.eltrut.differentiate.common.block.wood.LogSlabBlock;
 import co.eltrut.differentiate.common.block.wood.LogStairBlock;
 import co.eltrut.differentiate.common.block.wood.LogVerticalSlabBlock;
 import co.eltrut.differentiate.common.block.wood.LogWallBlock;
+import co.eltrut.differentiate.common.repo.VariantBlocksRepo;
+import co.eltrut.differentiate.core.util.BlockUtil;
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.lepton.common.blocks.*;
 import co.eltrut.lepton.common.repo.WoodVariantRepo;
@@ -37,12 +39,11 @@ public class LeptonBlocks {
 	public static final WoodVariantRepo CRIMSON = HELPER.createNetherWoodVariants(Blocks.CRIMSON_HYPHAE);
 	public static final WoodVariantRepo WARPED = HELPER.createNetherWoodVariants(Blocks.WARPED_HYPHAE);
 
-	public static final RegistryObject<Block> QUARTZ_BRICK_SLAB = HELPER.createSimpleBlock("quartz_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final VariantBlocksRepo QUARTZ_BRICK = HELPER.createSimpleVariants("quartz_brick", Blocks.QUARTZ_BRICKS);
 
 	public static final RegistryObject<Block> SMOOTH_STONE_STAIRS = HELPER.createSimpleBlock("smooth_stone_stairs", () -> new StairBlock(Blocks.SMOOTH_STONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_RED_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_red_sandstone_stairs", () -> new StairBlock(Blocks.CUT_RED_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> QUARTZ_BRICK_STAIRS = HELPER.createSimpleBlock("quartz_brick_stairs", () -> new StairBlock(Blocks.QUARTZ_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 	public static final RegistryObject<Block> PURPUR_WALL = HELPER.createSimpleBlock("purpur_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> QUARTZ_WALL = HELPER.createSimpleBlock("quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)), CreativeModeTab.TAB_DECORATIONS);
@@ -58,47 +59,33 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CUT_RED_SANDSTONE_WALL = HELPER.createSimpleBlock("cut_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> SMOOTH_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> SMOOTH_RED_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_RED_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> QUARTZ_BRICK_WALL = HELPER.createSimpleBlock("quartz_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_DECORATIONS);
 
-	// Vanilla Buttons
 	public static final RegistryObject<Block> POLISHED_ANDESITE_BUTTON = HELPER.createSimpleBlock("polished_andesite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Block> POLISHED_DIORITE_BUTTON = HELPER.createSimpleBlock("polished_diorite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Block> POLISHED_GRANITE_BUTTON = HELPER.createSimpleBlock("polished_granite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE);
-	
-	// Vanilla Pressure Plates
+
 	public static final RegistryObject<Block> POLISHED_ANDESITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_andesite_pressure_plate", () -> new StonePressurePlateBlock(Properties.ANDESITE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Block> POLISHED_DIORITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_diorite_pressure_plate", () -> new StonePressurePlateBlock(Properties.DIORITE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Block> POLISHED_GRANITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_granite_pressure_plate", () -> new StonePressurePlateBlock(Properties.GRANITE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE);
-	
-	// Cracked Soul Sandstone
-	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE = HELPER.createSimpleBlock("cracked_soul_sandstone", () -> new Block(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_soul_sandstone_slab", () -> new SlabBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cracked_soul_sandstone_stairs", () -> new StairBlock(CRACKED_SOUL_SANDSTONE.get()::defaultBlockState, Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("cracked_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 
-	// Quark Stairs
-	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER::defaultBlockState, Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
+	// Quark
+	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER::defaultBlockState, BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 
-	// Quark Walls
-	public static final RegistryObject<Block> MIDORI_WALL = HELPER.createSimpleBlock("midori_wall", () -> new WallBlock(Properties.MIDORI), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = HELPER.createSimpleBlock("polished_limestone_wall", () -> new WallBlock(Properties.LIMESTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_JASPER_WALL = HELPER.createSimpleBlock("polished_jasper_wall", () -> new WallBlock(Properties.JASPER), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_SLATE_WALL = HELPER.createSimpleBlock("polished_slate_wall", () -> new WallBlock(Properties.SLATE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_MYALITE_WALL = HELPER.createSimpleBlock("polished_myalite_wall", () -> new PolishedMyaliteWallBlock(Properties.MYALITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> ELDER_PRISMARINE_BRICK_WALL = HELPER.createSimpleBlock("elder_prismarine_brick_wall", () -> new WallBlock(Properties.ELDER_PRISMARINE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> DARK_ELDER_PRISMARINE_WALL = HELPER.createSimpleBlock("dark_elder_prismarine_wall", () -> new WallBlock(Properties.ELDER_PRISMARINE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("cut_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> MIDORI_WALL = HELPER.createSimpleBlock("midori_wall", () -> new WallBlock(BlockUtil.QuarkProperties.MIDORI), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = HELPER.createSimpleBlock("polished_limestone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.LIMESTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_JASPER_WALL = HELPER.createSimpleBlock("polished_jasper_wall", () -> new WallBlock(BlockUtil.QuarkProperties.JASPER), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_SLATE_WALL = HELPER.createSimpleBlock("polished_slate_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SLATE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> POLISHED_MYALITE_WALL = HELPER.createSimpleBlock("polished_myalite_wall", () -> new PolishedMyaliteWallBlock(BlockUtil.QuarkProperties.MYALITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> ELDER_PRISMARINE_BRICK_WALL = HELPER.createSimpleBlock("elder_prismarine_brick_wall", () -> new WallBlock(BlockUtil.QuarkProperties.ELDER_PRISMARINE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> DARK_ELDER_PRISMARINE_WALL = HELPER.createSimpleBlock("dark_elder_prismarine_wall", () -> new WallBlock(BlockUtil.QuarkProperties.ELDER_PRISMARINE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("cut_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
+	public static final RegistryObject<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 
-	public static final RegistryObject<Block> QUARTZ_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("quartz_brick_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-
-	// Quark Buttons
 	public static final RegistryObject<Block> POLISHED_LIMESTONE_BUTTON = HELPER.createSimpleBlock("polished_limestone_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_JASPER_BUTTON = HELPER.createSimpleBlock("polished_jasper_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_SLATE_BUTTON = HELPER.createSimpleBlock("polished_slate_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_MYALITE_BUTTON = HELPER.createSimpleBlock("polished_myalite_button", () -> new PolishedMyaliteButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-	
-	// Quark Pressure Plates
+
 	public static final RegistryObject<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_limestone_pressure_plate", () -> new StonePressurePlateBlock(Properties.LIMESTONE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_jasper_pressure_plate", () -> new StonePressurePlateBlock(Properties.JASPER_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_SLATE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_slate_pressure_plate", () -> new StonePressurePlateBlock(Properties.SLATE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);

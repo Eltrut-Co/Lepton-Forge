@@ -1,10 +1,10 @@
 package co.eltrut.lepton.common.blocks;
 
+import co.eltrut.differentiate.client.provider.MyaliteColorProvider;
 import co.eltrut.differentiate.common.interf.IColoredBlock;
-import co.eltrut.lepton.client.MyaliteColorProvider;
-import net.minecraft.block.WallBlock;
-import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.world.level.block.WallBlock;
 
 public class PolishedMyaliteWallBlock extends WallBlock implements IColoredBlock {
 
@@ -13,12 +13,12 @@ public class PolishedMyaliteWallBlock extends WallBlock implements IColoredBlock
 	}
 
 	@Override
-	public IItemColor getItemColor() {
+	public ItemColor getItemColor() {
 		return MyaliteColorProvider.getItemColor();
 	}
 
 	@Override
-	public IBlockColor getBlockColor() {
+	public BlockColor getBlockColor() {
 		return MyaliteColorProvider.getBlockColor();
 	}
 

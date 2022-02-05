@@ -1,10 +1,10 @@
 package co.eltrut.lepton.common.blocks;
 
+import co.eltrut.differentiate.client.provider.MyaliteColorProvider;
 import co.eltrut.differentiate.common.block.DifferStoneButtonBlock;
 import co.eltrut.differentiate.common.interf.IColoredBlock;
-import co.eltrut.lepton.client.MyaliteColorProvider;
-import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.item.ItemColor;
 
 public class PolishedMyaliteButtonBlock extends DifferStoneButtonBlock implements IColoredBlock {
 
@@ -13,12 +13,12 @@ public class PolishedMyaliteButtonBlock extends DifferStoneButtonBlock implement
 	}
 
 	@Override
-	public IItemColor getItemColor() {
+	public ItemColor getItemColor() {
 		return MyaliteColorProvider.getItemColor();
 	}
 
 	@Override
-	public IBlockColor getBlockColor() {
+	public BlockColor getBlockColor() {
 		return MyaliteColorProvider.getBlockColor();
 	}
 

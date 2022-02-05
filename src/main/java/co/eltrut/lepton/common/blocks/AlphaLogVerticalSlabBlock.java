@@ -1,19 +1,19 @@
 package co.eltrut.lepton.common.blocks;
 
-import java.util.Random;
-import java.util.function.Supplier;
-
 import co.eltrut.differentiate.common.block.wood.LogVerticalSlabBlock;
 import co.eltrut.differentiate.common.interf.IRenderTypeBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.Random;
+import java.util.function.Supplier;
 
 public class AlphaLogVerticalSlabBlock extends LogVerticalSlabBlock implements IRenderTypeBlock {
 
@@ -33,7 +33,7 @@ public class AlphaLogVerticalSlabBlock extends LogVerticalSlabBlock implements I
 	// Quark copy-paste for consistency
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+    public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
         super.animateTick(stateIn, worldIn, pos, rand);
 
         if(rand.nextInt(10) == 0)
