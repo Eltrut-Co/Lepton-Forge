@@ -26,7 +26,8 @@ public class Lepton {
         modEventBus.addListener(this::doCommonStuff);
     	modEventBus.addListener(this::doClientStuff);
         instance = this;
-        
+
+        REGISTRATOR.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         
     }
