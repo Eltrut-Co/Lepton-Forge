@@ -1,7 +1,5 @@
 package co.eltrut.lepton.core;
 
-import co.eltrut.lepton.core.registrator.LeptonBlockHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,9 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class Lepton {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "lepton";
-    public static final Registrator REGISTRATOR = Registrator.create(MOD_ID, s -> {
-        s.getHelpers().put(ForgeRegistries.BLOCKS, new LeptonBlockHelper(s));
-    });
+    public static final Registrator REGISTRATOR = new Registrator(MOD_ID);
     public static Lepton instance;
 
     IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -33,7 +29,6 @@ public class Lepton {
 
         REGISTRATOR.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
-        
     }
 
     private void doCommonStuff(final FMLCommonSetupEvent event) {
