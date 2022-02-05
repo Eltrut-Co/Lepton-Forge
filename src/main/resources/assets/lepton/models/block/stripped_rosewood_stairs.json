@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "atmospheric:block/stripped_rosewood_log",
-        "top": "atmospheric:block/stripped_rosewood_log",
-        "side": "atmospheric:block/stripped_rosewood_log"
-    }
-}

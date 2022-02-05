@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "atmospheric:block/red_arid_sandstone_bottom",
-    "top": "atmospheric:block/red_arid_sandstone_bottom",
-    "side": "atmospheric:block/red_arid_sandstone_bottom"
-  }
-}

@@ -1,9 +1,0 @@
-{
-    "variants": {
- 		"type=north": { "model": "lepton:block/stripped_redbud_wood_vertical_slab", "y": 0, "uvlock": true },
- 		"type=south": { "model": "lepton:block/stripped_redbud_wood_vertical_slab", "y": 180, "uvlock": true },
-  		"type=east": { "model": "lepton:block/stripped_redbud_wood_vertical_slab", "y": 90, "uvlock": true },
- 		"type=west": { "model": "lepton:block/stripped_redbud_wood_vertical_slab", "y": 270, "uvlock": true },
-        "type=double": { "model": "abundance:block/stripped_redbud_wood" }
-    }
-}

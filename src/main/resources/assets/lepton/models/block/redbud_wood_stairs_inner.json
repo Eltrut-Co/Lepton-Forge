@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/inner_stairs",
-    "textures": {
-        "bottom": "abundance:block/redbud_log",
-        "top": "abundance:block/redbud_log",
-        "side": "abundance:block/redbud_log"
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "parent": "differentiate:block/vertical_slab",
-    "textures": {
-        "bottom": "quark:block/glowshroom_stem",
-        "top": "quark:block/glowshroom_stem",
-        "side": "quark:block/glowshroom_stem"
-    }
-}

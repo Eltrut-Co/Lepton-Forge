@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "atmospheric:block/aspen_log",
-        "top": "atmospheric:block/aspen_log",
-        "side": "atmospheric:block/aspen_log"
-    }
-}

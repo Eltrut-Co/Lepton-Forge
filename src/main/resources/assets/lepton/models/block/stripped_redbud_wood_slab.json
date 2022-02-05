@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "abundance:block/stripped_redbud_log",
-    "top": "abundance:block/stripped_redbud_log",
-    "side": "abundance:block/stripped_redbud_log"
-  }
-}

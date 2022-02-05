@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "abundance:block/jacaranda_log",
-        "top": "abundance:block/jacaranda_log",
-        "side": "abundance:block/jacaranda_log"
-    }
-}

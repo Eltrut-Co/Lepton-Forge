@@ -1,8 +1,0 @@
-{
-    "parent": "differentiate:block/vertical_slab",
-    "textures": {
-        "bottom": "atmospheric:block/arid_sandstone_bottom",
-        "top": "atmospheric:block/arid_sandstone_bottom",
-        "side": "atmospheric:block/arid_sandstone_bottom"
-    }
-}

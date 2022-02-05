@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "atmospheric:block/morado_log",
-    "top": "atmospheric:block/morado_log",
-    "side": "atmospheric:block/morado_log"
-  }
-}

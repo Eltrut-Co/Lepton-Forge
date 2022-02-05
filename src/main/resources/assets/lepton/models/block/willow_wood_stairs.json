@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "environmental:block/willow_log",
-        "top": "environmental:block/willow_log",
-        "side": "environmental:block/willow_log"
-    }
-}

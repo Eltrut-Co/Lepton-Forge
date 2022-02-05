@@ -1,8 +1,0 @@
-{
-    "parent": "lepton:block/new_template_wall_side_tall",
-    "textures": {
-        "bottom": "atmospheric:block/arid_sandstone_top",
-		"top": "atmospheric:block/arid_sandstone_top",
-		"side": "atmospheric:block/cut_arid_sandstone"
-    }
-}

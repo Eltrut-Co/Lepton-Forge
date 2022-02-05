@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/wall_inventory",
-    "textures": {
-        "wall": "bayou_blues:block/stripped_cypress_log"
-    }
-}

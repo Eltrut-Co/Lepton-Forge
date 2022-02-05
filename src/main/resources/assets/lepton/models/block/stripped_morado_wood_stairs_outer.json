@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/outer_stairs",
-    "textures": {
-        "bottom": "atmospheric:block/stripped_morado_log",
-        "top": "atmospheric:block/stripped_morado_log",
-        "side": "atmospheric:block/stripped_morado_log"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "parent": "lepton:block/new_outer_stairs",
-    "textures": {
-        "bottom": "infernalexp:blocks/glowdust_stone",
-        "top": "infernalexp:blocks/glowdust_sandstone_top",
-        "side": "infernalexp:blocks/cut_glowdust_sandstone",
-		"side2": "infernalexp:blocks/glowdust_sandstone_top"
-    }
-}

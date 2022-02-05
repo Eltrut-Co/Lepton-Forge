@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "environmental:block/wisteria_log",
-    "top": "environmental:block/wisteria_log",
-    "side": "environmental:block/wisteria_log"
-  }
-}

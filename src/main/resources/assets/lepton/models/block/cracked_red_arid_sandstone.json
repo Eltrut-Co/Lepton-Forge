@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/cube_all",
-    "textures": {
-        "all": "atmospheric:block/red_arid_sandstone_bottom"
-    }
-}

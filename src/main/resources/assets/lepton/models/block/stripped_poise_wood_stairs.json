@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "endergetic:block/poise_stem_stripped",
-        "top": "endergetic:block/poise_stem_stripped",
-        "side": "endergetic:block/poise_stem_stripped"
-    }
-}

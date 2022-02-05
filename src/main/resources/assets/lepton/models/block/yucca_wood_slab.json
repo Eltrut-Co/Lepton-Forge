@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "atmospheric:block/yucca_log",
-    "top": "atmospheric:block/yucca_log",
-    "side": "atmospheric:block/yucca_log"
-  }
-}

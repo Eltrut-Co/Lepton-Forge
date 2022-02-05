@@ -1,9 +1,0 @@
-{
-    "parent": "lepton:block/new_outer_stairs",
-    "textures": {
-        "bottom": "atmospheric:block/arid_sandstone_bottom",
-        "top": "atmospheric:block/arid_sandstone_top",
-        "side": "atmospheric:block/cut_arid_sandstone",
-		"side2": "atmospheric:block/arid_sandstone_top"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "variants": {
- 		"type=north": { "model": "lepton:block/cypress_wood_vertical_slab", "y": 0, "uvlock": true },
- 		"type=south": { "model": "lepton:block/cypress_wood_vertical_slab", "y": 180, "uvlock": true },
-  		"type=east": { "model": "lepton:block/cypress_wood_vertical_slab", "y": 90, "uvlock": true },
- 		"type=west": { "model": "lepton:block/cypress_wood_vertical_slab", "y": 270, "uvlock": true },
-        "type=double": { "model": "bayou_blues:block/cypress_wood" }
-    }
-}

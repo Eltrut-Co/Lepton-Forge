@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "bayou_blues:block/cypress_log",
-        "top": "bayou_blues:block/cypress_log",
-        "side": "bayou_blues:block/cypress_log"
-    }
-}

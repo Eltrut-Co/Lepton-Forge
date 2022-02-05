@@ -1,8 +1,0 @@
-{
-    "parent": "differentiate:block/vertical_slab",
-    "textures": {
-        "bottom": "environmental:block/stripped_cherry_log",
-        "top": "environmental:block/stripped_cherry_log",
-        "side": "environmental:block/stripped_cherry_log"
-    }
-}
