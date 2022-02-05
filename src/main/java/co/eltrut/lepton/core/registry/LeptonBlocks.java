@@ -26,20 +26,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class LeptonBlocks {
 	
 	public static final BlockHelper HELPER = Lepton.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
-	
-	// Cracked Sandstone
-	public static final RegistryObject<Block> CRACKED_SANDSTONE = HELPER.createSimpleBlock("cracked_sandstone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_RED_SANDSTONE = HELPER.createSimpleBlock("cracked_red_sandstone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
-	public static final RegistryObject<Block> CRACKED_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_RED_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_red_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
-	public static final RegistryObject<Block> CRACKED_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cracked_sandstone_stairs", () -> new StairBlock(CRACKED_SANDSTONE.get()::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_RED_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cracked_red_sandstone_stairs", () -> new StairBlock(CRACKED_RED_SANDSTONE.get()::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
-	public static final RegistryObject<Block> CRACKED_SANDSTONE_WALL = HELPER.createSimpleBlock("cracked_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> CRACKED_RED_SANDSTONE_WALL = HELPER.createSimpleBlock("cracked_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
-	
+
 	// Vanilla Slabs
 	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_acacia_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
 	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_birch_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
@@ -59,12 +46,8 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CRIMSON_HYPHAE_SLAB = HELPER.createSimpleBlock("crimson_hyphae_slab", () -> new LogSlabBlock(STRIPPED_CRIMSON_HYPHAE_SLAB, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> WARPED_HYPHAE_SLAB = HELPER.createSimpleBlock("warped_hyphae_slab", () -> new LogSlabBlock(STRIPPED_WARPED_HYPHAE_SLAB, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	
-	public static final RegistryObject<Block> CRACKED_STONE_BRICK_SLAB = HELPER.createSimpleBlock("cracked_stone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> QUARTZ_BRICK_SLAB = HELPER.createSimpleBlock("quartz_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_SLAB = HELPER.createSimpleBlock("cracked_nether_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_SLAB = HELPER.createSimpleBlock("gilded_blackstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GILDED_BLACKSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
+
 	// Vanilla Stairs
 	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_acacia_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
 	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_birch_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
@@ -87,12 +70,8 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> SMOOTH_STONE_STAIRS = HELPER.createSimpleBlock("smooth_stone_stairs", () -> new StairBlock(Blocks.SMOOTH_STONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_RED_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_red_sandstone_stairs", () -> new StairBlock(Blocks.CUT_RED_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_STONE_BRICK_STAIRS = HELPER.createSimpleBlock("cracked_stone_brick_stairs", () -> new StairBlock(Blocks.CRACKED_STONE_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> QUARTZ_BRICK_STAIRS = HELPER.createSimpleBlock("quartz_brick_stairs", () -> new StairBlock(Blocks.QUARTZ_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_STAIRS = HELPER.createSimpleBlock("cracked_nether_brick_stairs", () -> new StairBlock(Blocks.CRACKED_NETHER_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_stairs", () -> new StairBlock(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_STAIRS = HELPER.createSimpleBlock("gilded_blackstone_stairs", () -> new StairBlock(Blocks.GILDED_BLACKSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.GILDED_BLACKSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
+
 	// Vanilla Walls
 	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_acacia_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
 	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_birch_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
@@ -126,12 +105,8 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CUT_RED_SANDSTONE_WALL = HELPER.createSimpleBlock("cut_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> SMOOTH_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> SMOOTH_RED_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_RED_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> CRACKED_STONE_BRICK_WALL = HELPER.createSimpleBlock("cracked_stone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> QUARTZ_BRICK_WALL = HELPER.createSimpleBlock("quartz_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_WALL = HELPER.createSimpleBlock("cracked_nether_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_WALL = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_WALL = HELPER.createSimpleBlock("gilded_blackstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.GILDED_BLACKSTONE)), CreativeModeTab.TAB_DECORATIONS);
-	
+
 	// Vanilla Buttons
 	public static final RegistryObject<Block> POLISHED_ANDESITE_BUTTON = HELPER.createSimpleBlock("polished_andesite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Block> POLISHED_DIORITE_BUTTON = HELPER.createSimpleBlock("polished_diorite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE);
@@ -147,35 +122,22 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_soul_sandstone_slab", () -> new SlabBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cracked_soul_sandstone_stairs", () -> new StairBlock(CRACKED_SOUL_SANDSTONE.get()::defaultBlockState, Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("cracked_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	
-	// Quark Slabs
-	public static final RegistryObject<Block> BIOTITE_BRICK_SLAB = HELPER.createSimpleBlock("biotite_brick_slab", () -> new SlabBlock(BlockUtil.QuarkProperties.BIOTITE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	
+
 	// Quark Stairs
 	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER::defaultBlockState, Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> BIOTITE_BRICK_STAIRS = HELPER.createSimpleBlock("biotite_brick_stairs", () -> new StairBlock(Blocks.COAL_BLOCK::defaultBlockState, Properties.BIOTITE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	
+
 	// Quark Walls
 	public static final RegistryObject<Block> MIDORI_WALL = HELPER.createSimpleBlock("midori_wall", () -> new WallBlock(Properties.MIDORI), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> BIOTITE_WALL = HELPER.createSimpleBlock("biotite_wall", () -> new WallBlock(Properties.BIOTITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> SMOOTH_BIOTITE_WALL = HELPER.createSimpleBlock("smooth_biotite_wall", () -> new WallBlock(Properties.BIOTITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_MARBLE_WALL = HELPER.createSimpleBlock("polished_marble_wall", () -> new WallBlock(Properties.MARBLE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_LIMESTONE_WALL = HELPER.createSimpleBlock("polished_limestone_wall", () -> new WallBlock(Properties.LIMESTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_JASPER_WALL = HELPER.createSimpleBlock("polished_jasper_wall", () -> new WallBlock(Properties.JASPER), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_SLATE_WALL = HELPER.createSimpleBlock("polished_slate_wall", () -> new WallBlock(Properties.SLATE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_VOIDSTONE_WALL = HELPER.createSimpleBlock("polished_voidstone_wall", () -> new WallBlock(Properties.VOIDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_MYALITE_WALL = HELPER.createSimpleBlock("polished_myalite_wall", () -> new PolishedMyaliteWallBlock(Properties.MYALITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> ELDER_PRISMARINE_BRICK_WALL = HELPER.createSimpleBlock("elder_prismarine_brick_wall", () -> new WallBlock(Properties.ELDER_PRISMARINE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> DARK_ELDER_PRISMARINE_WALL = HELPER.createSimpleBlock("dark_elder_prismarine_wall", () -> new WallBlock(Properties.ELDER_PRISMARINE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("cut_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	public static final RegistryObject<Block> BIOTITE_BRICK_WALL = HELPER.createSimpleBlock("biotite_brick_wall", () -> new WallBlock(Properties.BIOTITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-	
+
 	// Quark Vertical Slabs
-	public static final RegistryObject<Block> CRACKED_SANDSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_sandstone_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_RED_SANDSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_red_sandstone_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_SOUL_SANDSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_soul_sandstone_vertical_slab", () -> new VerticalSlabBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	
 	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_acacia_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
 	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_birch_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
 	public static final RegistryObject<Block> STRIPPED_DARK_OAK_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_dark_oak_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
@@ -194,43 +156,21 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CRIMSON_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("crimson_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_CRIMSON_HYPHAE_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 	public static final RegistryObject<Block> WARPED_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("warped_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_WARPED_HYPHAE_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 	
-	public static final RegistryObject<Block> CRACKED_STONE_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_stone_brick_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 	public static final RegistryObject<Block> QUARTZ_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("quartz_brick_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_NETHER_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_nether_brick_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_polished_blackstone_brick_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> GILDED_BLACKSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("gilded_blackstone_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.GILDED_BLACKSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 
-	public static final RegistryObject<Block> BIOTITE_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("biotite_brick_vertical_slab", () -> new VerticalSlabBlock(Properties.BIOTITE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	
 	// Quark Buttons
-	public static final RegistryObject<Block> POLISHED_MARBLE_BUTTON = HELPER.createSimpleBlock("polished_marble_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_LIMESTONE_BUTTON = HELPER.createSimpleBlock("polished_limestone_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_JASPER_BUTTON = HELPER.createSimpleBlock("polished_jasper_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_SLATE_BUTTON = HELPER.createSimpleBlock("polished_slate_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_VOIDSTONE_BUTTON = HELPER.createSimpleBlock("polished_voidstone_button", () -> new DifferStoneButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_MYALITE_BUTTON = HELPER.createSimpleBlock("polished_myalite_button", () -> new PolishedMyaliteButtonBlock(LeptonBlocks.Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	
 	// Quark Pressure Plates
-	public static final RegistryObject<Block> POLISHED_MARBLE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_marble_pressure_plate", () -> new StonePressurePlateBlock(Properties.MARBLE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_limestone_pressure_plate", () -> new StonePressurePlateBlock(Properties.LIMESTONE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_jasper_pressure_plate", () -> new StonePressurePlateBlock(Properties.JASPER_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_SLATE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_slate_pressure_plate", () -> new StonePressurePlateBlock(Properties.SLATE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-	public static final RegistryObject<Block> POLISHED_VOIDSTONE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_voidstone_pressure_plate", () -> new StonePressurePlateBlock(Properties.VOIDSTONE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	public static final RegistryObject<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createSimpleBlock("polished_myalite_pressure_plate", () -> new PolishedMyalitePressurePlateBlock(Properties.MYALITE_PRESSURE_PLATE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 	
 	// Atmospheric
-	public static final RegistryObject<Block> CRACKED_ARID_SANDSTONE = HELPER.createSimpleBlock("cracked_arid_sandstone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_ARID_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_arid_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_ARID_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cracked_arid_sandstone_stairs", () -> new StairBlock(CRACKED_ARID_SANDSTONE.get()::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_ARID_SANDSTONE_WALL = HELPER.createSimpleBlock("cracked_arid_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_DECORATIONS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_ARID_SANDSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_arid_sandstone_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC, Mods.QUARK);
-	
-	public static final RegistryObject<Block> CRACKED_RED_ARID_SANDSTONE = HELPER.createSimpleBlock("cracked_red_arid_sandstone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_RED_ARID_SANDSTONE_SLAB = HELPER.createSimpleBlock("cracked_red_arid_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_RED_ARID_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cracked_red_arid_sandstone_stairs", () -> new StairBlock(CRACKED_RED_ARID_SANDSTONE.get()::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_RED_ARID_SANDSTONE_WALL = HELPER.createSimpleBlock("cracked_red_arid_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_DECORATIONS, Mods.ATMOSPHERIC);
-	public static final RegistryObject<Block> CRACKED_RED_ARID_SANDSTONE_VERTICAL_SLAB = HELPER.createSimpleBlock("cracked_red_arid_sandstone_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC, Mods.QUARK);
-	
 	public static final RegistryObject<Block> CUT_ARID_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_arid_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
 	public static final RegistryObject<Block> CUT_RED_ARID_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_red_arid_sandstone_stairs", () -> new StairBlock(Blocks.CUT_RED_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.ATMOSPHERIC);
 	
@@ -457,11 +397,9 @@ public class LeptonBlocks {
 		public static final BlockBehaviour.Properties ANDESITE_PRESSURE_PLATE = pressurePlate(MaterialColor.STONE);
 		public static final BlockBehaviour.Properties DIORITE_PRESSURE_PLATE = pressurePlate(MaterialColor.QUARTZ);
 		public static final BlockBehaviour.Properties GRANITE_PRESSURE_PLATE = pressurePlate(MaterialColor.DIRT);
-		public static final BlockBehaviour.Properties MARBLE_PRESSURE_PLATE = pressurePlate(MaterialColor.QUARTZ);
 		public static final BlockBehaviour.Properties LIMESTONE_PRESSURE_PLATE = pressurePlate(MaterialColor.STONE);
 		public static final BlockBehaviour.Properties JASPER_PRESSURE_PLATE = pressurePlate(MaterialColor.TERRACOTTA_RED);
 		public static final BlockBehaviour.Properties SLATE_PRESSURE_PLATE = pressurePlate(MaterialColor.ICE);
-		public static final BlockBehaviour.Properties VOIDSTONE_PRESSURE_PLATE = pressurePlate(MaterialColor.COLOR_BLACK);
 		public static final BlockBehaviour.Properties MYALITE_PRESSURE_PLATE = pressurePlate(MaterialColor.COLOR_PURPLE);
 
 		private static BlockBehaviour.Properties pressurePlate(MaterialColor materialColor) {
