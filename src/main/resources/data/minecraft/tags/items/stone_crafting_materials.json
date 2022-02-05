@@ -3,16 +3,16 @@
 	"values": [
 		"minecraft:andesite",
 		"minecraft:diorite",
-		"minecraft:granite"
+		"minecraft:granite",
+		"minecraft:calcite",
+		"minecraft:dripstone",
+		"minecraft:tuff"
 	],
 	"optional": [
-		"quark:marble",
-		"quark:slate",
+		"quark:shale",
 		"quark:jasper",
 		"quark:limestone",
-		"quark:basalt",
 		"quark:myalite",
-		"quark:permafrost",
-		"quark:brimstone"
+		"quark:permafrost"
 	]
 }

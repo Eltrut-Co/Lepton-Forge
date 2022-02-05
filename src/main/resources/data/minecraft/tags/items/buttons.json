@@ -4,11 +4,12 @@
 		"lepton:polished_andesite_button",
 		"lepton:polished_diorite_button",
 		"lepton:polished_granite_button",
-		"lepton:polished_marble_button",
-		"lepton:polished_slate_button",
+		"lepton:polished_shale_button",
 		"lepton:polished_jasper_button",
 		"lepton:polished_limestone_button",
-		"lepton:polished_voidstone_button",
-		"lepton:polished_myalite_button"
+		"lepton:polished_myalite_button",
+		"lepton:polished_calcite_button",
+		"lepton:polished_dripstone_button",
+		"lepton:polished_tuff_button"
 	]
 }

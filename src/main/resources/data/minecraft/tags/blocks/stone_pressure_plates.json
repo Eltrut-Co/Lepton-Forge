@@ -4,11 +4,12 @@
 		"lepton:polished_andesite_pressure_plate",
 		"lepton:polished_diorite_pressure_plate",
 		"lepton:polished_granite_pressure_plate",
-		"lepton:polished_marble_pressure_plate",
-		"lepton:polished_slate_pressure_plate",
+		"lepton:polished_shale_pressure_plate",
 		"lepton:polished_jasper_pressure_plate",
 		"lepton:polished_limestone_pressure_plate",
-		"lepton:polished_voidstone_pressure_plate",
-		"lepton:polished_myalite_pressure_plate"
+		"lepton:polished_myalite_pressure_plate",
+		"lepton:polished_calcite_pressure_plate",
+		"lepton:polished_dripstone_pressure_plate",
+		"lepton:polished_tuff_pressure_plate"
 	]
 }
