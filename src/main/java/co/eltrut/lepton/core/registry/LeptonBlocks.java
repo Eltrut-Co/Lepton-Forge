@@ -7,11 +7,11 @@ import co.eltrut.differentiate.common.block.wood.LogSlabBlock;
 import co.eltrut.differentiate.common.block.wood.LogStairBlock;
 import co.eltrut.differentiate.common.block.wood.LogVerticalSlabBlock;
 import co.eltrut.differentiate.common.block.wood.LogWallBlock;
-import co.eltrut.differentiate.core.registrator.BlockHelper;
-import co.eltrut.differentiate.core.util.BlockUtil;
 import co.eltrut.differentiate.core.util.CompatUtil.Mods;
 import co.eltrut.lepton.common.blocks.*;
+import co.eltrut.lepton.common.repo.WoodVariantRepo;
 import co.eltrut.lepton.core.Lepton;
+import co.eltrut.lepton.core.registrator.LeptonBlockHelper;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -25,72 +25,25 @@ import net.minecraftforge.registries.RegistryObject;
 @Mod.EventBusSubscriber(modid = Lepton.MOD_ID, bus = Bus.MOD)
 public class LeptonBlocks {
 	
-	public static final BlockHelper HELPER = Lepton.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
+	public static final LeptonBlockHelper HELPER = Lepton.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
 
-	// Vanilla Slabs
-	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_acacia_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_birch_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> STRIPPED_DARK_OAK_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_dark_oak_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> STRIPPED_JUNGLE_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_jungle_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> STRIPPED_OAK_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_oak_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> STRIPPED_SPRUCE_WOOD_SLAB = HELPER.createSimpleFuelBlock("stripped_spruce_wood_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> STRIPPED_CRIMSON_HYPHAE_SLAB = HELPER.createSimpleBlock("stripped_crimson_hyphae_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> STRIPPED_WARPED_HYPHAE_SLAB = HELPER.createSimpleBlock("stripped_warped_hyphae_slab", () -> new LogSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
-	public static final RegistryObject<Block> ACACIA_WOOD_SLAB = HELPER.createSimpleFuelBlock("acacia_wood_slab", () -> new LogSlabBlock(STRIPPED_ACACIA_WOOD_SLAB, BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> BIRCH_WOOD_SLAB = HELPER.createSimpleFuelBlock("birch_wood_slab", () -> new LogSlabBlock(STRIPPED_BIRCH_WOOD_SLAB, BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> DARK_OAK_WOOD_SLAB = HELPER.createSimpleFuelBlock("dark_oak_wood_slab", () -> new LogSlabBlock(STRIPPED_DARK_OAK_WOOD_SLAB, BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> JUNGLE_WOOD_SLAB = HELPER.createSimpleFuelBlock("jungle_wood_slab", () -> new LogSlabBlock(STRIPPED_JUNGLE_WOOD_SLAB, BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> OAK_WOOD_SLAB = HELPER.createSimpleFuelBlock("oak_wood_slab", () -> new LogSlabBlock(STRIPPED_OAK_WOOD_SLAB, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> SPRUCE_WOOD_SLAB = HELPER.createSimpleFuelBlock("spruce_wood_slab", () -> new LogSlabBlock(STRIPPED_SPRUCE_WOOD_SLAB, BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150);
-	public static final RegistryObject<Block> CRIMSON_HYPHAE_SLAB = HELPER.createSimpleBlock("crimson_hyphae_slab", () -> new LogSlabBlock(STRIPPED_CRIMSON_HYPHAE_SLAB, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> WARPED_HYPHAE_SLAB = HELPER.createSimpleBlock("warped_hyphae_slab", () -> new LogSlabBlock(STRIPPED_WARPED_HYPHAE_SLAB, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
+	// Vanilla
+	public static final WoodVariantRepo ACACIA = HELPER.createSimpleWoodVariants(Blocks.ACACIA_WOOD);
+	public static final WoodVariantRepo BIRCH = HELPER.createSimpleWoodVariants(Blocks.BIRCH_WOOD);
+	public static final WoodVariantRepo DARK_OAK = HELPER.createSimpleWoodVariants(Blocks.DARK_OAK_WOOD);
+	public static final WoodVariantRepo JUNGLE = HELPER.createSimpleWoodVariants(Blocks.JUNGLE_WOOD);
+	public static final WoodVariantRepo OAK = HELPER.createSimpleWoodVariants(Blocks.OAK_WOOD);
+	public static final WoodVariantRepo SPRUCE = HELPER.createSimpleWoodVariants(Blocks.SPRUCE_WOOD);
+	public static final WoodVariantRepo CRIMSON = HELPER.createNetherWoodVariants(Blocks.CRIMSON_HYPHAE);
+	public static final WoodVariantRepo WARPED = HELPER.createNetherWoodVariants(Blocks.WARPED_HYPHAE);
+
 	public static final RegistryObject<Block> QUARTZ_BRICK_SLAB = HELPER.createSimpleBlock("quartz_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-	// Vanilla Stairs
-	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_acacia_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_birch_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> STRIPPED_DARK_OAK_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_dark_oak_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> STRIPPED_JUNGLE_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_jungle_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> STRIPPED_OAK_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_oak_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> STRIPPED_SPRUCE_WOOD_STAIRS = HELPER.createSimpleFuelBlock("stripped_spruce_wood_stairs", () -> new LogStairBlock(Blocks.STRIPPED_SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> STRIPPED_CRIMSON_HYPHAE_STAIRS = HELPER.createSimpleBlock("stripped_crimson_hyphae_stairs", () -> new LogStairBlock(Blocks.STRIPPED_CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> STRIPPED_WARPED_HYPHAE_STAIRS = HELPER.createSimpleBlock("stripped_warped_hyphae_stairs", () -> new LogStairBlock(Blocks.STRIPPED_WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
-	public static final RegistryObject<Block> ACACIA_WOOD_STAIRS = HELPER.createSimpleFuelBlock("acacia_wood_stairs", () -> new LogStairBlock(STRIPPED_ACACIA_WOOD_STAIRS, Blocks.ACACIA_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> BIRCH_WOOD_STAIRS = HELPER.createSimpleFuelBlock("birch_wood_stairs", () -> new LogStairBlock(STRIPPED_BIRCH_WOOD_STAIRS, Blocks.BIRCH_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> DARK_OAK_WOOD_STAIRS = HELPER.createSimpleFuelBlock("dark_oak_wood_stairs", () -> new LogStairBlock(STRIPPED_DARK_OAK_WOOD_STAIRS, Blocks.DARK_OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> JUNGLE_WOOD_STAIRS = HELPER.createSimpleFuelBlock("jungle_wood_stairs", () -> new LogStairBlock(STRIPPED_JUNGLE_WOOD_STAIRS, Blocks.JUNGLE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> OAK_WOOD_STAIRS = HELPER.createSimpleFuelBlock("oak_wood_stairs", () -> new LogStairBlock(STRIPPED_OAK_WOOD_STAIRS, Blocks.OAK_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> SPRUCE_WOOD_STAIRS = HELPER.createSimpleFuelBlock("spruce_wood_stairs", () -> new LogStairBlock(STRIPPED_SPRUCE_WOOD_STAIRS, Blocks.SPRUCE_WOOD::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 300);
-	public static final RegistryObject<Block> CRIMSON_HYPHAE_STAIRS = HELPER.createSimpleBlock("crimson_hyphae_stairs", () -> new LogStairBlock(STRIPPED_CRIMSON_HYPHAE_STAIRS, Blocks.CRIMSON_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Block> WARPED_HYPHAE_STAIRS = HELPER.createSimpleBlock("warped_hyphae_stairs", () -> new LogStairBlock(STRIPPED_WARPED_HYPHAE_STAIRS, Blocks.WARPED_HYPHAE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS);
-	
 	public static final RegistryObject<Block> SMOOTH_STONE_STAIRS = HELPER.createSimpleBlock("smooth_stone_stairs", () -> new StairBlock(Blocks.SMOOTH_STONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_RED_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_red_sandstone_stairs", () -> new StairBlock(Blocks.CUT_RED_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> QUARTZ_BRICK_STAIRS = HELPER.createSimpleBlock("quartz_brick_stairs", () -> new StairBlock(Blocks.QUARTZ_BRICKS::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-	// Vanilla Walls
-	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_acacia_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_birch_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> STRIPPED_DARK_OAK_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_dark_oak_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> STRIPPED_JUNGLE_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_jungle_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> STRIPPED_OAK_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_oak_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> STRIPPED_SPRUCE_WOOD_WALL = HELPER.createSimpleFuelBlock("stripped_spruce_wood_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> STRIPPED_CRIMSON_HYPHAE_WALL = HELPER.createSimpleBlock("stripped_crimson_hyphae_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE), true), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> STRIPPED_WARPED_HYPHAE_WALL = HELPER.createSimpleBlock("stripped_warped_hyphae_wall", () -> new LogWallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE), true), CreativeModeTab.TAB_DECORATIONS);
-	
-	public static final RegistryObject<Block> ACACIA_WOOD_WALL = HELPER.createSimpleFuelBlock("acacia_wood_wall", () -> new LogWallBlock(STRIPPED_ACACIA_WOOD_WALL, BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> BIRCH_WOOD_WALL = HELPER.createSimpleFuelBlock("birch_wood_wall", () -> new LogWallBlock(STRIPPED_BIRCH_WOOD_WALL, BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> DARK_OAK_WOOD_WALL = HELPER.createSimpleFuelBlock("dark_oak_wood_wall", () -> new LogWallBlock(STRIPPED_DARK_OAK_WOOD_WALL, BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> JUNGLE_WOOD_WALL = HELPER.createSimpleFuelBlock("jungle_wood_wall", () -> new LogWallBlock(STRIPPED_JUNGLE_WOOD_WALL, BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> OAK_WOOD_WALL = HELPER.createSimpleFuelBlock("oak_wood_wall", () -> new LogWallBlock(STRIPPED_OAK_WOOD_WALL, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> SPRUCE_WOOD_WALL = HELPER.createSimpleFuelBlock("spruce_wood_wall", () -> new LogWallBlock(STRIPPED_SPRUCE_WOOD_WALL, BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD)), CreativeModeTab.TAB_DECORATIONS, 300);
-	public static final RegistryObject<Block> CRIMSON_HYPHAE_WALL = HELPER.createSimpleBlock("crimson_hyphae_wall", () -> new LogWallBlock(STRIPPED_CRIMSON_HYPHAE_WALL, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE), true), CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Block> WARPED_HYPHAE_WALL = HELPER.createSimpleBlock("warped_hyphae_wall", () -> new LogWallBlock(STRIPPED_WARPED_HYPHAE_WALL, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE), true), CreativeModeTab.TAB_DECORATIONS);
-	
 	public static final RegistryObject<Block> PURPUR_WALL = HELPER.createSimpleBlock("purpur_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> QUARTZ_WALL = HELPER.createSimpleBlock("quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)), CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Block> SMOOTH_QUARTZ_WALL = HELPER.createSimpleBlock("smooth_quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ)), CreativeModeTab.TAB_DECORATIONS);
@@ -137,25 +90,6 @@ public class LeptonBlocks {
 	public static final RegistryObject<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("cut_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 	public static final RegistryObject<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createSimpleBlock("smooth_soul_sandstone_wall", () -> new WallBlock(Properties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 
-	// Quark Vertical Slabs
-	public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_acacia_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_birch_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_DARK_OAK_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_dark_oak_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_JUNGLE_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_jungle_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_OAK_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_oak_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_SPRUCE_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("stripped_spruce_wood_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_CRIMSON_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("stripped_crimson_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> STRIPPED_WARPED_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("stripped_warped_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	
-	public static final RegistryObject<Block> ACACIA_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("acacia_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_ACACIA_WOOD_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> BIRCH_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("birch_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_BIRCH_WOOD_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.BIRCH_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> DARK_OAK_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("dark_oak_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_DARK_OAK_WOOD_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.DARK_OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> JUNGLE_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("jungle_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_JUNGLE_WOOD_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> OAK_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("oak_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_OAK_WOOD_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> SPRUCE_WOOD_VERTICAL_SLAB = HELPER.createSimpleFuelBlock("spruce_wood_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_SPRUCE_WOOD_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS, 150, Mods.QUARK);
-	public static final RegistryObject<Block> CRIMSON_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("crimson_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_CRIMSON_HYPHAE_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	public static final RegistryObject<Block> WARPED_HYPHAE_VERTICAL_SLAB = HELPER.createSimpleBlock("warped_hyphae_vertical_slab", () -> new LogVerticalSlabBlock(STRIPPED_WARPED_HYPHAE_VERTICAL_SLAB, BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE), true), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-	
 	public static final RegistryObject<Block> QUARTZ_BRICK_VERTICAL_SLAB = HELPER.createSimpleBlock("quartz_brick_vertical_slab", () -> new VerticalSlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
 
 	// Quark Buttons
