@@ -39,7 +39,7 @@ public class LeptonBlocks {
 	public static final WoodVariantRepo CRIMSON = HELPER.createNetherWoodVariants(Blocks.CRIMSON_HYPHAE);
 	public static final WoodVariantRepo WARPED = HELPER.createNetherWoodVariants(Blocks.WARPED_HYPHAE);
 
-	public static final VariantBlocksRepo QUARTZ_BRICK = HELPER.createSimpleVariants("quartz_brick", Blocks.QUARTZ_BRICKS);
+	public static final VariantBlocksRepo QUARTZ_BRICK = HELPER.createSimpleVariants(Blocks.QUARTZ_BRICKS);
 
 	public static final RegistryObject<Block> SMOOTH_STONE_STAIRS = HELPER.createSimpleBlock("smooth_stone_stairs", () -> new StairBlock(Blocks.SMOOTH_STONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Block> CUT_SANDSTONE_STAIRS = HELPER.createSimpleBlock("cut_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState, BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
