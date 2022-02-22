@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:polished_calcite"
+    }
+  },
+  "result": {
+    "item": "lepton:polished_calcite_wall",
+    "count": 6
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "calcite"
+    }
+  ]
+}

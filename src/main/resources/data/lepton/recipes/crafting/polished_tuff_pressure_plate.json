@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:polished_tuff"
+    }
+  },
+  "result": {
+    "item": "lepton:polished_tuff_pressure_plate"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "tuff"
+    }
+  ]
+}

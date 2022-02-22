@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "quark:polished_dripstone"
+    }
+  ],
+  "result": {
+    "item": "lepton:polished_dripstone_button"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "dripstone"
+    }
+  ]
+}

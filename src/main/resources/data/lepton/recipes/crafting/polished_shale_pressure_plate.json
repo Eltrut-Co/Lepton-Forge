@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:polished_shale"
+    }
+  },
+  "result": {
+    "item": "lepton:polished_shale_pressure_plate"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "shale"
+    }
+  ]
+}

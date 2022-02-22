@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "quark:polished_calcite"
+  },
+  "result": "lepton:polished_calcite_wall",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "calcite"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "quark:polished_tuff"
+    }
+  ],
+  "result": {
+    "item": "lepton:polished_tuff_button"
+  },
+  "conditions": [
+    {
+      "type": "differentiate:flag",
+      "flag": "tuff"
+    }
+  ]
+}
