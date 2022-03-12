@@ -1,0 +1,31 @@
+{
+	"replace": "false",
+	"values": [
+		"lepton:quartz_brick_slab",
+		"lepton:smooth_stone_stairs",
+		"lepton:cut_sandstone_stairs",
+		"lepton:cut_red_sandstone_stairs",
+		"lepton:quartz_brick_stairs",
+		"lepton:cut_soul_sandstone_stairs",
+		"lepton:polished_andesite_button",
+		"lepton:polished_diorite_button",
+		"lepton:polished_granite_button",
+		"lepton:polished_shale_button",
+		"lepton:polished_jasper_button",
+		"lepton:polished_limestone_button",
+		"lepton:polished_myalite_button",
+		"lepton:polished_calcite_button",
+		"lepton:polished_dripstone_button",
+		"lepton:polished_tuff_button",
+		"lepton:polished_andesite_pressure_plate",
+		"lepton:polished_diorite_pressure_plate",
+		"lepton:polished_granite_pressure_plate",
+		"lepton:polished_shale_pressure_plate",
+		"lepton:polished_jasper_pressure_plate",
+		"lepton:polished_limestone_pressure_plate",
+		"lepton:polished_myalite_pressure_plate",
+		"lepton:polished_calcite_pressure_plate",
+		"lepton:polished_dripstone_pressure_plate",
+		"lepton:polished_tuff_pressure_plate"
+	]
+}
