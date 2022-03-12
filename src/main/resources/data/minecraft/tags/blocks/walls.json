@@ -15,23 +15,7 @@
 		"lepton:cut_red_sandstone_wall",
 		"lepton:smooth_sandstone_wall",
 		"lepton:smooth_red_sandstone_wall",
-		"lepton:acacia_wood_wall",
-		"lepton:birch_wood_wall",
-		"lepton:dark_oak_wood_wall",
-		"lepton:jungle_wood_wall",
-		"lepton:oak_wood_wall",
-		"lepton:spruce_wood_wall",
-		"lepton:stripped_acacia_wood_wall",
-		"lepton:stripped_birch_wood_wall",
-		"lepton:stripped_dark_oak_wood_wall",
-		"lepton:stripped_jungle_wood_wall",
-		"lepton:stripped_oak_wood_wall",
-		"lepton:stripped_spruce_wood_wall",
 		"lepton:quartz_brick_wall",
-		"lepton:crimson_hyphae_wall",
-		"lepton:warped_hyphae_wall",
-		"lepton:stripped_crimson_hyphae_wall",
-		"lepton:stripped_warped_hyphae_wall",
 		"lepton:midori_wall",
 		"lepton:polished_limestone_wall",
 		"lepton:polished_jasper_wall",
@@ -41,6 +25,7 @@
 		"lepton:polished_dripstone_wall",
 		"lepton:polished_tuff_wall",
 		"lepton:cut_soul_sandstone_wall",
-		"lepton:smooth_soul_sandstone_wall"
+		"lepton:smooth_soul_sandstone_wall",
+		"#lepton:wood_walls"
 	]
 }

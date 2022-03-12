@@ -1,0 +1,21 @@
+{
+	"replace": "false",
+	"values": [
+		"lepton:acacia_wood_stairs",
+		"lepton:birch_wood_stairs",
+		"lepton:dark_oak_wood_stairs",
+		"lepton:jungle_wood_stairs",
+		"lepton:oak_wood_stairs",
+		"lepton:spruce_wood_stairs",
+		"lepton:stripped_acacia_wood_stairs",
+		"lepton:stripped_birch_wood_stairs",
+		"lepton:stripped_dark_oak_wood_stairs",
+		"lepton:stripped_jungle_wood_stairs",
+		"lepton:stripped_oak_wood_stairs",
+		"lepton:stripped_spruce_wood_stairs",
+		"lepton:crimson_hyphae_stairs",
+		"lepton:warped_hyphae_stairs",
+		"lepton:stripped_crimson_hyphae_stairs",
+		"lepton:stripped_warped_hyphae_stairs"
+	]
+}

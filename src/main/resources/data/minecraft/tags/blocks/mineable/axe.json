@@ -1,0 +1,8 @@
+{
+	"replace": "false",
+	"values": [
+		"#lepton:wood_slabs",
+		"#lepton:wood_stairs",
+		"#lepton:wood_walls"
+	]
+}

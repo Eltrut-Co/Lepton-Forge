@@ -1,22 +1,7 @@
 {
 	"replace": "false",
 	"values": [
-		"lepton:acacia_wood_slab",
-		"lepton:birch_wood_slab",
-		"lepton:dark_oak_wood_slab",
-		"lepton:jungle_wood_slab",
-		"lepton:oak_wood_slab",
-		"lepton:spruce_wood_slab",
-		"lepton:stripped_acacia_wood_slab",
-		"lepton:stripped_birch_wood_slab",
-		"lepton:stripped_dark_oak_wood_slab",
-		"lepton:stripped_jungle_wood_slab",
-		"lepton:stripped_oak_wood_slab",
-		"lepton:stripped_spruce_wood_slab",
 		"lepton:quartz_brick_slab",
-		"lepton:crimson_hyphae_slab",
-		"lepton:warped_hyphae_slab",
-		"lepton:stripped_crimson_hyphae_slab",
-		"lepton:stripped_warped_hyphae_slab"
+		"#lepton:wood_slabs"
 	]
 }

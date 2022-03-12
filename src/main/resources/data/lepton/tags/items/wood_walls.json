@@ -1,0 +1,21 @@
+{
+	"replace": "false",
+	"values": [
+		"lepton:acacia_wood_wall",
+		"lepton:birch_wood_wall",
+		"lepton:dark_oak_wood_wall",
+		"lepton:jungle_wood_wall",
+		"lepton:oak_wood_wall",
+		"lepton:spruce_wood_wall",
+		"lepton:stripped_acacia_wood_wall",
+		"lepton:stripped_birch_wood_wall",
+		"lepton:stripped_dark_oak_wood_wall",
+		"lepton:stripped_jungle_wood_wall",
+		"lepton:stripped_oak_wood_wall",
+		"lepton:stripped_spruce_wood_wall",
+		"lepton:crimson_hyphae_wall",
+		"lepton:warped_hyphae_wall",
+		"lepton:stripped_crimson_hyphae_wall",
+		"lepton:stripped_warped_hyphae_wall"
+	]
+}
