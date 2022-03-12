@@ -71,8 +71,8 @@ dependencies {
 	
 	implementation fg.deobf("curse.maven:differentiate-450748:${differentiate_id}")
 	
-	implementation fg.deobf("curse.maven:autoreglib-250363:${arl_id}")
-	implementation fg.deobf("curse.maven:quark-243121:${quark_id}")
+	//implementation fg.deobf("curse.maven:autoreglib-250363:${arl_id}")
+	//implementation fg.deobf("curse.maven:quark-243121:${quark_id}")
 	
 	//implementation fg.deobf("curse.maven:blueprint-382216:${blueprint_id}")
 	//implementation fg.deobf("curse.maven:environmental-388992:${environmental_id}")

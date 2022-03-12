@@ -30,14 +30,14 @@ public class LeptonBlocks {
 	public static final BlockHelper HELPER = Lepton.REGISTRATOR.getHelper(ForgeRegistries.BLOCKS);
 
 	// Vanilla
-	public static final WoodVariantRepo ACACIA = HELPER.createSimpleWoodVariants(Blocks.ACACIA_WOOD);
-	public static final WoodVariantRepo BIRCH = HELPER.createSimpleWoodVariants(Blocks.BIRCH_WOOD);
-	public static final WoodVariantRepo DARK_OAK = HELPER.createSimpleWoodVariants(Blocks.DARK_OAK_WOOD);
-	public static final WoodVariantRepo JUNGLE = HELPER.createSimpleWoodVariants(Blocks.JUNGLE_WOOD);
-	public static final WoodVariantRepo OAK = HELPER.createSimpleWoodVariants(Blocks.OAK_WOOD);
-	public static final WoodVariantRepo SPRUCE = HELPER.createSimpleWoodVariants(Blocks.SPRUCE_WOOD);
-	public static final WoodVariantRepo CRIMSON = HELPER.createNetherWoodVariants(Blocks.CRIMSON_HYPHAE);
-	public static final WoodVariantRepo WARPED = HELPER.createNetherWoodVariants(Blocks.WARPED_HYPHAE);
+	public static final WoodVariantRepo ACACIA = HELPER.createSimpleWoodVariants("acacia", BlockUtil.WoodProperties.ACACIA);
+	public static final WoodVariantRepo BIRCH = HELPER.createSimpleWoodVariants("birch", BlockUtil.WoodProperties.BIRCH);
+	public static final WoodVariantRepo DARK_OAK = HELPER.createSimpleWoodVariants("dark_oak", BlockUtil.WoodProperties.DARK_OAK);
+	public static final WoodVariantRepo JUNGLE = HELPER.createSimpleWoodVariants("jungle", BlockUtil.WoodProperties.JUNGLE);
+	public static final WoodVariantRepo OAK = HELPER.createSimpleWoodVariants("oak", BlockUtil.WoodProperties.OAK);
+	public static final WoodVariantRepo SPRUCE = HELPER.createSimpleWoodVariants("spruce", BlockUtil.WoodProperties.SPRUCE);
+	public static final WoodVariantRepo CRIMSON = HELPER.createNetherWoodVariants("crimson", BlockUtil.WoodProperties.CRIMSON);
+	public static final WoodVariantRepo WARPED = HELPER.createNetherWoodVariants("warped", BlockUtil.WoodProperties.WARPED);
 
 	public static final VariantBlocksRepo QUARTZ_BRICK = HELPER.createSimpleVariants(Blocks.QUARTZ_BRICKS);
 
