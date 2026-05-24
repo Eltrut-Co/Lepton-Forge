@@ -1,5 +1,5 @@
 {
-	"replace": "false",
+	"replace": false,
 	"values": [
 		"lepton:polished_andesite_pressure_plate",
 		"lepton:polished_diorite_pressure_plate",

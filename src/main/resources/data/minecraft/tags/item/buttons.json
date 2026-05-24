@@ -1,5 +1,5 @@
 {
-	"replace": "false",
+	"replace": false,
 	"values": [
 		"lepton:polished_andesite_button",
 		"lepton:polished_diorite_button",

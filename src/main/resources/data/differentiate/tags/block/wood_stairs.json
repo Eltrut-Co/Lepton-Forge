@@ -1,5 +1,5 @@
 {
-	"replace": "false",
+	"replace": false,
 	"values": [
 		"lepton:acacia_wood_stairs",
 		"lepton:birch_wood_stairs",

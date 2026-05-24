@@ -1,5 +1,5 @@
 {
-	"replace": "false",
+	"replace": false,
 	"values": [
 		"lepton:smooth_stone_stairs",
 		"lepton:cut_sandstone_stairs",

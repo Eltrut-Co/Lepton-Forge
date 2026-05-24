@@ -5,7 +5,8 @@
 		"minecraft:diorite",
 		"minecraft:granite",
 		"minecraft:calcite",
-		"minecraft:tuff"
+		"minecraft:tuff",
+		"minecraft:dripstone"
 	],
 	"optional": [
 		"quark:shale",
