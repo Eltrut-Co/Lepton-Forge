@@ -25,7 +25,6 @@
 		"lepton:polished_dripstone_wall",
 		"lepton:polished_tuff_wall",
 		"lepton:cut_soul_sandstone_wall",
-		"lepton:smooth_soul_sandstone_wall",
-		"#lepton:wood_walls"
+		"lepton:smooth_soul_sandstone_wall"
 	]
 }
