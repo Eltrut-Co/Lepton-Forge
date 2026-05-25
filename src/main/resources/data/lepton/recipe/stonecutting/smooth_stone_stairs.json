@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:smooth_stone"
   },
-  "result": "lepton:smooth_stone_stairs",
-  "count": 1
+  "result": {
+    "id": "lepton:smooth_stone_stairs",
+    "count": 1
+  }
 }
