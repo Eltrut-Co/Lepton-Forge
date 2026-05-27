@@ -33,7 +33,7 @@ public class LeptonBlocks {
 	public static final WoodVariantRepo CHERRY = HELPER.createWoodVariants(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD, "cherry");
 	public static final WoodVariantRepo DARK_OAK = HELPER.createWoodVariants(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD, "dark_oak");
 	public static final WoodVariantRepo JUNGLE = HELPER.createWoodVariants(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD, "jungle");
-	public static final WoodVariantRepo MANGROVE = HELPER.createWoodVariants(Blocks.MANGROVE_WOOD, Blocks.MANGROVE_WOOD, "mangrove");
+	public static final WoodVariantRepo MANGROVE = HELPER.createWoodVariants("minecraft", "mangrove_wood", BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_WOOD), BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_WOOD));
 	public static final WoodVariantRepo OAK = HELPER.createWoodVariants(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD, "oak");
 	public static final WoodVariantRepo SPRUCE = HELPER.createWoodVariants(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD, "spruce");
 	public static final WoodVariantRepo CRIMSON = HELPER.createWoodVariants(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE, "crimson", true);
