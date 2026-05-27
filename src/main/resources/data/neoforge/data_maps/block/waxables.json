@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": {
+    "lepton:cut_copper_wall": {
+      "waxed": "lepton:waxed_cut_copper_wall"
+    },
+    "lepton:exposed_cut_copper_wall": {
+      "waxed": "lepton:waxed_exposed_cut_copper_wall"
+    },
+    "lepton:weathered_cut_copper_wall": {
+      "waxed": "lepton:waxed_weathered_cut_copper_wall"
+    },
+    "lepton:oxidized_cut_copper_wall": {
+      "waxed": "lepton:waxed_oxidized_cut_copper_wall"
+    }
+  }
+}
