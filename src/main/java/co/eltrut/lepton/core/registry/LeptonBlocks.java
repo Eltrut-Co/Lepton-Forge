@@ -92,10 +92,10 @@ public class LeptonBlocks {
 	public static final DeferredBlock<Block> OXIDIZED_CUT_COPPER_WALL = HELPER.createFollowBlock("oxidized_cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB);
 	public static final DeferredBlock<Block> WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("weathered_cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB);
 
-	public static final DeferredBlock<Block> WAXED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB);
-	public static final DeferredBlock<Block> WAXED_EXPOSED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_exposed_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
-	public static final DeferredBlock<Block> WAXED_OXIDIZED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_oxidized_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
-	public static final DeferredBlock<Block> WAXED_WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_weathered_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_cut_copper_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_EXPOSED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_exposed_cut_copper_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_OXIDIZED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_oxidized_cut_copper_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_weathered_cut_copper_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
 
 	// Quark
 //	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER::defaultBlockState, BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
@@ -107,7 +107,6 @@ public class LeptonBlocks {
 //	public static final DeferredBlock<Block> POLISHED_MYALITE_WALL = HELPER.createBlock("polished_myalite_wall", () -> new PolishedMyaliteWallBlock(BlockUtil.QuarkProperties.MYALITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_CALCITE_WALL = HELPER.createBlock("polished_calcite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_WALL = HELPER.createBlock("polished_dripstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_TUFF_WALL = HELPER.createBlock("polished_tuff_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 //	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createBlock("cut_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 //	public static final DeferredBlock<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createBlock("smooth_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
 //
@@ -117,7 +116,6 @@ public class LeptonBlocks {
 //	public static final DeferredBlock<Block> POLISHED_MYALITE_BUTTON = HELPER.createBlock("polished_myalite_button", () -> new PolishedMyaliteButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_CALCITE_BUTTON = HELPER.createBlock("polished_calcite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_BUTTON = HELPER.createBlock("polished_dripstone_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_TUFF_BUTTON = HELPER.createBlock("polished_tuff_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //
 //	public static final DeferredBlock<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createBlock("polished_limestone_pressure_plate", () -> new StonePressurePlateBlock(Properties.LIMESTONE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createBlock("polished_jasper_pressure_plate", () -> new StonePressurePlateBlock(Properties.JASPER), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
@@ -125,7 +123,6 @@ public class LeptonBlocks {
 //	public static final DeferredBlock<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createBlock("polished_myalite_pressure_plate", () -> new PolishedMyalitePressurePlateBlock(Properties.MYALITE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_CALCITE_PRESSURE_PLATE = HELPER.createBlock("polished_calcite_pressure_plate", () -> new StonePressurePlateBlock(Properties.CALCITE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_PRESSURE_PLATE = HELPER.createBlock("polished_dripstone_pressure_plate", () -> new StonePressurePlateBlock(Properties.DRIPSTONE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_TUFF_PRESSURE_PLATE = HELPER.createBlock("polished_tuff_pressure_plate", () -> new StonePressurePlateBlock(Properties.TUFF), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 
 	private static Block stoneButton() {
 		return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));

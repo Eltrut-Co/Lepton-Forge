@@ -25,6 +25,14 @@
 		"lepton:polished_dripstone_wall",
 		"lepton:polished_tuff_wall",
 		"lepton:cut_soul_sandstone_wall",
-		"lepton:smooth_soul_sandstone_wall"
+		"lepton:smooth_soul_sandstone_wall",
+		"lepton:cut_copper_wall",
+		"lepton:exposed_cut_copper_wall",
+		"lepton:oxidized_cut_copper_wall",
+		"lepton:weathered_cut_copper_wall",
+		"lepton:waxed_cut_copper_wall",
+		"lepton:waxed_exposed_cut_copper_wall",
+		"lepton:waxed_oxidized_cut_copper_wall",
+		"lepton:waxed_weathered_cut_copper_wall"
 	]
 }

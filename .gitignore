@@ -21,7 +21,7 @@ build
 eclipse
 run
 logs
-src/generated
+src/generated/resources/.cache/*
 *.bak
 
 # Files from Forge MDK
