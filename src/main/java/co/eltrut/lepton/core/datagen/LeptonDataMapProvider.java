@@ -28,7 +28,7 @@ public class LeptonDataMapProvider extends DataMapProvider {
     @Override
     protected void gather(HolderLookup.Provider provider) {
 
-        for (WoodVariantRepo repo : LeptonBlocks.VANILLA_WOODS) {
+        for (WoodVariantRepo repo : LeptonBlocks.Collections.VANILLA_WOODS) {
             Map<DeferredBlock<Block>, DeferredBlock<Block>> map = repo.getBlocksAsMap();
 
             for (Map.Entry<DeferredBlock<Block>, DeferredBlock<Block>> entry : map.entrySet()) {

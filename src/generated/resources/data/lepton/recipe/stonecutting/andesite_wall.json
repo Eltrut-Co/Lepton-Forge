@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:andesite"
   },
-  "result": "lepton:polished_andesite_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "lepton:polished_andesite_wall"
+  }
 }

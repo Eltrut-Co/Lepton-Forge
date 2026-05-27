@@ -9,6 +9,7 @@ import co.eltrut.lepton.common.blocks.WeatheringCopperWallBlock;
 import co.eltrut.lepton.core.Lepton;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -21,6 +22,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.List;
+import java.util.Map;
 
 @EventBusSubscriber(modid = Lepton.MOD_ID)
 public class LeptonBlocks {
@@ -40,8 +42,6 @@ public class LeptonBlocks {
 	public static final WoodVariantRepo SPRUCE = HELPER.createWoodVariants(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD, "spruce");
 	public static final WoodVariantRepo CRIMSON = HELPER.createWoodVariants(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE, "crimson", true);
 	public static final WoodVariantRepo WARPED = HELPER.createWoodVariants(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE, "warped", true);
-
-	public static final List<WoodVariantRepo> VANILLA_WOODS = List.of(ACACIA, BIRCH, CHERRY, DARK_OAK, JUNGLE, MANGROVE, OAK, SPRUCE, CRIMSON, WARPED);
 
 	public static final VariantBlocksRepo QUARTZ_BRICK = HELPER.createBlockVariants(Blocks.QUARTZ_BRICKS, CreativeModeTabs.BUILDING_BLOCKS);
 
@@ -127,6 +127,18 @@ public class LeptonBlocks {
 //	public static final DeferredBlock<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createBlock("polished_myalite_pressure_plate", () -> new PolishedMyalitePressurePlateBlock(Properties.MYALITE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_CALCITE_PRESSURE_PLATE = HELPER.createBlock("polished_calcite_pressure_plate", () -> new StonePressurePlateBlock(Properties.CALCITE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
 //	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_PRESSURE_PLATE = HELPER.createBlock("polished_dripstone_pressure_plate", () -> new StonePressurePlateBlock(Properties.DRIPSTONE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
+
+	public static class Collections {
+
+		public static final List<WoodVariantRepo> VANILLA_WOODS = List.of(ACACIA, BIRCH, CHERRY, DARK_OAK, JUNGLE, MANGROVE, OAK, SPRUCE, CRIMSON, WARPED);
+
+		public static final Map<List<Block>, DeferredBlock<Block>> STONES = Map.of(
+				List.of(Blocks.ANDESITE, Blocks.POLISHED_ANDESITE), POLISHED_ANDESITE_WALL,
+				List.of(Blocks.DIORITE, Blocks.POLISHED_DIORITE), POLISHED_DIORITE_WALL,
+				List.of(Blocks.GRANITE, Blocks.POLISHED_GRANITE), POLISHED_GRANITE_WALL
+		);
+
+	}
 
 	private static Block stoneButton() {
 		return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));

@@ -5,16 +5,10 @@
   ],
   "key": {
     "#": {
-      "item": "quark:polished_tuff"
+      "item": "minecraft:polished_tuff"
     }
   },
   "result": {
     "item": "lepton:polished_tuff_pressure_plate"
-  },
-  "conditions": [
-    {
-      "type": "differentiate:flag",
-      "flag": "tuff"
-    }
-  ]
+  }
 }
