@@ -28,3 +28,4 @@ src/generated
 forge*changelog.txt
 
 *.DS_STORE
+libs/*

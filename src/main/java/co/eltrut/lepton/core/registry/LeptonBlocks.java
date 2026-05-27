@@ -5,6 +5,7 @@ import co.eltrut.differentiate.common.repo.WoodVariantRepo;
 import co.eltrut.differentiate.core.event.LoadEvent;
 import co.eltrut.differentiate.core.registrator.BlockHelper;
 import co.eltrut.differentiate.core.util.CompatUtil;
+import co.eltrut.lepton.common.blocks.WeatheringCopperWallBlock;
 import co.eltrut.lepton.core.Lepton;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,17 +30,14 @@ public class LeptonBlocks {
 	// Vanilla
 	public static final WoodVariantRepo ACACIA = HELPER.createWoodVariants(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD, "acacia");
 	public static final WoodVariantRepo BIRCH = HELPER.createWoodVariants(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD, "birch");
-//	public static final WoodVariantRepo CHERRY = HELPER.createWoodVariants(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD, "cherry");
+	public static final WoodVariantRepo CHERRY = HELPER.createWoodVariants(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD, "cherry");
 	public static final WoodVariantRepo DARK_OAK = HELPER.createWoodVariants(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD, "dark_oak");
 	public static final WoodVariantRepo JUNGLE = HELPER.createWoodVariants(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD, "jungle");
-//	public static final WoodVariantRepo MANGROVE = HELPER.createWoodVariants(Blocks.MANGROVE_WOOD, Blocks.STRIPPED_MANGROVE_WOOD, "mangrove");
+	public static final WoodVariantRepo MANGROVE = HELPER.createWoodVariants(Blocks.MANGROVE_WOOD, Blocks.MANGROVE_WOOD, "mangrove");
 	public static final WoodVariantRepo OAK = HELPER.createWoodVariants(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD, "oak");
 	public static final WoodVariantRepo SPRUCE = HELPER.createWoodVariants(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD, "spruce");
 	public static final WoodVariantRepo CRIMSON = HELPER.createWoodVariants(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE, "crimson", true);
 	public static final WoodVariantRepo WARPED = HELPER.createWoodVariants(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE, "warped", true);
-
-//	public static final VariantBlocksRepo BAMBOO_BUNDLE = HELPER.createBlockWithVariants("bamboo_bundle", BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK), CreativeModeTabs.BUILDING_BLOCKS);
-//	public static final VariantBlocksRepo STRIPPED_BAMBOO_BUNDLE = HELPER.createBlockWithVariants("stripped_bamboo_bundle", BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_BAMBOO_BLOCK), CreativeModeTabs.BUILDING_BLOCKS);
 
 	public static final VariantBlocksRepo QUARTZ_BRICK = HELPER.createBlockVariants(Blocks.QUARTZ_BRICKS, CreativeModeTabs.BUILDING_BLOCKS);
 
@@ -88,6 +86,16 @@ public class LeptonBlocks {
 	public static final DeferredBlock<Block> POLISHED_GRANITE_BUTTON = HELPER.createFollowBlock("polished_granite_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_GRANITE_PRESSURE_PLATE);
 	public static final DeferredBlock<Block> POLISHED_DEEPSLATE_BUTTON = HELPER.createFollowBlock("polished_deepslate_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_DEEPSLATE_PRESSURE_PLATE);
 	public static final DeferredBlock<Block> POLISHED_TUFF_BUTTON = HELPER.createFollowBlock("polished_tuff_button", LeptonBlocks::tuffButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_TUFF_PRESSURE_PLATE);
+
+	public static final DeferredBlock<Block> CUT_COPPER_WALL = HELPER.createFollowBlock("cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> EXPOSED_CUT_COPPER_WALL = HELPER.createFollowBlock("exposed_cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> OXIDIZED_CUT_COPPER_WALL = HELPER.createFollowBlock("oxidized_cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.OXIDIZED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("weathered_cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WEATHERED_CUT_COPPER_SLAB);
+
+	public static final DeferredBlock<Block> WAXED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_EXPOSED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_exposed_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_OXIDIZED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_oxidized_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
+	public static final DeferredBlock<Block> WAXED_WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_weathered_cut_copper_wall", BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
 
 	// Quark
 //	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER::defaultBlockState, BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
