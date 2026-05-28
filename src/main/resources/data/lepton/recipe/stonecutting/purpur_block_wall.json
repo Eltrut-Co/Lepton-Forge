@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:purpur_block"
   },
-  "result": "lepton:purpur_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "lepton:purpur_wall"
+  }
 }

@@ -15,9 +15,13 @@
     "item": "lepton:oak_wood_vertical_slab",
     "count": 3
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "differentiate:flag",
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
       "flag": "vertical_slabs"
     }
   ]

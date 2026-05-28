@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:quartz_bricks"
   },
-  "result": "lepton:quartz_brick_slab",
-  "count": 2
+  "result": {
+    "count": 1,
+    "id": "lepton:quartz_brick_slab"
+  }
 }

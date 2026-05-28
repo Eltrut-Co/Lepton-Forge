@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:smooth_quartz"
   },
-  "result": "lepton:smooth_quartz_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "lepton:smooth_quartz_wall"
+  }
 }

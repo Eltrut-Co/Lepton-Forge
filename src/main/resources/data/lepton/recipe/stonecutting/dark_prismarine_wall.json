@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:dark_prismarine"
   },
-  "result": "lepton:dark_prismarine_wall",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "lepton:dark_prismarine_wall"
+  }
 }

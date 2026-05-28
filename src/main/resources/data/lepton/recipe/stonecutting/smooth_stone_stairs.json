@@ -4,7 +4,7 @@
     "item": "minecraft:smooth_stone"
   },
   "result": {
-    "id": "lepton:smooth_stone_stairs",
-    "count": 1
+    "count": 1,
+    "id": "lepton:smooth_stone_stairs"
   }
 }

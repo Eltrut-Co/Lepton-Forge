@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:sandstone"
   },
-  "result": "lepton:cut_sandstone_stairs",
-  "count": 1
+  "result": {
+    "count": 1,
+    "id": "lepton:cut_sandstone_stairs"
+  }
 }
