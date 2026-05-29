@@ -14,9 +14,13 @@
     "id": "lepton:cut_soul_sandstone_stairs",
     "count": 4
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "differentiate:flag",
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
       "flag": "soul_sandstone"
     }
   ]

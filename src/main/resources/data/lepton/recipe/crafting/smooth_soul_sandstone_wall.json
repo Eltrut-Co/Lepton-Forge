@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "##"
+    "###",
+    "###"
   ],
   "key": {
     "#": {
-      "item": "quark:polished_jasper"
+      "item": "quark:smooth_soul_sandstone"
     }
   },
   "result": {
-    "id": "lepton:polished_jasper_pressure_plate"
+    "id": "lepton:smooth_soul_sandstone_wall",
+    "count": 6
   },
   "neoforge:conditions": [
     {
@@ -18,7 +20,7 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "jasper"
+      "flag": "soul_sandstone"
     }
   ]
 }

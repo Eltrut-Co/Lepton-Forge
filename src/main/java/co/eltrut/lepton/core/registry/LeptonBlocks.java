@@ -151,6 +151,8 @@ public class LeptonBlocks {
 				entry(List.of(Blocks.RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE), CUT_RED_SANDSTONE_STAIRS)
 		);
 
+		public static final Map<List<String>, DeferredBlock<Block>> QUARK_STONE_WALLS = Map.ofEntries();
+
 	}
 
 	public static class SlabReferences {

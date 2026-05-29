@@ -51,7 +51,7 @@ public class LeptonRecipeProvider extends DifferentiateRecipeProvider {
 //            }
 //        }
 
-        this.buildStonecuttingRecipes(List.of(Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_BRICKS), LeptonBlocks.QUARTZ_BRICK, output);
+//        this.buildStonecuttingRecipes(List.of(Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_BRICKS), LeptonBlocks.QUARTZ_BRICK, output);
 
     }
 

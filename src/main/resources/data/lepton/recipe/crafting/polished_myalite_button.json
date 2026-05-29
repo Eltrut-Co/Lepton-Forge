@@ -8,9 +8,13 @@
   "result": {
     "id": "lepton:polished_myalite_button"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "differentiate:flag",
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
       "flag": "myalite"
     }
   ]

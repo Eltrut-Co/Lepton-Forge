@@ -13,9 +13,13 @@
     "id": "lepton:polished_limestone_wall",
     "count": 6
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
-      "type": "differentiate:flag",
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
       "flag": "limestone"
     }
   ]
