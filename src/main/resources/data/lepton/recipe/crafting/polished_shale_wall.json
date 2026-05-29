@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "lepton:polished_shale_wall",
+    "id": "lepton:polished_shale_wall",
     "count": 6
   },
   "conditions": [

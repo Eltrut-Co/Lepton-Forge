@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "lepton:stone_wall",
+    "id": "lepton:stone_wall",
     "count": 6
   }
 }

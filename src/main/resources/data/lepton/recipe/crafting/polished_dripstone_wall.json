@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "lepton:polished_dripstone_wall",
+    "id": "lepton:polished_dripstone_wall",
     "count": 6
   },
   "conditions": [

@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "lepton:warped_hyphae_vertical_slab",
+    "id": "lepton:warped_hyphae_vertical_slab",
     "count": 3
   },
   "neoforge:conditions": [

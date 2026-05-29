@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "lepton:stripped_birch_wood_slab",
+    "id": "lepton:stripped_birch_wood_slab",
     "count": 1
   },
   "neoforge:conditions": [

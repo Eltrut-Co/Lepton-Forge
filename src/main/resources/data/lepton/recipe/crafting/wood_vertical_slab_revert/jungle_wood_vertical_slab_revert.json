@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "lepton:jungle_wood_slab",
+    "id": "lepton:jungle_wood_slab",
     "count": 1
   },
   "neoforge:conditions": [

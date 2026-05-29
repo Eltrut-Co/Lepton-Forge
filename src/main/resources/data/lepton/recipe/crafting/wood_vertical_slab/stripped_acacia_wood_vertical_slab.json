@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "lepton:stripped_acacia_wood_vertical_slab",
+    "id": "lepton:stripped_acacia_wood_vertical_slab",
     "count": 3
   },
   "neoforge:conditions": [

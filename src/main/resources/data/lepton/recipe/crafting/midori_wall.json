@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "lepton:midori_wall",
+    "id": "lepton:midori_wall",
     "count": 6
   },
   "conditions": [

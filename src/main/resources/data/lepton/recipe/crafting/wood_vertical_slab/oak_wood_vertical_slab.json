@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "lepton:oak_wood_vertical_slab",
+    "id": "lepton:oak_wood_vertical_slab",
     "count": 3
   },
   "neoforge:conditions": [

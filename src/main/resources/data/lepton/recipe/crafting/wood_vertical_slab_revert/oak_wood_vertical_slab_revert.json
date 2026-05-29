@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "lepton:oak_wood_slab",
+    "id": "lepton:oak_wood_slab",
     "count": 1
   },
   "neoforge:conditions": [
