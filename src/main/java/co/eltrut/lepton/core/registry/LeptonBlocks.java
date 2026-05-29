@@ -4,6 +4,7 @@ import co.eltrut.differentiate.common.repo.VariantBlocksRepo;
 import co.eltrut.differentiate.common.repo.WoodVariantRepo;
 import co.eltrut.differentiate.core.event.LoadEvent;
 import co.eltrut.differentiate.core.registrator.BlockHelper;
+import co.eltrut.differentiate.core.util.BlockUtil;
 import co.eltrut.differentiate.core.util.CompatUtil;
 import co.eltrut.lepton.common.blocks.WeatheringCopperWallBlock;
 import co.eltrut.lepton.core.Lepton;
@@ -30,7 +31,7 @@ import static java.util.Map.entry;
 public class LeptonBlocks {
 	@SubscribeEvent
 	public static void load(LoadEvent event) {}
-	
+
 	public static final BlockHelper HELPER = Lepton.REGISTRATOR.getHelper(Registries.BLOCK);
 
 	// Vanilla
@@ -70,13 +71,13 @@ public class LeptonBlocks {
 	public static final DeferredBlock<Block> POLISHED_DIORITE_PRESSURE_PLATE = HELPER.createFollowBlock("polished_diorite_pressure_plate", () -> stonePressurePlateBlock(MapColor.QUARTZ), CreativeModeTabs.BUILDING_BLOCKS, POLISHED_DIORITE_WALL);
 	public static final DeferredBlock<Block> POLISHED_GRANITE_PRESSURE_PLATE = HELPER.createFollowBlock("polished_granite_pressure_plate", () -> stonePressurePlateBlock(MapColor.DIRT), CreativeModeTabs.BUILDING_BLOCKS, POLISHED_GRANITE_WALL);
 	public static final DeferredBlock<Block> POLISHED_DEEPSLATE_PRESSURE_PLATE = HELPER.createFollowBlock("polished_deepslate_pressure_plate", () -> stonePressurePlateBlock(MapColor.DEEPSLATE), CreativeModeTabs.BUILDING_BLOCKS, Blocks.POLISHED_DEEPSLATE_WALL);
-	public static final DeferredBlock<Block> POLISHED_TUFF_PRESSURE_PLATE = HELPER.createFollowBlock("polished_tuff_pressure_plate", LeptonBlocks::tuffPressurePlateBlock, CreativeModeTabs.BUILDING_BLOCKS, Blocks.POLISHED_TUFF_WALL);
+	public static final DeferredBlock<Block> POLISHED_TUFF_PRESSURE_PLATE = HELPER.createFollowBlock("polished_tuff_pressure_plate", () -> stonePressurePlateBlock(MapColor.TERRACOTTA_GRAY, BlockSetTypes.POLISHED_TUFF), CreativeModeTabs.BUILDING_BLOCKS, Blocks.POLISHED_TUFF_WALL);
 
 	public static final DeferredBlock<Block> POLISHED_ANDESITE_BUTTON = HELPER.createFollowBlock("polished_andesite_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_ANDESITE_PRESSURE_PLATE);
 	public static final DeferredBlock<Block> POLISHED_DIORITE_BUTTON = HELPER.createFollowBlock("polished_diorite_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_DIORITE_PRESSURE_PLATE);
 	public static final DeferredBlock<Block> POLISHED_GRANITE_BUTTON = HELPER.createFollowBlock("polished_granite_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_GRANITE_PRESSURE_PLATE);
 	public static final DeferredBlock<Block> POLISHED_DEEPSLATE_BUTTON = HELPER.createFollowBlock("polished_deepslate_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_DEEPSLATE_PRESSURE_PLATE);
-	public static final DeferredBlock<Block> POLISHED_TUFF_BUTTON = HELPER.createFollowBlock("polished_tuff_button", LeptonBlocks::tuffButton, CreativeModeTabs.BUILDING_BLOCKS, POLISHED_TUFF_PRESSURE_PLATE);
+	public static final DeferredBlock<Block> POLISHED_TUFF_BUTTON = HELPER.createFollowBlock("polished_tuff_button", () -> stoneButton(BlockSetTypes.POLISHED_TUFF), CreativeModeTabs.BUILDING_BLOCKS, POLISHED_TUFF_PRESSURE_PLATE);
 
 	public static final DeferredBlock<Block> CUT_COPPER_WALL = HELPER.createFollowBlock("cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.CUT_COPPER_SLAB);
 	public static final DeferredBlock<Block> EXPOSED_CUT_COPPER_WALL = HELPER.createFollowBlock("exposed_cut_copper_wall", () -> new WeatheringCopperWallBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.EXPOSED_CUT_COPPER_SLAB);
@@ -89,31 +90,31 @@ public class LeptonBlocks {
 	public static final DeferredBlock<Block> WAXED_WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_weathered_cut_copper_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
 
 	// Quark
-//	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER::defaultBlockState, BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_BUILDING_BLOCKS, Mods.QUARK);
-//
-//	public static final DeferredBlock<Block> MIDORI_WALL = HELPER.createBlock("midori_wall", () -> new WallBlock(BlockUtil.QuarkProperties.MIDORI), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_LIMESTONE_WALL = HELPER.createBlock("polished_limestone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.LIMESTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_JASPER_WALL = HELPER.createBlock("polished_jasper_wall", () -> new WallBlock(BlockUtil.QuarkProperties.JASPER), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_SHALE_WALL = HELPER.createBlock("polished_shale_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SLATE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_MYALITE_WALL = HELPER.createBlock("polished_myalite_wall", () -> new PolishedMyaliteWallBlock(BlockUtil.QuarkProperties.MYALITE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_CALCITE_WALL = HELPER.createBlock("polished_calcite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_WALL = HELPER.createBlock("polished_dripstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createBlock("cut_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//	public static final DeferredBlock<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createBlock("smooth_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTab.TAB_DECORATIONS, Mods.QUARK);
-//
-//	public static final DeferredBlock<Block> POLISHED_LIMESTONE_BUTTON = HELPER.createBlock("polished_limestone_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_JASPER_BUTTON = HELPER.createBlock("polished_jasper_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_SHALE_BUTTON = HELPER.createBlock("polished_shale_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_MYALITE_BUTTON = HELPER.createBlock("polished_myalite_button", () -> new PolishedMyaliteButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_CALCITE_BUTTON = HELPER.createBlock("polished_calcite_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_BUTTON = HELPER.createBlock("polished_dripstone_button", () -> new DifferStoneButtonBlock(Properties.BUTTON), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//
-//	public static final DeferredBlock<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createBlock("polished_limestone_pressure_plate", () -> new StonePressurePlateBlock(Properties.LIMESTONE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createBlock("polished_jasper_pressure_plate", () -> new StonePressurePlateBlock(Properties.JASPER), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_SHALE_PRESSURE_PLATE = HELPER.createBlock("polished_shale_pressure_plate", () -> new StonePressurePlateBlock(Properties.SHALE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createBlock("polished_myalite_pressure_plate", () -> new PolishedMyalitePressurePlateBlock(Properties.MYALITE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_CALCITE_PRESSURE_PLATE = HELPER.createBlock("polished_calcite_pressure_plate", () -> new StonePressurePlateBlock(Properties.CALCITE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
-//	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_PRESSURE_PLATE = HELPER.createBlock("polished_dripstone_pressure_plate", () -> new StonePressurePlateBlock(Properties.DRIPSTONE), CreativeModeTab.TAB_REDSTONE, Mods.QUARK);
+	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER.defaultBlockState(), BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+
+	public static final DeferredBlock<Block> MIDORI_WALL = HELPER.createBlock("midori_wall", () -> new WallBlock(BlockUtil.QuarkProperties.MIDORI), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_LIMESTONE_WALL = HELPER.createBlock("polished_limestone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.LIMESTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_JASPER_WALL = HELPER.createBlock("polished_jasper_wall", () -> new WallBlock(BlockUtil.QuarkProperties.JASPER), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_SHALE_WALL = HELPER.createBlock("polished_shale_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SHALE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_MYALITE_WALL = HELPER.createBlock("polished_myalite_wall", () -> new WallBlock(BlockUtil.QuarkProperties.MYALITE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_CALCITE_WALL = HELPER.createBlock("polished_calcite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_WALL = HELPER.createBlock("polished_dripstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_WALL = HELPER.createBlock("cut_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> SMOOTH_SOUL_SANDSTONE_WALL = HELPER.createBlock("smooth_soul_sandstone_wall", () -> new WallBlock(BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+
+	public static final DeferredBlock<Block> POLISHED_LIMESTONE_BUTTON = HELPER.createBlock("polished_limestone_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_JASPER_BUTTON = HELPER.createBlock("polished_jasper_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_SHALE_BUTTON = HELPER.createBlock("polished_shale_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_MYALITE_BUTTON = HELPER.createBlock("polished_myalite_button", LeptonBlocks::stoneButton, CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_CALCITE_BUTTON = HELPER.createBlock("polished_calcite_button", () -> stoneButton(BlockSetTypes.POLISHED_CALCITE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_BUTTON = HELPER.createBlock("polished_dripstone_button", () -> stoneButton(BlockSetTypes.POLISHED_DRIPSTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+
+	public static final DeferredBlock<Block> POLISHED_LIMESTONE_PRESSURE_PLATE = HELPER.createBlock("polished_limestone_pressure_plate", () -> stonePressurePlateBlock(MapColor.STONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_JASPER_PRESSURE_PLATE = HELPER.createBlock("polished_jasper_pressure_plate", () -> stonePressurePlateBlock(MapColor.TERRACOTTA_RED), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_SHALE_PRESSURE_PLATE = HELPER.createBlock("polished_shale_pressure_plate", () -> stonePressurePlateBlock(MapColor.ICE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_MYALITE_PRESSURE_PLATE = HELPER.createBlock("polished_myalite_pressure_plate", () -> stonePressurePlateBlock(MapColor.COLOR_PURPLE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_CALCITE_PRESSURE_PLATE = HELPER.createBlock("polished_calcite_pressure_plate", () -> stonePressurePlateBlock(MapColor.TERRACOTTA_WHITE, BlockSetTypes.POLISHED_CALCITE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
+	public static final DeferredBlock<Block> POLISHED_DRIPSTONE_PRESSURE_PLATE = HELPER.createBlock("polished_dripstone_pressure_plate", () -> stonePressurePlateBlock(MapColor.TERRACOTTA_BROWN, BlockSetTypes.POLISHED_DRIPSTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
 
 	public static class Collections {
 
@@ -177,22 +178,27 @@ public class LeptonBlocks {
 
 	}
 
+	public static class BlockSetTypes {
+
+		private static final BlockSetType POLISHED_TUFF = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.POLISHED_TUFF, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
+		private static final BlockSetType POLISHED_CALCITE = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.CALCITE, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
+		private static final BlockSetType POLISHED_DRIPSTONE = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.DRIPSTONE_BLOCK, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
+
+	}
+
 	private static Block stoneButton() {
 		return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
 	}
 
-	private static Block tuffButton() {
-		return new ButtonBlock(POLISHED_TUFF, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY).sound(SoundType.TUFF));
+	private static Block stoneButton(BlockSetType type) {
+		return new ButtonBlock(type, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
 	}
 
 	private static Block stonePressurePlateBlock(MapColor color) {
 		return new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.of().mapColor(color).forceSolidOn().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
 	}
 
-	private static Block tuffPressurePlateBlock() {
-		return new PressurePlateBlock(POLISHED_TUFF, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_GRAY).forceSolidOn().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY).sound(SoundType.TUFF));
+	private static Block stonePressurePlateBlock(MapColor color, BlockSetType type) {
+		return new PressurePlateBlock(type, BlockBehaviour.Properties.of().mapColor(color).forceSolidOn().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY).sound(SoundType.TUFF));
 	}
-
-	private static final BlockSetType POLISHED_TUFF = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.POLISHED_TUFF, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
-	
 }
