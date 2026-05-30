@@ -6,15 +6,15 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "calcite"
+      "flag": "myalite"
     }
   ],
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "quark:polished_calcite"
+    "item": "quark:myalite"
   },
   "result": {
     "count": 1,
-    "id": "lepton:polished_calcite_wall"
+    "id": "lepton:polished_myalite_wall"
   }
 }

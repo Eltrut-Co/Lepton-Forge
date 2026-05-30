@@ -6,12 +6,12 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "calcite"
+      "flag": "dripstone"
     }
   ],
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "quark:polished_calcite"
+    "item": "minecraft:dripstone_block"
   },
   "result": {
     "count": 1,

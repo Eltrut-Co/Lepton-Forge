@@ -6,15 +6,15 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "calcite"
+      "flag": "soul_sandstone"
     }
   ],
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "quark:polished_calcite"
+    "item": "quark:soul_sandstone"
   },
   "result": {
     "count": 1,
-    "id": "lepton:polished_calcite_wall"
+    "id": "lepton:cut_soul_sandstone_wall"
   }
 }

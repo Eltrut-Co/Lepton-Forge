@@ -6,15 +6,15 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "calcite"
+      "flag": "midori"
     }
   ],
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "quark:polished_calcite"
+    "item": "quark:midori_block"
   },
   "result": {
     "count": 1,
-    "id": "lepton:polished_calcite_wall"
+    "id": "lepton:midori_wall"
   }
 }

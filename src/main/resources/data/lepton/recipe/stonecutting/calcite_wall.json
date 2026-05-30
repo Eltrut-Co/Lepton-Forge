@@ -11,7 +11,7 @@
   ],
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "quark:polished_calcite"
+    "item": "minecraft:calcite"
   },
   "result": {
     "count": 1,

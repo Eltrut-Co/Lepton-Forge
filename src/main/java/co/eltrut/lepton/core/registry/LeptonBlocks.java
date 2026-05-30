@@ -20,7 +20,6 @@ import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.List;
 import java.util.Map;
@@ -52,20 +51,20 @@ public class LeptonBlocks {
 	public static final DeferredBlock<Block> CUT_SANDSTONE_STAIRS = HELPER.createFollowBlock("cut_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.CUT_SANDSTONE);
 	public static final DeferredBlock<Block> CUT_RED_SANDSTONE_STAIRS = HELPER.createFollowBlock("cut_red_sandstone_stairs", () -> new StairBlock(Blocks.CUT_RED_SANDSTONE.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.CUT_RED_SANDSTONE);
 
-	public static final DeferredBlock<Block> PURPUR_WALL = HELPER.createFollowBlock("purpur_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.PURPUR_SLAB.getLeft(), SlabReferences.PURPUR_SLAB.getRight());
-	public static final DeferredBlock<Block> QUARTZ_WALL = HELPER.createFollowBlock("quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.QUARTZ_SLAB.getLeft(), SlabReferences.QUARTZ_SLAB.getRight());
-	public static final DeferredBlock<Block> SMOOTH_QUARTZ_WALL = HELPER.createFollowBlock("smooth_quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_QUARTZ)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.SMOOTH_QUARTZ_SLAB.getLeft(), SlabReferences.SMOOTH_QUARTZ_SLAB.getRight());
-	public static final DeferredBlock<Block> POLISHED_ANDESITE_WALL = HELPER.createFollowBlock("polished_andesite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.POLISHED_ANDESITE_SLAB.getLeft(), SlabReferences.POLISHED_ANDESITE_SLAB.getRight());
-	public static final DeferredBlock<Block> POLISHED_DIORITE_WALL = HELPER.createFollowBlock("polished_diorite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.POLISHED_DIORITE_SLAB.getLeft(), SlabReferences.POLISHED_DIORITE_SLAB.getRight());
-	public static final DeferredBlock<Block> POLISHED_GRANITE_WALL = HELPER.createFollowBlock("polished_granite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.POLISHED_GRANITE_SLAB.getLeft(), SlabReferences.POLISHED_GRANITE_SLAB.getRight());
-	public static final DeferredBlock<Block> STONE_WALL = HELPER.createFollowBlock("stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.STONE_SLAB.getLeft(), SlabReferences.STONE_SLAB.getRight());
-	public static final DeferredBlock<Block> SMOOTH_STONE_WALL = HELPER.createFollowBlock("smooth_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.SMOOTH_STONE_SLAB.getLeft(), SlabReferences.SMOOTH_STONE_SLAB.getRight());
-	public static final DeferredBlock<Block> PRISMARINE_BRICK_WALL = HELPER.createFollowBlock("prismarine_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_BRICKS)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.PRISMARINE_BRICK_SLAB.getLeft(), SlabReferences.PRISMARINE_BRICK_SLAB.getRight());
-	public static final DeferredBlock<Block> DARK_PRISMARINE_WALL = HELPER.createFollowBlock("dark_prismarine_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.DARK_PRISMARINE_SLAB.getLeft(), SlabReferences.DARK_PRISMARINE_SLAB.getRight());
-	public static final DeferredBlock<Block> CUT_SANDSTONE_WALL = HELPER.createFollowBlock("cut_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.CUT_SANDSTONE_SLAB.getLeft(), SlabReferences.CUT_SANDSTONE_SLAB.getRight());
-	public static final DeferredBlock<Block> CUT_RED_SANDSTONE_WALL = HELPER.createFollowBlock("cut_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.CUT_RED_SANDSTONE_SLAB.getLeft(), SlabReferences.CUT_RED_SANDSTONE_SLAB.getRight());
-	public static final DeferredBlock<Block> SMOOTH_SANDSTONE_WALL = HELPER.createFollowBlock("smooth_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.SMOOTH_SANDSTONE_SLAB.getLeft(), SlabReferences.SMOOTH_SANDSTONE_SLAB.getRight());
-	public static final DeferredBlock<Block> SMOOTH_RED_SANDSTONE_WALL = HELPER.createFollowBlock("smooth_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_RED_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, SlabReferences.SMOOTH_RED_SANDSTONE_SLAB.getLeft(), SlabReferences.SMOOTH_RED_SANDSTONE_SLAB.getRight());
+	public static final DeferredBlock<Block> PURPUR_WALL = HELPER.createFollowBlock("purpur_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.PURPUR_SLAB);
+	public static final DeferredBlock<Block> QUARTZ_WALL = HELPER.createFollowBlock("quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.QUARTZ_SLAB);
+	public static final DeferredBlock<Block> SMOOTH_QUARTZ_WALL = HELPER.createFollowBlock("smooth_quartz_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_QUARTZ)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.SMOOTH_QUARTZ_SLAB);
+	public static final DeferredBlock<Block> POLISHED_ANDESITE_WALL = HELPER.createFollowBlock("polished_andesite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.POLISHED_ANDESITE_SLAB);
+	public static final DeferredBlock<Block> POLISHED_DIORITE_WALL = HELPER.createFollowBlock("polished_diorite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.POLISHED_DIORITE_SLAB);
+	public static final DeferredBlock<Block> POLISHED_GRANITE_WALL = HELPER.createFollowBlock("polished_granite_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.POLISHED_GRANITE_SLAB);
+	public static final DeferredBlock<Block> STONE_WALL = HELPER.createFollowBlock("stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.STONE_SLAB);
+	public static final DeferredBlock<Block> SMOOTH_STONE_WALL = HELPER.createFollowBlock("smooth_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.SMOOTH_STONE_SLAB);
+	public static final DeferredBlock<Block> PRISMARINE_BRICK_WALL = HELPER.createFollowBlock("prismarine_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_BRICKS)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.PRISMARINE_BRICK_SLAB);
+	public static final DeferredBlock<Block> DARK_PRISMARINE_WALL = HELPER.createFollowBlock("dark_prismarine_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.DARK_PRISMARINE_SLAB);
+	public static final DeferredBlock<Block> CUT_SANDSTONE_WALL = HELPER.createFollowBlock("cut_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.CUT_SANDSTONE_SLAB);
+	public static final DeferredBlock<Block> CUT_RED_SANDSTONE_WALL = HELPER.createFollowBlock("cut_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CUT_RED_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.CUT_RED_SANDSTONE_SLAB);
+	public static final DeferredBlock<Block> SMOOTH_SANDSTONE_WALL = HELPER.createFollowBlock("smooth_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.SMOOTH_SANDSTONE_SLAB);
+	public static final DeferredBlock<Block> SMOOTH_RED_SANDSTONE_WALL = HELPER.createFollowBlock("smooth_red_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_RED_SANDSTONE)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.SMOOTH_RED_SANDSTONE_SLAB);
 
 	public static final DeferredBlock<Block> POLISHED_ANDESITE_PRESSURE_PLATE = HELPER.createFollowBlock("polished_andesite_pressure_plate", () -> stonePressurePlateBlock(MapColor.STONE), CreativeModeTabs.BUILDING_BLOCKS, POLISHED_ANDESITE_WALL);
 	public static final DeferredBlock<Block> POLISHED_DIORITE_PRESSURE_PLATE = HELPER.createFollowBlock("polished_diorite_pressure_plate", () -> stonePressurePlateBlock(MapColor.QUARTZ), CreativeModeTabs.BUILDING_BLOCKS, POLISHED_DIORITE_WALL);
@@ -151,32 +150,19 @@ public class LeptonBlocks {
 				entry(List.of(Blocks.RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE), CUT_RED_SANDSTONE_STAIRS)
 		);
 
-		public static final Map<List<String>, DeferredBlock<Block>> QUARK_STONE_WALLS = Map.ofEntries();
+		public static final List<WoodVariantRepo> QUARK_WOODS = List.of();
 
-	}
-
-	public static class SlabReferences {
-
-		public static final Pair<String, String> PURPUR_SLAB = followSlab("purpur");
-		public static final Pair<String, String> QUARTZ_SLAB = followSlab("quartz");
-		public static final Pair<String, String> SMOOTH_QUARTZ_SLAB = followSlab("smooth_quartz");
-		public static final Pair<String, String> POLISHED_ANDESITE_SLAB = followSlab("polished_andesite");
-		public static final Pair<String, String> POLISHED_DIORITE_SLAB = followSlab("polished_diorite");
-		public static final Pair<String, String> POLISHED_GRANITE_SLAB = followSlab("polished_granite");
-		public static final Pair<String, String> STONE_SLAB = followSlab("stone");
-		public static final Pair<String, String> SMOOTH_STONE_SLAB = followSlab("smooth_stone");
-		public static final Pair<String, String> PRISMARINE_BRICK_SLAB = followSlab("prismarine_brick");
-		public static final Pair<String, String> DARK_PRISMARINE_SLAB = followSlab("dark_prismarine");
-		public static final Pair<String, String> CUT_SANDSTONE_SLAB = followSlab("cut_sandstone");
-		public static final Pair<String, String> CUT_RED_SANDSTONE_SLAB = followSlab("cut_red_sandstone");
-		public static final Pair<String, String> SMOOTH_SANDSTONE_SLAB = followSlab("smooth_sandstone");
-		public static final Pair<String, String> SMOOTH_RED_SANDSTONE_SLAB = followSlab("smooth_red_sandstone");
-
-		private static Pair<String, String> followSlab(String slabPrefix) {
-			if (CompatUtil.areModsLoaded(CompatUtil.Mods.QUARK))
-				return Pair.of("quark", slabPrefix + "_vertical_slab");
-			return Pair.of("minecraft", slabPrefix + "_slab");
-		}
+		public static final Map<List<String>, DeferredBlock<Block>> QUARK_STONE_WALLS = Map.ofEntries(
+				entry(List.of("midori_block"), MIDORI_WALL),
+				entry(List.of("limestone", "polished_limestone"), POLISHED_LIMESTONE_WALL),
+				entry(List.of("jasper", "polished_jasper"), POLISHED_JASPER_WALL),
+				entry(List.of("shale", "polished_shale"), POLISHED_SHALE_WALL),
+				entry(List.of("myalite", "polished_myalite"), POLISHED_MYALITE_WALL),
+				entry(List.of("polished_calcite"), POLISHED_CALCITE_WALL),
+				entry(List.of("polished_dripstone"), POLISHED_DRIPSTONE_WALL),
+				entry(List.of("soul_sandstone", "cut_soul_sandstone"), CUT_SOUL_SANDSTONE_WALL),
+				entry(List.of("smooth_soul_sandstone"), SMOOTH_SOUL_SANDSTONE_WALL)
+		);
 
 	}
 

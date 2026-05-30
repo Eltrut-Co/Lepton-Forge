@@ -1,14 +1,20 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "shale"
+    }
+  ],
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "quark:polished_shale"
   },
-  "result": "lepton:polished_shale_wall",
-  "count": 1,
-  "conditions": [
-    {
-      "type": "differentiate:flag",
-      "flag": "shale"
-    }
-  ]
+  "result": {
+    "count": 1,
+    "id": "lepton:polished_shale_wall"
+  }
 }
