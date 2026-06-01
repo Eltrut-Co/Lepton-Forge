@@ -121,7 +121,7 @@ public class LeptonBlocks {
 
 	public static class Collections {
 
-		public static final List<WoodVariantRepo> VANILLA_WOODS = List.of(ACACIA, BIRCH, CHERRY, DARK_OAK, JUNGLE, MANGROVE, OAK, SPRUCE, CRIMSON, WARPED);
+		public static final List<WoodVariantRepo> WOODS = List.of(ACACIA, BIRCH, CHERRY, DARK_OAK, JUNGLE, MANGROVE, OAK, SPRUCE, CRIMSON, WARPED, AZALEA, ANCIENT, BLOSSOM);
 
 		public static final Map<List<Block>, DeferredBlock<Block>> STONE_WALLS = Map.ofEntries(
 				entry(List.of(Blocks.ANDESITE, Blocks.POLISHED_ANDESITE), POLISHED_ANDESITE_WALL),
@@ -153,8 +153,6 @@ public class LeptonBlocks {
 				entry(List.of(Blocks.SANDSTONE, Blocks.CUT_SANDSTONE), CUT_SANDSTONE_STAIRS),
 				entry(List.of(Blocks.RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE), CUT_RED_SANDSTONE_STAIRS)
 		);
-
-		public static final List<WoodVariantRepo> QUARK_WOODS = List.of(AZALEA, ANCIENT, BLOSSOM);
 
 		public static final Map<List<String>, DeferredBlock<Block>> QUARK_STONE_WALLS = Map.ofEntries(
 				entry(List.of("midori_block"), MIDORI_WALL),

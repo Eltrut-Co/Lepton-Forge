@@ -33,15 +33,15 @@ public class LeptonRecipeProvider extends DifferentiateRecipeProvider {
 
     protected void buildRecipes(RecipeOutput output) {
 
-        for (Map.Entry<List<String>, DeferredBlock<Block>> entry : LeptonBlocks.Collections.QUARK_STONE_WALLS.entrySet()) {
-            for (String name : entry.getKey()) {
-                Block block = BlockUtil.getBlockFromId(CompatUtil.Mods.QUARK, name);
-                SingleItemRecipeBuilder.stonecutting(Ingredient.of(block), RecipeCategory.BUILDING_BLOCKS, entry.getValue())
-                        .unlockedBy("has_" + name, has(block))
-                        .save(output.withConditions(new ModLoadedCondition(CompatUtil.Mods.QUARK)),
-                                ResourceLocation.fromNamespaceAndPath(Lepton.MOD_ID, "stonecutting/" + name + "_wall"));
-            }
-        }
+//        for (Map.Entry<List<String>, DeferredBlock<Block>> entry : LeptonBlocks.Collections.QUARK_STONE_WALLS.entrySet()) {
+//            for (String name : entry.getKey()) {
+//                Block block = BlockUtil.getBlockFromId(CompatUtil.Mods.QUARK, name);
+//                SingleItemRecipeBuilder.stonecutting(Ingredient.of(block), RecipeCategory.BUILDING_BLOCKS, entry.getValue())
+//                        .unlockedBy("has_" + name, has(block))
+//                        .save(output.withConditions(new ModLoadedCondition(CompatUtil.Mods.QUARK)),
+//                                ResourceLocation.fromNamespaceAndPath(Lepton.MOD_ID, "stonecutting/" + name + "_wall"));
+//            }
+//        }
 
 //        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, LeptonBlocks.POLISHED_CALCITE_WALL)
 //                .unlockedBy("has_calcite", has(Blocks.CALCITE))

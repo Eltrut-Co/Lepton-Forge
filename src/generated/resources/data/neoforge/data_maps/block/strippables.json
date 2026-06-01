@@ -12,6 +12,30 @@
     "lepton:acacia_wood_wall": {
       "stripped_block": "lepton:stripped_acacia_wood_wall"
     },
+    "lepton:ancient_wood_slab": {
+      "stripped_block": "lepton:stripped_ancient_wood_slab"
+    },
+    "lepton:ancient_wood_stairs": {
+      "stripped_block": "lepton:stripped_ancient_wood_stairs"
+    },
+    "lepton:ancient_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_ancient_wood_vertical_slab"
+    },
+    "lepton:ancient_wood_wall": {
+      "stripped_block": "lepton:stripped_ancient_wood_wall"
+    },
+    "lepton:azalea_wood_slab": {
+      "stripped_block": "lepton:stripped_azalea_wood_slab"
+    },
+    "lepton:azalea_wood_stairs": {
+      "stripped_block": "lepton:stripped_azalea_wood_stairs"
+    },
+    "lepton:azalea_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_azalea_wood_vertical_slab"
+    },
+    "lepton:azalea_wood_wall": {
+      "stripped_block": "lepton:stripped_azalea_wood_wall"
+    },
     "lepton:birch_wood_slab": {
       "stripped_block": "lepton:stripped_birch_wood_slab"
     },
@@ -23,6 +47,18 @@
     },
     "lepton:birch_wood_wall": {
       "stripped_block": "lepton:stripped_birch_wood_wall"
+    },
+    "lepton:blossom_wood_slab": {
+      "stripped_block": "lepton:stripped_blossom_wood_slab"
+    },
+    "lepton:blossom_wood_stairs": {
+      "stripped_block": "lepton:stripped_blossom_wood_stairs"
+    },
+    "lepton:blossom_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_blossom_wood_vertical_slab"
+    },
+    "lepton:blossom_wood_wall": {
+      "stripped_block": "lepton:stripped_blossom_wood_wall"
     },
     "lepton:cherry_wood_slab": {
       "stripped_block": "lepton:stripped_cherry_wood_slab"
