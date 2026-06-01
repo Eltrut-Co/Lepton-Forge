@@ -1,0 +1,160 @@
+{
+  "values": {
+    "lepton:acacia_wood_slab": {
+      "stripped_block": "lepton:stripped_acacia_wood_slab"
+    },
+    "lepton:acacia_wood_stairs": {
+      "stripped_block": "lepton:stripped_acacia_wood_stairs"
+    },
+    "lepton:acacia_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_acacia_wood_vertical_slab"
+    },
+    "lepton:acacia_wood_wall": {
+      "stripped_block": "lepton:stripped_acacia_wood_wall"
+    },
+    "lepton:ancient_wood_slab": {
+      "stripped_block": "lepton:stripped_ancient_wood_slab"
+    },
+    "lepton:ancient_wood_stairs": {
+      "stripped_block": "lepton:stripped_ancient_wood_stairs"
+    },
+    "lepton:ancient_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_ancient_wood_vertical_slab"
+    },
+    "lepton:ancient_wood_wall": {
+      "stripped_block": "lepton:stripped_ancient_wood_wall"
+    },
+    "lepton:azalea_wood_slab": {
+      "stripped_block": "lepton:stripped_azalea_wood_slab"
+    },
+    "lepton:azalea_wood_stairs": {
+      "stripped_block": "lepton:stripped_azalea_wood_stairs"
+    },
+    "lepton:azalea_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_azalea_wood_vertical_slab"
+    },
+    "lepton:azalea_wood_wall": {
+      "stripped_block": "lepton:stripped_azalea_wood_wall"
+    },
+    "lepton:birch_wood_slab": {
+      "stripped_block": "lepton:stripped_birch_wood_slab"
+    },
+    "lepton:birch_wood_stairs": {
+      "stripped_block": "lepton:stripped_birch_wood_stairs"
+    },
+    "lepton:birch_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_birch_wood_vertical_slab"
+    },
+    "lepton:birch_wood_wall": {
+      "stripped_block": "lepton:stripped_birch_wood_wall"
+    },
+    "lepton:blossom_wood_slab": {
+      "stripped_block": "lepton:stripped_blossom_wood_slab"
+    },
+    "lepton:blossom_wood_stairs": {
+      "stripped_block": "lepton:stripped_blossom_wood_stairs"
+    },
+    "lepton:blossom_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_blossom_wood_vertical_slab"
+    },
+    "lepton:blossom_wood_wall": {
+      "stripped_block": "lepton:stripped_blossom_wood_wall"
+    },
+    "lepton:cherry_wood_slab": {
+      "stripped_block": "lepton:stripped_cherry_wood_slab"
+    },
+    "lepton:cherry_wood_stairs": {
+      "stripped_block": "lepton:stripped_cherry_wood_stairs"
+    },
+    "lepton:cherry_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_cherry_wood_vertical_slab"
+    },
+    "lepton:cherry_wood_wall": {
+      "stripped_block": "lepton:stripped_cherry_wood_wall"
+    },
+    "lepton:crimson_hyphae_slab": {
+      "stripped_block": "lepton:stripped_crimson_hyphae_slab"
+    },
+    "lepton:crimson_hyphae_stairs": {
+      "stripped_block": "lepton:stripped_crimson_hyphae_stairs"
+    },
+    "lepton:crimson_hyphae_vertical_slab": {
+      "stripped_block": "lepton:stripped_crimson_hyphae_vertical_slab"
+    },
+    "lepton:crimson_hyphae_wall": {
+      "stripped_block": "lepton:stripped_crimson_hyphae_wall"
+    },
+    "lepton:dark_oak_wood_slab": {
+      "stripped_block": "lepton:stripped_dark_oak_wood_slab"
+    },
+    "lepton:dark_oak_wood_stairs": {
+      "stripped_block": "lepton:stripped_dark_oak_wood_stairs"
+    },
+    "lepton:dark_oak_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_dark_oak_wood_vertical_slab"
+    },
+    "lepton:dark_oak_wood_wall": {
+      "stripped_block": "lepton:stripped_dark_oak_wood_wall"
+    },
+    "lepton:jungle_wood_slab": {
+      "stripped_block": "lepton:stripped_jungle_wood_slab"
+    },
+    "lepton:jungle_wood_stairs": {
+      "stripped_block": "lepton:stripped_jungle_wood_stairs"
+    },
+    "lepton:jungle_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_jungle_wood_vertical_slab"
+    },
+    "lepton:jungle_wood_wall": {
+      "stripped_block": "lepton:stripped_jungle_wood_wall"
+    },
+    "lepton:mangrove_wood_slab": {
+      "stripped_block": "lepton:stripped_mangrove_wood_slab"
+    },
+    "lepton:mangrove_wood_stairs": {
+      "stripped_block": "lepton:stripped_mangrove_wood_stairs"
+    },
+    "lepton:mangrove_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_mangrove_wood_vertical_slab"
+    },
+    "lepton:mangrove_wood_wall": {
+      "stripped_block": "lepton:stripped_mangrove_wood_wall"
+    },
+    "lepton:oak_wood_slab": {
+      "stripped_block": "lepton:stripped_oak_wood_slab"
+    },
+    "lepton:oak_wood_stairs": {
+      "stripped_block": "lepton:stripped_oak_wood_stairs"
+    },
+    "lepton:oak_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_oak_wood_vertical_slab"
+    },
+    "lepton:oak_wood_wall": {
+      "stripped_block": "lepton:stripped_oak_wood_wall"
+    },
+    "lepton:spruce_wood_slab": {
+      "stripped_block": "lepton:stripped_spruce_wood_slab"
+    },
+    "lepton:spruce_wood_stairs": {
+      "stripped_block": "lepton:stripped_spruce_wood_stairs"
+    },
+    "lepton:spruce_wood_vertical_slab": {
+      "stripped_block": "lepton:stripped_spruce_wood_vertical_slab"
+    },
+    "lepton:spruce_wood_wall": {
+      "stripped_block": "lepton:stripped_spruce_wood_wall"
+    },
+    "lepton:warped_hyphae_slab": {
+      "stripped_block": "lepton:stripped_warped_hyphae_slab"
+    },
+    "lepton:warped_hyphae_stairs": {
+      "stripped_block": "lepton:stripped_warped_hyphae_stairs"
+    },
+    "lepton:warped_hyphae_vertical_slab": {
+      "stripped_block": "lepton:stripped_warped_hyphae_vertical_slab"
+    },
+    "lepton:warped_hyphae_wall": {
+      "stripped_block": "lepton:stripped_warped_hyphae_wall"
+    }
+  }
+}

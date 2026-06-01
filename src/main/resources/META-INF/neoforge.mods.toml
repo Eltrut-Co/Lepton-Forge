@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[2,)"
+license="CC BY-NC-SA 3.0 Unported"
+issueTrackerURL="https://github.com/Eltrut-Co/Lepton/issues"
+[[mods]]
+modId="lepton"
+version="3.0.0"
+displayName="Lepton"
+logoFile="lepton.png"
+credits="EltrutLikes"
+authors="Eltrut & Co."
+description='''
+Smallest things.
+'''
+
+[[dependencies.lepton]]
+    modId="neoforge"
+    mandatory=true
+    versionRange="[2,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.lepton]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.lepton]]
+    modId="differentiate"
+    mandatory=true
+    versionRange="[3.1.0,)"
+    ordering="AFTER"
+    side="BOTH"

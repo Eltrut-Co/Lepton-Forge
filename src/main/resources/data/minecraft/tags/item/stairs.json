@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values": [
+		"lepton:smooth_stone_stairs",
+		"lepton:cut_sandstone_stairs",
+		"lepton:cut_red_sandstone_stairs",
+		"lepton:quartz_brick_stairs",
+		"lepton:cut_soul_sandstone_stairs"
+	]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_vertical_slab",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "lepton:azalea_wood_slab"
+    }
+  },
+  "result": {
+    "id": "lepton:azalea_wood_vertical_slab",
+    "count": 3
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "vertical_slabs"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "azalea_wood"
+    }
+  ]
+}

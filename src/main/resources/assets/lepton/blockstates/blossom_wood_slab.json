@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lepton:block/blossom_wood_slab"
+    },
+    "type=double": {
+      "model": "quark:block/blossom_wood"
+    },
+    "type=top": {
+      "model": "lepton:block/blossom_wood_slab_top"
+    }
+  }
+}

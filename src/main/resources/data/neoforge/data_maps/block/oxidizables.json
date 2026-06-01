@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": {
+    "lepton:cut_copper_wall": {
+      "next_oxidation_stage": "lepton:exposed_cut_copper_wall"
+    },
+    "lepton:exposed_cut_copper_wall": {
+      "next_oxidation_stage": "lepton:weathered_cut_copper_wall"
+    },
+    "lepton:weathered_cut_copper_wall": {
+      "next_oxidation_stage": "lepton:oxidized_cut_copper_wall"
+    }
+  }
+}

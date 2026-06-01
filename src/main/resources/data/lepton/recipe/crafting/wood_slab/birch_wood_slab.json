@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:birch_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:birch_wood_slab",
+    "count": 6
+  }
+}

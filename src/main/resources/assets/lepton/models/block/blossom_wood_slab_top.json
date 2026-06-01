@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "quark:block/blossom_log",
+    "top": "quark:block/blossom_log",
+    "side": "quark:block/blossom_log"
+  }
+}

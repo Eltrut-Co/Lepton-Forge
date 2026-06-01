@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_cherry_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:stripped_cherry_wood_slab",
+    "count": 6
+  }
+}

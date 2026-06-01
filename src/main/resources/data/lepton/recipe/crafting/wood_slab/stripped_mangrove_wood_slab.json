@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_mangrove_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:stripped_mangrove_wood_slab",
+    "count": 6
+  }
+}

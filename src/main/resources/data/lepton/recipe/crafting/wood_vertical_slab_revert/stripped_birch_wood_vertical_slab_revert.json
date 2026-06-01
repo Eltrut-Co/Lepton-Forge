@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wood_vertical_slab_revert",
+  "ingredients": [
+    {
+      "item": "lepton:stripped_birch_wood_vertical_slab"
+    }
+  ],
+  "result": {
+    "id": "lepton:stripped_birch_wood_slab",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "vertical_slabs"
+    }
+  ]
+}

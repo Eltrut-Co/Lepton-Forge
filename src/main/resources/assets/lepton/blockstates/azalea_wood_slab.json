@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lepton:block/azalea_wood_slab"
+    },
+    "type=double": {
+      "model": "quark:block/azalea_wood"
+    },
+    "type=top": {
+      "model": "lepton:block/azalea_wood_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lepton:block/ancient_wood_slab"
+    },
+    "type=double": {
+      "model": "quark:block/ancient_wood"
+    },
+    "type=top": {
+      "model": "lepton:block/ancient_wood_slab_top"
+    }
+  }
+}

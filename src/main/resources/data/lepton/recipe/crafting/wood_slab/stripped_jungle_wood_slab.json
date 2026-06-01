@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_jungle_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:stripped_jungle_wood_slab",
+    "count": 6
+  }
+}
