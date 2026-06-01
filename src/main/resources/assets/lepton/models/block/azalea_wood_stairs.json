@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/stairs",
+    "textures": {
+        "bottom": "quark:block/azalea_log",
+        "top": "quark:block/azalea_log",
+        "side": "quark:block/azalea_log"
+    }
+}

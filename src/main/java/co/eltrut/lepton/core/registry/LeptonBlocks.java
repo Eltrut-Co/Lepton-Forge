@@ -89,6 +89,10 @@ public class LeptonBlocks {
 	public static final DeferredBlock<Block> WAXED_WEATHERED_CUT_COPPER_WALL = HELPER.createFollowBlock("waxed_weathered_cut_copper_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CUT_COPPER)), CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
 
 	// Quark
+	public static final WoodVariantRepo AZALEA = HELPER.createWoodVariants(CompatUtil.Mods.QUARK, "azalea_wood", BlockUtil.QuarkProperties.AZALEA, BlockUtil.QuarkProperties.STRIPPED_AZALEA);
+	public static final WoodVariantRepo ANCIENT = HELPER.createWoodVariants(CompatUtil.Mods.QUARK, "ancient_wood", BlockUtil.QuarkProperties.ANCIENT, BlockUtil.QuarkProperties.ANCIENT);
+	public static final WoodVariantRepo BLOSSOM = HELPER.createWoodVariants(CompatUtil.Mods.QUARK, "blossom_wood", BlockUtil.QuarkProperties.BLOSSOM, BlockUtil.QuarkProperties.BLOSSOM);
+
 	public static final DeferredBlock<Block> CUT_SOUL_SANDSTONE_STAIRS = HELPER.createBlock("cut_soul_sandstone_stairs", () -> new StairBlock(Blocks.BROWN_CONCRETE_POWDER.defaultBlockState(), BlockUtil.QuarkProperties.SOUL_SANDSTONE), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
 
 	public static final DeferredBlock<Block> MIDORI_WALL = HELPER.createBlock("midori_wall", () -> new WallBlock(BlockUtil.QuarkProperties.MIDORI), CreativeModeTabs.BUILDING_BLOCKS, CompatUtil.Mods.QUARK);
