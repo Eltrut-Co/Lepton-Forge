@@ -23,6 +23,10 @@
     {
       "type": "zeta:flag",
       "flag": "vertical_slabs"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "azalea_wood"
     }
   ]
 }

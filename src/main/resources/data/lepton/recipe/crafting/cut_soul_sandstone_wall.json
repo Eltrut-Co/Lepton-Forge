@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "wood_slab",
   "pattern": [
+    "###",
     "###"
   ],
   "key": {
     "#": {
-      "item": "quark:stripped_azalea_wood"
+      "item": "quark:cut_soul_sandstone"
     }
   },
   "result": {
-    "id": "lepton:stripped_azalea_wood_slab",
+    "id": "lepton:cut_soul_sandstone_wall",
     "count": 6
   },
   "neoforge:conditions": [
@@ -20,7 +20,7 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "azalea_wood"
+      "flag": "soul_sandstone"
     }
   ]
 }

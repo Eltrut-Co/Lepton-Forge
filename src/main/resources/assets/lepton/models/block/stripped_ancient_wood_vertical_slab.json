@@ -1,0 +1,8 @@
+{
+    "parent": "differentiate:block/vertical_slab",
+    "textures": {
+        "bottom": "quark:block/stripped_ancient_log",
+        "top": "quark:block/stripped_ancient_log",
+        "side": "quark:block/stripped_ancient_log"
+    }
+}

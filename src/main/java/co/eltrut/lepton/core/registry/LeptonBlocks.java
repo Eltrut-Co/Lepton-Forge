@@ -154,7 +154,7 @@ public class LeptonBlocks {
 				entry(List.of(Blocks.RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE), CUT_RED_SANDSTONE_STAIRS)
 		);
 
-		public static final List<WoodVariantRepo> QUARK_WOODS = List.of();
+		public static final List<WoodVariantRepo> QUARK_WOODS = List.of(AZALEA, ANCIENT, BLOSSOM);
 
 		public static final Map<List<String>, DeferredBlock<Block>> QUARK_STONE_WALLS = Map.ofEntries(
 				entry(List.of("midori_block"), MIDORI_WALL),

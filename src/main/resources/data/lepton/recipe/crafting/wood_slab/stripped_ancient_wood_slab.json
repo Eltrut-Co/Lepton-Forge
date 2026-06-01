@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "quark:stripped_azalea_wood"
+      "item": "quark:stripped_ancient_wood"
     }
   },
   "result": {
-    "id": "lepton:stripped_azalea_wood_slab",
+    "id": "lepton:stripped_ancient_wood_slab",
     "count": 6
   },
   "neoforge:conditions": [
@@ -20,7 +20,7 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "azalea_wood"
+      "flag": "ancient_wood"
     }
   ]
 }

@@ -3,11 +3,11 @@
   "group": "wood_vertical_slab_revert",
   "ingredients": [
     {
-      "item": "lepton:stripped_azalea_wood_vertical_slab"
+      "item": "lepton:stripped_ancient_wood_vertical_slab"
     }
   ],
   "result": {
-    "id": "lepton:stripped_azalea_wood_slab",
+    "id": "lepton:stripped_ancient_wood_slab",
     "count": 1
   },
   "neoforge:conditions": [
@@ -21,7 +21,7 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "azalea_wood"
+      "flag": "ancient_wood"
     }
   ]
 }

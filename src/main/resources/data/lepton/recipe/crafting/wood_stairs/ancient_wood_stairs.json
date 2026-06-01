@@ -1,17 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "wood_slab",
+  "group": "wood_stairs",
   "pattern": [
+    "#  ",
+    "## ",
     "###"
   ],
   "key": {
     "#": {
-      "item": "quark:stripped_azalea_wood"
+      "item": "quark:ancient_wood"
     }
   },
   "result": {
-    "id": "lepton:stripped_azalea_wood_slab",
-    "count": 6
+    "id": "lepton:ancient_wood_stairs",
+    "count": 4
   },
   "neoforge:conditions": [
     {
@@ -20,7 +22,7 @@
     },
     {
       "type": "zeta:flag",
-      "flag": "azalea_wood"
+      "flag": "ancient_wood"
     }
   ]
 }
