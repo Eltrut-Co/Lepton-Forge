@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wood_vertical_slab_revert",
+  "ingredients": [
+    {
+      "item": "lepton:blossom_wood_vertical_slab"
+    }
+  ],
+  "result": {
+    "id": "lepton:blossom_wood_slab",
+    "count": 1
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "vertical_slabs"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "blossom_trees"
+    }
+  ]
+}
