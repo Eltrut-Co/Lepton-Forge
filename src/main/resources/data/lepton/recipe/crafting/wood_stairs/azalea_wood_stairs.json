@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:azalea_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:azalea_wood_stairs",
+    "count": 4
+  }
+}

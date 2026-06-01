@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_wall",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:azalea_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:azalea_wood_wall",
+    "count": 6
+  }
+}

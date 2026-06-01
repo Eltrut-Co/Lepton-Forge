@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:stripped_azalea_wood"
+    }
+  },
+  "result": {
+    "id": "lepton:stripped_azalea_wood_slab",
+    "count": 6
+  }
+}
