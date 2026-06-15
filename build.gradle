@@ -142,7 +142,7 @@ configurations {
 
 dependencies {
    // implementation ("curse.maven:differentiate-450748:${differentiate_id}")
-    implementation files("libs/differentiate-1.21.1-3.1.0.jar")
+    implementation files("libs/differentiate-1.21.1-3.1.1.jar")
 
     implementation ("maven.modrinth:zeta:${zeta_version}")
     implementation ("maven.modrinth:quark:${quark_version}")
