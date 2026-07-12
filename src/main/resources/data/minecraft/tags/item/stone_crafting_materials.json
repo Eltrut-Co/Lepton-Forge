@@ -6,13 +6,13 @@
 		"minecraft:granite",
 		"minecraft:calcite",
 		"minecraft:tuff",
-		"minecraft:dripstone_block"
-	],
-	"optional": [
-		"quark:shale",
-		"quark:jasper",
-		"quark:limestone",
-		"quark:myalite",
-		"quark:permafrost"
+		"minecraft:dripstone_block",
+		{"id": "quark:shale", "required": false},
+		{"id": "quark:limestone", "required": false},
+		{"id": "quark:jasper", "required": false},
+		{"id": "quark:myalite", "required": false},
+		{"id": "quark:permafrost", "required": false},
+		{"id": "minecraft:sulfur", "required": false},
+		{"id": "minecraft:cinnabar", "required": false}
 	]
 }
