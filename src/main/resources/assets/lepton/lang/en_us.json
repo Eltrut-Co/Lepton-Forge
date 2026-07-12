@@ -176,6 +176,9 @@
 	"block.lepton.waxed_cut_copper_wall": "Waxed Cut Copper Wall",
 	"block.lepton.waxed_exposed_cut_copper_wall": "Waxed Exposed Cut Copper Wall",
 	"block.lepton.waxed_oxidized_cut_copper_wall": "Waxed Oxidized Cut Copper Wall",
-	"block.lepton.waxed_weathered_cut_copper_wall": "Waxed Weathered Cut Copper Wall"
+	"block.lepton.waxed_weathered_cut_copper_wall": "Waxed Weathered Cut Copper Wall",
+
+	"block_type.lepton.wood_slab": "%s Wood Slab",
+	"block_type.lepton.stripped_wood_slab": "Stripped %s Wood Slab"
 
 }
