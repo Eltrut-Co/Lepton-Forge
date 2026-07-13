@@ -1,26 +1,25 @@
 package co.eltrut.lepton.core.compat;
 
-import co.eltrut.differentiate.common.block.VerticalSlabBlock;
 import co.eltrut.differentiate.core.util.CompatUtil;
 import co.eltrut.lepton.core.Lepton;
 import co.eltrut.lepton.core.registry.LeptonBlocks;
 import net.mehvahdjukaar.every_compat.ECPlatStuff;
-import net.mehvahdjukaar.every_compat.api.*;
+import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
+import net.mehvahdjukaar.every_compat.api.SimpleEntrySet;
+import net.mehvahdjukaar.every_compat.api.TabAddMode;
+import net.mehvahdjukaar.every_compat.misc.CompatSpritesHelper;
 import net.mehvahdjukaar.every_compat.modules.EveryCompatModule;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodChildKeys;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
 
 import java.util.function.Consumer;
 
@@ -47,8 +46,10 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         woodSlab = SimpleEntrySet.builder(WoodType.class, "wood_slab", LeptonBlocks.OAK.woods().getSlabBlock(),
                 () -> VanillaWoodTypes.OAK, s -> new SlabBlock(Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.WOOD, VanillaWoodChildKeys.LOG)
-                .addModelTransform(m -> m.replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.WOOD))
-                .setTab(() -> BuiltInRegistries.CREATIVE_MODE_TAB.get(CreativeModeTabs.BUILDING_BLOCKS))
+                .addModelTransform(m -> m
+                        .replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.LOG, CompatSpritesHelper.LOOKS_LIKE_SIDE_LOG_TEXTURE)
+                        .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
+                .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
@@ -92,12 +93,14 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         strippedWoodSlab = SimpleEntrySet.builder(WoodType.class, "wood_slab", "stripped", LeptonBlocks.OAK.strippedWoods().getSlabBlock(),
                         () -> VanillaWoodTypes.OAK, s -> new SlabBlock(Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.STRIPPED_WOOD, VanillaWoodChildKeys.STRIPPED_LOG)
-                .addTexture(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.MINECRAFT, "stripped_oak_log"), PaletteStrategies.STRIPPED_LOG_SIDE_STANDARD)
-                .setTab(() -> BuiltInRegistries.CREATIVE_MODE_TAB.get(CreativeModeTabs.BUILDING_BLOCKS))
+                .addModelTransform(m -> m
+                        .replaceWithTextureFromChild("minecraft:block/stripped_oak_log", VanillaWoodChildKeys.STRIPPED_LOG, CompatSpritesHelper.LOOKS_LIKE_SIDE_LOG_TEXTURE)
+                        .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/stripped_oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.STRIPPED_WOOD)).withPrefix("block/").toString())))
+                .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_slabs"), Registries.BLOCK, Registries.ITEM)
-                .addRecipe(ResourceLocation.fromNamespaceAndPath(Lepton.MOD_ID, "crafting/wood_slab/stripped_oak_wood_slab"))
+                .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_slab"))
                 .build();
         this.addEntry(strippedWoodSlab);
 
@@ -132,13 +135,18 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
 //        this.addEntry(strippedWoodWall);
     }
 
-//    @Override
-//    public void onModSetup() {
-//        woodSlab.blocks.forEach((w, slab) -> {
-//            Block strippedSlab = strippedWoodSlab.blocks.get(w);
-//            if (strippedSlab != null) ECPlatStuff.registerStripping(slab, strippedSlab);
-//        });
-//    }
+    @Override
+    public void onModSetup() {
+        woodSlab.blocks.forEach((w, slab) -> {
+            Block strippedSlab = strippedWoodSlab.blocks.get(w);
+            if (strippedSlab != null) {
+                Lepton.LOGGER.info("Registering stripping of {} into {}", slab, strippedSlab);
+                ECPlatStuff.registerStripping(slab, strippedSlab);
+            } else {
+                Lepton.LOGGER.warn("Uh oh");
+            }
+        });
+    }
 
     @Override
     public void addDynamicClientResources(Consumer<ResourceGenTask> executor) {
