@@ -6,6 +6,7 @@ import co.eltrut.lepton.core.Lepton;
 import co.eltrut.lepton.core.registry.LeptonBlocks;
 import net.mehvahdjukaar.every_compat.ECPlatStuff;
 import net.mehvahdjukaar.every_compat.api.*;
+import net.mehvahdjukaar.every_compat.modules.EveryCompatModule;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodChildKeys;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.block.WallBlock;
 
 import java.util.function.Consumer;
 
-public class LeptonEveryCompatModule extends SimpleModule {
+public class LeptonEveryCompatModule extends EveryCompatModule {
 
     public final SimpleEntrySet<WoodType, Block> woodSlab;
 //    public final SimpleEntrySet<WoodType, Block> woodStairs;
@@ -41,17 +42,17 @@ public class LeptonEveryCompatModule extends SimpleModule {
     }
 
     public LeptonEveryCompatModule() {
-        super(Lepton.MOD_ID, "lp", "everycomp");
+        super(Lepton.MOD_ID, "lp");
 
         woodSlab = SimpleEntrySet.builder(WoodType.class, "wood_slab", LeptonBlocks.OAK.woods().getSlabBlock(),
                 () -> VanillaWoodTypes.OAK, s -> new SlabBlock(Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.WOOD, VanillaWoodChildKeys.LOG)
-                .addTexture(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.MINECRAFT, "oak_log"), PaletteStrategies.LOG_SIDE_STANDARD)
+                .addModelTransform(m -> m.replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.WOOD))
                 .setTab(() -> BuiltInRegistries.CREATIVE_MODE_TAB.get(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(ResourceLocation.fromNamespaceAndPath(Lepton.MOD_ID, "crafting/wood_slab/oak_wood_slab"))
+                .addRecipe(modRes("crafting/wood_slab/oak_wood_slab"))
                 .build();
         this.addEntry(woodSlab);
 
