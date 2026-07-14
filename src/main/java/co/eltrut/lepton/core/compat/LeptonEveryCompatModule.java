@@ -2,6 +2,7 @@ package co.eltrut.lepton.core.compat;
 
 import co.eltrut.differentiate.common.block.VerticalSlabBlock;
 import co.eltrut.differentiate.core.util.CompatUtil;
+import co.eltrut.lepton.common.blocks.*;
 import co.eltrut.lepton.core.Lepton;
 import co.eltrut.lepton.core.registry.LeptonBlocks;
 import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
@@ -46,7 +47,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         super(Lepton.MOD_ID, "lp");
 
         woodSlab = SimpleEntrySet.builder(WoodType.class, "wood_slab", LeptonBlocks.OAK.woods().getSlabBlock(),
-                () -> VanillaWoodTypes.OAK, s -> new SlabBlock(Utils.copyPropertySafe(s.log)))
+                () -> VanillaWoodTypes.OAK, s -> new StrippableSlabBlock(Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.WOOD, VanillaWoodChildKeys.LOG)
                 .addModelTransform(m -> m
                         .replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.LOG, CompatSpritesHelper.LOOKS_LIKE_SIDE_LOG_TEXTURE)
@@ -60,7 +61,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         this.addEntry(woodSlab);
 
         woodStairs = SimpleEntrySet.builder(WoodType.class, "wood_stairs", LeptonBlocks.OAK.woods().getStairsBlock(),
-                () -> VanillaWoodTypes.OAK, s -> new StairBlock(VanillaWoodTypes.OAK.log.defaultBlockState(), Utils.copyPropertySafe(s.log)))
+                () -> VanillaWoodTypes.OAK, s -> new StrippableStairBlock(VanillaWoodTypes.OAK.log.defaultBlockState(), Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.WOOD, VanillaWoodChildKeys.LOG)
                 .addModelTransform(m -> m
                         .replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.LOG, CompatSpritesHelper.LOOKS_LIKE_SIDE_LOG_TEXTURE)
@@ -74,7 +75,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         this.addEntry(woodStairs);
 
         woodVerticalSlab = SimpleEntrySet.builder(WoodType.class, "wood_vertical_slab", LeptonBlocks.OAK.woods().getVerticalSlabBlock(),
-                () -> VanillaWoodTypes.OAK, s -> new VerticalSlabBlock(Utils.copyPropertySafe(s.log)))
+                () -> VanillaWoodTypes.OAK, s -> new StrippableVerticalSlabBlock(Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.WOOD, VanillaWoodChildKeys.LOG)
                 .addModelTransform(m -> m
                         .replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.LOG, CompatSpritesHelper.LOOKS_LIKE_SIDE_LOG_TEXTURE)
@@ -88,7 +89,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         this.addEntry(woodVerticalSlab);
 
         woodWall = SimpleEntrySet.builder(WoodType.class, "wood_wall", LeptonBlocks.OAK.woods().getWallBlock(),
-                () -> VanillaWoodTypes.OAK, s -> new WallBlock(Utils.copyPropertySafe(s.log)))
+                () -> VanillaWoodTypes.OAK, s -> new StrippableWallBlock(Utils.copyPropertySafe(s.log)))
                 .requiresChildren(VanillaWoodChildKeys.WOOD, VanillaWoodChildKeys.LOG)
                 .addModelTransform(m -> m
                         .replaceWithTextureFromChild("minecraft:block/oak_log", VanillaWoodChildKeys.LOG, CompatSpritesHelper.LOOKS_LIKE_SIDE_LOG_TEXTURE)
@@ -160,12 +161,20 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
 
     @Override
     public void onModSetup() {
-        woodSlab.blocks.forEach((w, slab) -> {
-            Block strippedSlab = strippedWoodSlab.blocks.get(w);
-            if (strippedSlab != null) {
-                Lepton.LOGGER.info("Registering stripping of {} into {}", slab, strippedSlab);
-                // TODO: stripping
-//                ECPlatStuff.registerStripping(slab, strippedSlab);
+        this.strip(woodSlab, strippedWoodSlab);
+        this.strip(woodStairs, strippedWoodStairs);
+        this.strip(woodWall, strippedWoodWall);
+        this.strip(woodVerticalSlab, strippedWoodVerticalSlab);
+    }
+
+    public void strip(SimpleEntrySet<WoodType, Block> strippable, SimpleEntrySet<WoodType, Block> stripped) {
+        strippable.blocks.forEach((w, wood) -> {
+            Block strippedWood = stripped.blocks.get(w);
+            if (strippedWood != null && wood instanceof IStrippable) {
+                Lepton.LOGGER.info("Registering stripping of {} into {}", wood, strippedWood);
+                ((IStrippable) wood).setStrippedBlock(strippedWood);
+            } else {
+                Lepton.LOGGER.info("Uh oh");
             }
         });
     }
