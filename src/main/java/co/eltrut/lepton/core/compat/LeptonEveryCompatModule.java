@@ -10,7 +10,6 @@ import net.mehvahdjukaar.every_compat.api.SimpleEntrySet;
 import net.mehvahdjukaar.every_compat.api.TabAddMode;
 import net.mehvahdjukaar.every_compat.misc.CompatSpritesHelper;
 import net.mehvahdjukaar.every_compat.modules.EveryCompatModule;
-import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodChildKeys;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
@@ -23,8 +22,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
-
-import java.util.function.Consumer;
 
 public class LeptonEveryCompatModule extends EveryCompatModule {
 
@@ -179,13 +176,4 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         });
     }
 
-    @Override
-    public void addDynamicClientResources(Consumer<ResourceGenTask> executor) {
-        super.addDynamicClientResources(executor);
-    }
-
-    @Override
-    public void addDynamicServerResources(Consumer<ResourceGenTask> executor) {
-        super.addDynamicServerResources(executor);
-    }
 }

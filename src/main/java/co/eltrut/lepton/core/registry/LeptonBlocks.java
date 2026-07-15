@@ -170,9 +170,13 @@ public class LeptonBlocks {
 
 	public static class BlockSetTypes {
 
-		private static final BlockSetType POLISHED_TUFF = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.POLISHED_TUFF, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
-		private static final BlockSetType POLISHED_CALCITE = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.CALCITE, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
-		private static final BlockSetType POLISHED_DRIPSTONE = BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, SoundType.DRIPSTONE_BLOCK, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
+		private static final BlockSetType POLISHED_TUFF = stoneType(SoundType.POLISHED_TUFF);
+		private static final BlockSetType POLISHED_CALCITE = stoneType(SoundType.CALCITE);
+		private static final BlockSetType POLISHED_DRIPSTONE = stoneType(SoundType.DRIPSTONE_BLOCK);
+
+		public static BlockSetType stoneType(SoundType sound) {
+			return BlockSetType.register(new BlockSetType("stone", true, true, false, BlockSetType.PressurePlateSensitivity.MOBS, sound, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE, SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF, SoundEvents.STONE_BUTTON_CLICK_ON));
+		}
 
 	}
 
@@ -180,7 +184,7 @@ public class LeptonBlocks {
 		return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
 	}
 
-	private static Block stoneButton(BlockSetType type) {
+	public static Block stoneButton(BlockSetType type) {
 		return new ButtonBlock(type, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
 	}
 

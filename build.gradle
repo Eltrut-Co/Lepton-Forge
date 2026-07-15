@@ -149,6 +149,7 @@ dependencies {
 //    implementation ("maven.modrinth:quark:${quark_version}")
 
     implementation ("maven.modrinth:every-compat:${everycomp_version}-neoforge")
+    implementation ("maven.modrinth:stone-zone:${stonezone_version}-neoforge")
     implementation ("maven.modrinth:moonlight:${moonlight_version}-neoforge")
 
 //    implementation ("maven.modrinth:blueprint:${blueprint_version}")

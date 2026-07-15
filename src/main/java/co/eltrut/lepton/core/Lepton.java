@@ -4,6 +4,7 @@ import co.eltrut.differentiate.client.provider.MyaliteColorProvider;
 import co.eltrut.differentiate.core.registrator.Registrator;
 import co.eltrut.differentiate.core.util.CompatUtil;
 import co.eltrut.lepton.core.compat.LeptonEveryCompatModule;
+import co.eltrut.lepton.core.compat.LeptonStoneZoneModule;
 import co.eltrut.lepton.core.registry.LeptonBlocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -25,6 +26,7 @@ public class Lepton {
         REGISTRATOR.register(modEventBus);
 
         this.registerEveryCompatModule();
+        this.registerStoneZoneModule();
 
         modEventBus.addListener(this::registerBlockColorHandlers);
         modEventBus.addListener(this::registerItemColorHandlers);
@@ -56,6 +58,19 @@ public class Lepton {
             }
         } catch (Exception e) {
             Lepton.LOGGER.error("Uh oh, failed to start EveryCompat module", e);
+        }
+    }
+
+    private void registerStoneZoneModule() {
+        try {
+            if (CompatUtil.areModsLoaded("everycomp", "stonezone")) {
+                Lepton.LOGGER.info("Loading StoneZone module...");
+                LeptonStoneZoneModule.registerStoneZoneModule();
+            } else {
+                Lepton.LOGGER.info("StoneZone not detected, module not loading!");
+            }
+        } catch (Exception e) {
+            Lepton.LOGGER.error("Uh oh, failed to start StoneZone module", e);
         }
     }
 
