@@ -192,7 +192,7 @@ public class LeptonBlocks {
 		return new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.of().mapColor(color).forceSolidOn().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
 	}
 
-	private static Block stonePressurePlateBlock(MapColor color, BlockSetType type) {
+	public static Block stonePressurePlateBlock(MapColor color, BlockSetType type) {
 		return new PressurePlateBlock(type, BlockBehaviour.Properties.of().mapColor(color).forceSolidOn().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY).sound(SoundType.TUFF));
 	}
 }

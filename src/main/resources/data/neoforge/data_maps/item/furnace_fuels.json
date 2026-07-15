@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": {},
+  "remove": [
+    "#minecraft:non_flammable_wood"
+  ]
+}

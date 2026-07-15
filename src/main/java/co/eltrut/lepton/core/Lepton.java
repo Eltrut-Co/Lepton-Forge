@@ -50,7 +50,7 @@ public class Lepton {
     private void registerEveryCompatModule() {
         // I do this and I don't get an error
         try {
-            if (CompatUtil.areModsLoaded("everycomp")) {
+            if (CompatUtil.areModsLoaded(CompatUtil.Mods.EVERY_COMPAT)) {
                 Lepton.LOGGER.info("Loading EveryCompat module...");
                 LeptonEveryCompatModule.registerEveryCompatModule();
             } else {
@@ -63,7 +63,7 @@ public class Lepton {
 
     private void registerStoneZoneModule() {
         try {
-            if (CompatUtil.areModsLoaded("everycomp", "stonezone")) {
+            if (CompatUtil.areModsLoaded(CompatUtil.Mods.EVERY_COMPAT, CompatUtil.Mods.STONE_ZONE)) {
                 Lepton.LOGGER.info("Loading StoneZone module...");
                 LeptonStoneZoneModule.registerStoneZoneModule();
             } else {

@@ -1,7 +1,7 @@
 package co.eltrut.lepton.core.compat;
 
 import co.eltrut.differentiate.common.block.VerticalSlabBlock;
-import co.eltrut.differentiate.core.util.CompatUtil;
+import co.eltrut.differentiate.core.registry.DifferentiateTags;
 import co.eltrut.lepton.common.blocks.*;
 import co.eltrut.lepton.core.Lepton;
 import co.eltrut.lepton.core.registry.LeptonBlocks;
@@ -15,7 +15,6 @@ import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
@@ -51,9 +50,11 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_slabs"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_SLABS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_SLABS_ITEM, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_slab"))
+                .copyParentDrop()
                 .build();
         this.addEntry(woodSlab);
 
@@ -65,9 +66,11 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_stairs"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_STAIRS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_STAIRS_ITEM, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_stairs"))
+                .copyParentDrop()
                 .build();
         this.addEntry(woodStairs);
 
@@ -79,9 +82,11 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_vertical_slab"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS_ITEM, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_vertical_slab"))
+                .copyParentDrop()
                 .build();
         this.addEntry(woodVerticalSlab);
 
@@ -93,9 +98,11 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_wall"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_WALLS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_WALLS_ITEM, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_wall"))
+                .copyParentDrop()
                 .build();
         this.addEntry(woodWall);
 
@@ -108,8 +115,10 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_slabs"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_SLABS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_SLABS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_slab"))
+                .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodSlab);
 
@@ -122,8 +131,10 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_stairs"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_STAIRS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_STAIRS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_stairs"))
+                .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodStairs);
 
@@ -136,8 +147,10 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_vertical_slab"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_vertical_slab"))
+                .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodVerticalSlab);
 
@@ -150,8 +163,10 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(ResourceLocation.fromNamespaceAndPath(CompatUtil.Mods.DIFFERENTIATE, "wood_wall"), Registries.BLOCK, Registries.ITEM)
+                .addTag(DifferentiateTags.WOOD_WALLS, Registries.BLOCK)
+                .addTag(DifferentiateTags.WOOD_WALLS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_wall"))
+                .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodWall);
     }

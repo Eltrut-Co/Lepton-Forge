@@ -17,5 +17,8 @@
 		"lepton:polished_calcite_pressure_plate",
 		"lepton:polished_dripstone_pressure_plate",
 		"lepton:polished_tuff_pressure_plate"
+	],
+	"remove": [
+		"#differentiate:wood_walls"
 	]
 }

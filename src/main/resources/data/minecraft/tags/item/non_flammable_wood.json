@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "lepton:crimson_hyphae_slab",
+    "lepton:crimson_hyphae_stairs",
+    "lepton:crimson_hyphae_vertical_slab",
+    "lepton:crimson_hyphae_wall",
+    "lepton:stripped_crimson_hyphae_slab",
+    "lepton:stripped_crimson_hyphae_stairs",
+    "lepton:stripped_crimson_hyphae_vertical_slab",
+    "lepton:stripped_crimson_hyphae_wall",
+    "lepton:warped_hyphae_slab",
+    "lepton:warped_hyphae_stairs",
+    "lepton:warped_hyphae_vertical_slab",
+    "lepton:warped_hyphae_wall",
+    "lepton:stripped_warped_hyphae_slab",
+    "lepton:stripped_warped_hyphae_stairs",
+    "lepton:stripped_warped_hyphae_vertical_slab",
+    "lepton:stripped_warped_hyphae_wall"
+  ]
+}
