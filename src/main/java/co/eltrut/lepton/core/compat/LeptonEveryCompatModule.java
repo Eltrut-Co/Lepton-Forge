@@ -50,8 +50,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(DifferentiateTags.WOOD_SLABS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_SLABS_ITEM, Registries.ITEM)
+                .addTag(modRes("wood_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_slab"))
                 .copyParentDrop()
@@ -66,8 +65,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(DifferentiateTags.WOOD_STAIRS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_STAIRS_ITEM, Registries.ITEM)
+                .addTag(modRes("wood_stairs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_stairs"))
                 .copyParentDrop()
@@ -82,8 +80,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS_ITEM, Registries.ITEM)
+                .addTag(modRes("wood_vertical_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_vertical_slab"))
                 .copyParentDrop()
@@ -98,8 +95,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
-                .addTag(DifferentiateTags.WOOD_WALLS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_WALLS_ITEM, Registries.ITEM)
+                .addTag(modRes("wood_walls"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_wall"))
                 .copyParentDrop()
@@ -114,9 +110,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/stripped_oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.STRIPPED_WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
+                .addTag(modRes("wood_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_SLABS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_SLABS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_slab"))
                 .copyParentDrop()
                 .build();
@@ -130,9 +125,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/stripped_oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.STRIPPED_WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
+                .addTag(modRes("wood_stairs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_STAIRS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_STAIRS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_stairs"))
                 .copyParentDrop()
                 .build();
@@ -146,9 +140,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/stripped_oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.STRIPPED_WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
+                .addTag(modRes("wood_vertical_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_VERTICAL_SLABS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_vertical_slab"))
                 .copyParentDrop()
                 .build();
@@ -162,9 +155,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                         .addModifier((s, blockId, woodType) -> s.replace("minecraft:block/stripped_oak_wood", Utils.getID(woodType.getBlockOfThis(VanillaWoodChildKeys.STRIPPED_WOOD)).withPrefix("block/").toString())))
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
+                .addTag(modRes("wood_walls"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_WALLS, Registries.BLOCK)
-                .addTag(DifferentiateTags.WOOD_WALLS_ITEM, Registries.ITEM)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_wall"))
                 .copyParentDrop()
                 .build();
@@ -179,7 +171,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
         this.strip(woodVerticalSlab, strippedWoodVerticalSlab);
     }
 
-    public void strip(SimpleEntrySet<WoodType, Block> strippable, SimpleEntrySet<WoodType, Block> stripped) {
+    private void strip(SimpleEntrySet<WoodType, Block> strippable, SimpleEntrySet<WoodType, Block> stripped) {
         strippable.blocks.forEach((w, wood) -> {
             Block strippedWood = stripped.blocks.get(w);
             if (strippedWood != null && wood instanceof IStrippable) {

@@ -26,6 +26,7 @@
 		"lepton:crimson_hyphae_stairs",
 		"lepton:warped_hyphae_stairs",
 		"lepton:stripped_crimson_hyphae_stairs",
-		"lepton:stripped_warped_hyphae_stairs"
+		"lepton:stripped_warped_hyphae_stairs",
+		"#lepton:wood_stairs"
 	]
 }

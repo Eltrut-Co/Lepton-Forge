@@ -26,6 +26,7 @@
 		"lepton:crimson_hyphae_wall",
 		"lepton:warped_hyphae_wall",
 		"lepton:stripped_crimson_hyphae_wall",
-		"lepton:stripped_warped_hyphae_wall"
+		"lepton:stripped_warped_hyphae_wall",
+		"#lepton:wood_walls"
 	]
 }
