@@ -1,6 +1,8 @@
 {
 	"replace": false,
 	"values": [
+		"minecraft:stone_pressure_plate",
+		"minecraft:polished_blackstone_pressure_plate",
 		"lepton:polished_andesite_pressure_plate",
 		"lepton:polished_diorite_pressure_plate",
 		"lepton:polished_granite_pressure_plate",

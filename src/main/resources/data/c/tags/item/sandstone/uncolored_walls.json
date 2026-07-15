@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sandstone_wall",
+    "lepton:cut_sandstone_wall",
+    "lepton:smooth_sandstone_wall"
+  ]
+}
