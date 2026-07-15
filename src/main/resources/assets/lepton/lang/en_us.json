@@ -185,5 +185,7 @@
 	"block_type.lepton.stripped_wood_slab": "Stripped %s Wood Slab",
 	"block_type.lepton.stripped_wood_stairs": "Stripped %s Wood Stairs",
 	"block_type.lepton.stripped_wood_wall": "Stripped %s Wood Wall",
-	"block_type.lepton.stripped_wood_vertical_slab": "Stripped %s Wood Vertical Slab"
+	"block_type.lepton.stripped_wood_vertical_slab": "Stripped %s Wood Vertical Slab",
+
+	"block_type.lepton.polished_button": "Polished % Button"
 }

@@ -33,6 +33,7 @@ public class LeptonStoneZoneModule extends StoneZoneModule {
             BlockSetType stoneType = LeptonBlocks.BlockSetTypes.stoneType(stone.getSoundType(stone.defaultBlockState(), null, null, null));
             return LeptonBlocks.stoneButton(stoneType);
                         })
+                .addModelTransform(m -> m.replaceWithTextureFromChild("minecraft:block/polished_andesite", VanillaStoneChildKeys.POLISHED))
                 .requiresChildren(VanillaStoneChildKeys.POLISHED)
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .addTag(BlockTags.BUTTONS, Registries.BLOCK)
