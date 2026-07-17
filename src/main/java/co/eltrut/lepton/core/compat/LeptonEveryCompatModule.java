@@ -1,7 +1,6 @@
 package co.eltrut.lepton.core.compat;
 
 import co.eltrut.differentiate.common.block.VerticalSlabBlock;
-import co.eltrut.differentiate.core.registry.DifferentiateTags;
 import co.eltrut.lepton.common.blocks.*;
 import co.eltrut.lepton.core.Lepton;
 import co.eltrut.lepton.core.registry.LeptonBlocks;
@@ -67,7 +66,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_stairs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(modRes("crafting/wood_slab/oak_wood_stairs"))
+                .addRecipe(modRes("crafting/wood_stairs/oak_wood_stairs"))
                 .copyParentDrop()
                 .build();
         this.addEntry(woodStairs);
@@ -82,7 +81,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_vertical_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(modRes("crafting/wood_slab/oak_wood_vertical_slab"))
+                .addRecipe(modRes("crafting/wood_vertical_slab/oak_wood_vertical_slab")) // TODO: add the reversion recipe
                 .copyParentDrop()
                 .build();
         this.addEntry(woodVerticalSlab);
@@ -97,7 +96,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_walls"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(modRes("crafting/wood_slab/oak_wood_wall"))
+                .addRecipe(modRes("crafting/wood_wall/oak_wood_wall"))
                 .copyParentDrop()
                 .build();
         this.addEntry(woodWall);
@@ -113,6 +112,7 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .addTag(modRes("wood_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_slab"))
+//                .addRecipe(modRes("cutting/oak_wood_slab")) // TODO: this does not currently work
                 .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodSlab);
@@ -127,7 +127,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_stairs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_stairs"))
+                .addRecipe(modRes("crafting/wood_stairs/stripped_oak_wood_stairs"))
+//                .addRecipe(modRes("cutting/oak_wood_stairs"))
                 .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodStairs);
@@ -142,7 +143,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_vertical_slabs"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_vertical_slab"))
+                .addRecipe(modRes("crafting/wood_vertical_slab/stripped_oak_wood_vertical_slab"))
+//                .addRecipe(modRes("cutting/oak_wood_vertical_slab"))
                 .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodVerticalSlab);
@@ -157,7 +159,8 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_walls"), Registries.BLOCK, Registries.ITEM)
                 .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
-                .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_wall"))
+                .addRecipe(modRes("crafting/wood_wall/stripped_oak_wood_wall"))
+//                .addRecipe(modRes("cutting/oak_wood_wall"))
                 .copyParentDrop()
                 .build();
         this.addEntry(strippedWoodWall);
