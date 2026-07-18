@@ -9,17 +9,21 @@ import net.mehvahdjukaar.every_compat.api.SimpleEntrySet;
 import net.mehvahdjukaar.every_compat.api.TabAddMode;
 import net.mehvahdjukaar.every_compat.misc.CompatSpritesHelper;
 import net.mehvahdjukaar.every_compat.modules.EveryCompatModule;
+import net.mehvahdjukaar.moonlight.api.resources.ResType;
+import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
+import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceSink;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodChildKeys;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
+
+import java.util.function.Consumer;
 
 public class LeptonEveryCompatModule extends EveryCompatModule {
 
@@ -50,7 +54,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_slabs"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/oak_wood_slab"))
                 .addRecipe(modRes("crafting/wood_vertical_slab_revert/oak_wood_vertical_slab_revert"))
                 .copyParentDrop()
@@ -66,7 +69,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_stairs"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_stairs/oak_wood_stairs"))
                 .copyParentDrop()
                 .build();
@@ -81,7 +83,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_vertical_slabs"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_vertical_slab/oak_wood_vertical_slab"))
                 .copyParentDrop()
                 .build();
@@ -96,7 +97,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_walls"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_wall/oak_wood_wall"))
                 .copyParentDrop()
                 .build();
@@ -111,7 +111,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_slabs"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_slab/stripped_oak_wood_slab"))
                 .addRecipe(modRes("crafting/wood_vertical_slab_revert/stripped_oak_wood_vertical_slab_revert"))
                 .copyParentDrop()
@@ -127,7 +126,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_stairs"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_stairs/stripped_oak_wood_stairs"))
                 .copyParentDrop()
                 .build();
@@ -142,7 +140,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_vertical_slabs"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_vertical_slab/stripped_oak_wood_vertical_slab"))
                 .copyParentDrop()
                 .build();
@@ -157,7 +154,6 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 .setTab(getTab(CreativeModeTabs.BUILDING_BLOCKS))
                 .setTabMode(TabAddMode.AFTER_SAME_WOOD)
                 .addTag(modRes("wood_walls"), Registries.BLOCK, Registries.ITEM)
-                .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
                 .addRecipe(modRes("crafting/wood_wall/stripped_oak_wood_wall"))
                 .copyParentDrop()
                 .build();
@@ -180,6 +176,146 @@ public class LeptonEveryCompatModule extends EveryCompatModule {
                 ((IStrippable) wood).setStrippedBlock(strippedWood);
             } else {
                 Lepton.LOGGER.info("Uh oh");
+            }
+        });
+    }
+
+    @Override
+    public void addDynamicServerResources(Consumer<ResourceGenTask> executor) {
+        super.addDynamicServerResources(executor);
+        executor.accept((manager, sink) -> {
+            this.createCuttingRecipe(woodSlab, strippedWoodSlab, "slab", sink);
+            this.createCuttingRecipe(woodStairs, strippedWoodStairs, "stairs", sink);
+            this.createCuttingRecipe(woodWall, strippedWoodWall, "wall", sink);
+            this.createVerticalSlabCuttingRecipe(sink);
+        });
+    }
+
+    private void createCuttingRecipe(SimpleEntrySet<WoodType, Block> strippable, SimpleEntrySet<WoodType, Block> stripped, String suffix, ResourceSink sink) {
+        strippable.blocks.forEach((w, wood) -> {
+            Block strippedWood = stripped.blocks.get(w);
+            String recipe = """
+                {
+                  "type": "farmersdelight:cutting",
+                  "ingredients": [
+                    {
+                      "item": "[STRIPPABLE]"
+                    }
+                  ],
+                  "result": [
+                    {
+                      "item": {
+                        "count": 1,
+                        "id": "[STRIPPED]"
+                      }
+                    },
+                    {
+                      "item": {
+                        "count": 1,
+                        "id": "farmersdelight:tree_bark"
+                      }
+                    }
+                  ],
+                  "sound": {
+                    "sound_id": "minecraft:item.axe.strip"
+                  },
+                  "tool": [
+                    {
+                      "type": "farmersdelight:item_ability",
+                      "action": "axe_strip"
+                    },
+                    {
+                      "tag": "minecraft:axes"
+                    }
+                  ],
+                  "neoforge:conditions": [
+                    {
+                      "type": "neoforge:mod_loaded",
+                      "modid": "farmersdelight"
+                    }
+                  ]
+                }
+                """;
+
+            if (wood != null && strippedWood != null) {
+                String newRecipe = recipe
+                        .replace("[STRIPPABLE]", Utils.getID(wood).toString())
+                        .replace("[STRIPPED]", Utils.getID(strippedWood).toString());
+
+                // add finished recipe to sink
+                sink.addBytes(modRes(w.createPathWith(shortenedId(), "wood_" + suffix)),
+                        newRecipe.getBytes(), ResType.RECIPES);
+            } else {
+                Lepton.LOGGER.warn("Skipped generating cutting recipe for {}", w.getId().toString());
+            }
+        });
+
+    }
+
+    private void createVerticalSlabCuttingRecipe(ResourceSink sink) {
+        woodVerticalSlab.blocks.forEach((w, wood) -> {
+            Block strippedWood = strippedWoodVerticalSlab.blocks.get(w);
+            String recipe = """
+                    {
+                      "type": "farmersdelight:cutting",
+                      "ingredients": [
+                        {
+                          "item": "[STRIPPABLE]"
+                        }
+                      ],
+                      "result": [
+                        {
+                          "item": {
+                            "count": 1,
+                            "id": "[STRIPPED]"
+                          }
+                        },
+                        {
+                          "item": {
+                            "count": 1,
+                            "id": "farmersdelight:tree_bark"
+                          }
+                        }
+                      ],
+                      "sound": {
+                        "sound_id": "minecraft:item.axe.strip"
+                      },
+                      "tool": [
+                        {
+                          "type": "farmersdelight:item_ability",
+                          "action": "axe_strip"
+                        },
+                        {
+                          "tag": "minecraft:axes"
+                        }
+                      ],
+                      "neoforge:conditions": [
+                        {
+                          "type": "neoforge:mod_loaded",
+                          "modid": "farmersdelight"
+                        },
+                        {
+                          "type": "neoforge:mod_loaded",
+                          "modid": "quark"
+                        },
+                        {
+                          "type": "zeta:flag",
+                          "flag": "vertical_slabs"
+                        }
+                      ]
+                    }
+                    """;
+
+            if (wood != null && strippedWood != null) {
+                String newRecipe = recipe
+                        .replace("[STRIPPABLE]", Utils.getID(wood).toString())
+                        .replace("[STRIPPED]", Utils.getID(strippedWood).toString());
+
+                // add finished recipe to sink
+                sink.addBytes(modRes(w.createPathWith(shortenedId(), "wood_vertical_slab")),
+                        newRecipe.getBytes(), ResType.RECIPES);
+            } else {
+                Lepton.LOGGER.warn("Skipped generating cutting recipe for {}", w.getId().toString());
             }
         });
     }
